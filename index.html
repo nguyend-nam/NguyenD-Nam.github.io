@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dinh Nam Nguyen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="icon" href="img/nam.jpg">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="nav">
+		<button onclick="showmenu()"><i class="fas fa-bars"></i></button>
+		<a href="#">Nam Nguyen</a>
+		<span class="navbtn">
+			<a id="curr" href="#">Home</a>
+			<a href="about/index.html">About</a>
+			<a onclick="showsubnav()">Socials & Links <i class="fas fa-angle-down"></i></a>
+		</span>
+	</div>
+	<ul class="subnav" id="subnav">
+		<li><a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">My Portfolio</a></li>
+		<li><a target="_blank" href="https://github.com/NguyenD-Nam">GitHub</a></li>
+		<li><a target="_blank" href="https://www.linkedin.com/in/nguyend-nam/">LinkedIn</a></li>
+		<li><a target="_blank" href="https://codepen.io/nguyend-nam">CodePen</a></li>
+		<li><a target="_blank" href="https://binarysearch.com/@/namnguyen_2003">BinarySearch.com</a></li>
+	</ul>
+
+	<div class="menu" id="menu">
+		<button onclick="hidemenu()"><i class="fas fa-times"></i></button>
+		<a onclick="hidemenu()" id="curr" href="#">Home</a><br>
+		<hr>
+		<a onclick="hidemenu()" href="about/index.html">About</a><br>
+		<hr>
+		<a onclick="showsub()">Socials & Links <i class="fas fa-angle-down"></i></a>
+		<ul class="submenu" id="submenu">
+			<li><a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">My Portfolio</a></li>
+			<li><a target="_blank" href="https://github.com/NguyenD-Nam">GitHub</a></li>
+			<li><a target="_blank" href="https://www.linkedin.com/in/nguyend-nam/">LinkedIn</a></li>
+			<li><a target="_blank" href="https://codepen.io/nguyend-nam">CodePen</a></li>
+			<li><a target="_blank" href="https://binarysearch.com/@/namnguyen_2003">BinarySearch.com</a></li>
+		</ul>
+	</div>
+
+	<div class="front">
+		<div class="name">Hello, I'm Nam Nguyen</div>
+		<img src="img/nampic.jpg" height="490px">
+		<div class="name1">Hello, I'm Nam Nguyen</div>
+	</div>
+	<div class="ftr">
+		<div class="copy">&copy; 2021 Dinh Nam Nguyen - All rights reserved</div>
+		<ul class="links">
+			<li><a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">My Portfolio</a></li>
+			<li><a target="_blank" href="https://github.com/NguyenD-Nam">GitHub</a></li>
+			<li><a target="_blank" href="https://www.linkedin.com/in/nguyend-nam/">LinkedIn</a></li>
+			<li><a target="_blank" href="https://codepen.io/nguyend-nam">CodePen</a></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var menu = false;
+		var submenu = false;
+		var subnav = false;
+		function showmenu(){
+			menu = true;
+			document.getElementById('menu').style.transition = '0.2s';
+			setTimeout(function() {
+				document.getElementById('menu').style.right = '0';
+			}, 10);
+			setTimeout(function() {
+				document.getElementById('menu').style.transition = '0s';
+			}, 250);
+		}
+		function hidemenu(){
+			menu = false;
+			document.getElementById('menu').style.transition = '0.2s';
+			setTimeout(function() {
+				document.getElementById('menu').style.right = '100vw';
+			}, 10);
+			setTimeout(function() {
+				document.getElementById('menu').style.transition = '0s';
+			}, 250);
+		}
+		function showsub(){
+			if(submenu == false){
+				document.getElementById('submenu').style.display = 'block';
+				submenu = true;
+			}
+			else if(submenu == true){
+				document.getElementById('submenu').style.display = 'none';
+				submenu = false;
+			}
+		}
+		function showsubnav(){
+			if(subnav == false){
+				document.getElementById('subnav').style.display = 'block';
+				subnav = true;
+			}
+			else if(subnav == true){
+				document.getElementById('subnav').style.display = 'none';
+				subnav = false;
+			}
+		}
+	</script>
+</body>
+</html>

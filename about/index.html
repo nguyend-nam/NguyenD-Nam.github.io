@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About | Dinh Nam Nguyen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="icon" href="../img/nam.jpg">
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+	<div class="nav" style="background-color: #181818;">
+		<button onclick="showmenu()"><i class="fas fa-bars"></i></button>
+		<a href="../index.html">Nam Nguyen</a>
+		<span class="navbtn">
+			<a href="../index.html">Home</a>
+			<a id="curr" href="#">About</a>
+			<a onclick="showsubnav()">Socials & Links <i class="fas fa-angle-down"></i></a>
+		</span>
+	</div>
+	<ul class="subnav" id="subnav">
+		<li><a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">My Portfolio</a></li>
+		<li><a target="_blank" href="https://github.com/NguyenD-Nam">GitHub</a></li>
+		<li><a target="_blank" href="https://www.linkedin.com/in/nguyend-nam/">LinkedIn</a></li>
+		<li><a target="_blank" href="https://codepen.io/nguyend-nam">CodePen</a></li>
+		<li><a target="_blank" href="https://binarysearch.com/@/namnguyen_2003">BinarySearch.com</a></li>
+	</ul>
+
+	<div class="menu" id="menu">
+		<button onclick="hidemenu()"><i class="fas fa-times"></i></button>
+		<a onclick="hidemenu()" href="../index.html">Home</a><br>
+		<hr>
+		<a onclick="hidemenu()" id="curr" href="#">About</a><br>
+		<hr>
+		<a onclick="showsub()">Socials & Links <i class="fas fa-angle-down"></i></a>
+		<ul class="submenu" id="submenu">
+			<li><a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">My Portfolio</a></li>
+			<li><a target="_blank" href="https://github.com/NguyenD-Nam">GitHub</a></li>
+			<li><a target="_blank" href="https://www.linkedin.com/in/nguyend-nam/">LinkedIn</a></li>
+			<li><a target="_blank" href="https://codepen.io/nguyend-nam">CodePen</a></li>
+			<li><a target="_blank" href="https://binarysearch.com/@/namnguyen_2003">BinarySearch.com</a></li>
+		</ul>
+	</div>
+
+	<div class="section about">
+		<h1>About me</h1>
+		<img src="../img/nam.jpg" width="250px">
+		<p>Nice to meet you, my name is Nam, I'm currently living at Ho Chi Minh city of Vietnam and I'm studying Computer Engineering at HCMUT. I love doing Front-end projects, hope you like my stuff.</p>
+	</div>
+
+	<div class="section project">
+		<h1>Some of my projects</h1>
+		<div class="projs">
+			<div class="proj one">
+				<img src="../img/proj1.png" width=40%>
+				<div>
+					<h2>Weather Now</h2>
+					<p>Weather web-app to find out the temperature of your country or city instantly.</p>
+					<a target="_blank" href="https://nguyend-nam.github.io/Weather-Now/">See project</a>
+				</div>
+			</div>
+			<div class="proj one">
+				<img src="../img/proj2.png" width=40%>
+				<div>
+					<h2>Problem Randomizer</h2>
+					<p>Practice platform for competitive programmers.</p>
+					<a target="_blank" href="https://decsp.github.io/Problem-Randomizer/">See project</a>
+				</div>
+			</div>
+			<div class="proj one">
+				<img src="../img/proj3.png" width=40%>
+				<div>
+					<h2>Flash-card summary</h2>
+					<p>Flash-card visualized summary about myself.</p>
+					<a target="_blank" href="https://nguyend-nam.github.io/myWebsite/#a">See project</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ftr">
+		<div class="copy">&copy; 2021 Dinh Nam Nguyen - All rights reserved</div>
+		<ul class="links">
+			<li><a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">My Portfolio</a></li>
+			<li><a target="_blank" href="https://github.com/NguyenD-Nam">GitHub</a></li>
+			<li><a target="_blank" href="https://www.linkedin.com/in/nguyend-nam/">LinkedIn</a></li>
+			<li><a target="_blank" href="https://codepen.io/nguyend-nam">CodePen</a></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var menu = false;
+		var submenu = false;
+		var subnav = false;
+		function showmenu(){
+			menu = true;
+			document.getElementById('menu').style.transition = '0.2s';
+			setTimeout(function() {
+				document.getElementById('menu').style.right = '0';
+			}, 10);
+			setTimeout(function() {
+				document.getElementById('menu').style.transition = '0s';
+			}, 250);
+		}
+		function hidemenu(){
+			menu = false;
+			document.getElementById('menu').style.transition = '0.2s';
+			setTimeout(function() {
+				document.getElementById('menu').style.right = '100vw';
+			}, 10);
+			setTimeout(function() {
+				document.getElementById('menu').style.transition = '0s';
+			}, 250);
+		}
+		function showsub(){
+			if(submenu == false){
+				document.getElementById('submenu').style.display = 'block';
+				submenu = true;
+			}
+			else if(submenu == true){
+				document.getElementById('submenu').style.display = 'none';
+				submenu = false;
+			}
+		}
+		function showsubnav(){
+			if(subnav == false){
+				document.getElementById('subnav').style.display = 'block';
+				subnav = true;
+			}
+			else if(subnav == true){
+				document.getElementById('subnav').style.display = 'none';
+				subnav = false;
+			}
+		}
+	</script>
+</body>
+</html>
