@@ -123,7 +123,7 @@ button{
 	color: #fffffff0;
 	padding-left: 30px;
 	height: max-content;
-	font-size: 60px;
+	font-size: 55px;
 	width: 350px;
 	border-left: 2px solid #ffffffc0;
 }
@@ -220,7 +220,7 @@ h1{
 		display: none;
 	}
 	.name{
-		transform: translateY(150px);
+		transform: translateY(140px);
 	}
 	.name1{
 		display: none;
@@ -235,7 +235,7 @@ h1{
 		margin-right: 25px;
 	}
 	.front .name{
-		transform: translateY(165px);
+		transform: translateY(155px);
 		font-size: 50px;
 		width: 280px;
 	}
