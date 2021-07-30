@@ -54,7 +54,7 @@ button{
 	background-color: #000000c0;
 	padding: 20px;
 	line-height: 30px;
-	border-radius: 3px;
+	border-radius: 2px;
 	box-shadow: -3px 3px 5px #00000078;
 }
 .subnav a{
@@ -182,9 +182,45 @@ h1{
 	border-radius: 50%;
 }
 .about p{
-	font-size: 17px;
+	font-size: 18px;
 	width: 60%;
 	margin: 35px auto;
+	margin-bottom: 0;
+}
+.skillsets{
+	padding: 35px;
+	padding-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	box-sizing: border-box;
+	width: 70vw;
+	max-width: 550px;
+	margin: 0 auto;
+}
+.sk{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #ddddd6;
+	box-shadow: -3px -3px 4px #ffffff80, 3px 3px 4px #00000080;
+	text-align: center;
+	height: 100px; width: 100px;
+	border-radius: 50%;
+	margin: 20px 20px 0 20px;
+}
+.sk span{
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bolder;
+	text-shadow: -2px 2px 3px #00000060;
+	user-select: none;
+}
+.sk i{
+	font-size: 65px;
+	color: #efefe8;
 }
 .proj{
 	margin-top: 35px;
