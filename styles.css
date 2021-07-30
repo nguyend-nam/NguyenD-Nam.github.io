@@ -188,13 +188,13 @@ h1{
 	margin-bottom: 0;
 }
 .skillsets{
-	padding: 35px;
+	padding: 30px;
 	padding-bottom: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	box-sizing: border-box;
-	width: 80vw;
+	width: 85vw;
 	max-width: 550px;
 	margin: 0 auto;
 }
