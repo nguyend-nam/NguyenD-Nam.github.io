@@ -202,8 +202,8 @@ h1{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-image: linear-gradient(-45deg, #bfbfbf, #fff, #bfbfbf);
-	box-shadow: -3px -3px 5px #ffffff80, 3px 3px 5px #00000080;
+	background-color: #efefe8;
+	box-shadow: -3px -3px 5px #ffffff, 3px 3px 5px #00000030;
 	text-align: center;
 	height: 100px; width: 100px;
 	border-radius: 50%;
@@ -220,7 +220,7 @@ h1{
 }
 .sk i{
 	font-size: 65px;
-	color: #dbdbd4;
+	color: #ddddd6;
 }
 .proj{
 	margin-top: 35px;
@@ -317,10 +317,12 @@ h1{
 		width: 100%;
 		text-align: center;
 		margin: 0 auto;
-		margin-top: 5px;
-		line-height: 22px;
 	}
 	.proj div a{
 		margin: 0 auto;
+	}
+	.proj p{
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 }
