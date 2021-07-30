@@ -194,7 +194,7 @@ h1{
 	flex-wrap: wrap;
 	justify-content: space-around;
 	box-sizing: border-box;
-	width: 70vw;
+	width: 80vw;
 	max-width: 550px;
 	margin: 0 auto;
 }
@@ -207,7 +207,7 @@ h1{
 	text-align: center;
 	height: 100px; width: 100px;
 	border-radius: 50%;
-	margin: 20px 20px 0 20px;
+	margin: 20px 18px 0 18px;
 }
 .sk span{
 	position: fixed;
