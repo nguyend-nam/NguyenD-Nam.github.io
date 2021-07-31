@@ -80,7 +80,7 @@ button{
 .menu a{
 	text-decoration: none;
 	color: #ffffffc0;
-	cursor: pointer;
+/* 	cursor: pointer; */
 }
 .menu hr{
 	border: none;
@@ -89,7 +89,7 @@ button{
 	height: 2px;
 }
 .menu button{
-	cursor: pointer;
+/* 	cursor: pointer; */
 	color: #ffffffc0;
 	font-size: 23px;
 	position: absolute;
@@ -263,6 +263,9 @@ h1{
 	}
 }
 @media (max-width: 1199px) and (min-width: 1025px){
+	.nav a{
+		cursor: default;
+	}
 	.nav button{
 		display: none;
 	}
@@ -306,6 +309,9 @@ h1{
 	}
 	.links{
 		display: block;
+	}
+	.links a{
+		cursor: default;
 	}
 	.proj{
 		flex-wrap: wrap;
