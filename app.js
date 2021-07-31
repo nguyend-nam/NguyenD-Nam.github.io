@@ -3,7 +3,7 @@ var submenu = false;
 var subnav = false;
 function showmenu(){
 	menu = true;
-	document.getElementById('menu').style.transition = '0.12s';
+	document.getElementById('menu').style.transition = '0.15s';
 	setTimeout(function() {
 		document.getElementById('menu').style.right = '0';
 	}, 10);
@@ -13,7 +13,7 @@ function showmenu(){
 }
 function hidemenu(){
 	menu = false;
-	document.getElementById('menu').style.transition = '0.12s';
+	document.getElementById('menu').style.transition = '0.15s';
 	setTimeout(function() {
 		document.getElementById('menu').style.right = '100vw';
 	}, 10);
