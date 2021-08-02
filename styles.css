@@ -49,13 +49,14 @@ button{
 .subnav{
 	display: none;
 	position: fixed;
+	z-index: 10;
 	right: 130px;
 	list-style: none;
 	background-color: #000000c0;
 	padding: 20px;
 	line-height: 30px;
 	border-radius: 2px;
-	box-shadow: -3px 3px 5px #00000078;
+	box-shadow: -3px 3px 6px #00000030;
 }
 .subnav a{
 	font-size: 17px;
