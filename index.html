@@ -11,8 +11,9 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="icon" href="img/nam.jpg">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x: hidden;">
 	<div class="nav">
 		<button onclick="showmenu()"><i class="fas fa-bars"></i></button>
 		<a href="https://nguyend-nam.github.io/">Nam Nguyen</a>
@@ -48,7 +49,7 @@
 
 	<div class="front">
 		<div class="name">Hello, I'm Nam Nguyen</div>
-		<img src="img/nampic.jpg" height="460px">
+		<img data-aos="zoom-out" data-aos-delay="150" src="img/nampic.jpg" height="460px">
 		<div class="name1">Hello, I'm Nam Nguyen</div>
 	</div>
 	<div class="ftr">
@@ -61,6 +62,10 @@
 		</ul>
 	</div>
 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
