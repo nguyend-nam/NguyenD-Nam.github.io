@@ -13,8 +13,9 @@
 	<link rel="icon" href="../img/nam.jpg">
 	<link rel="stylesheet" type="text/css" href="../styles.css">
 	<link rel="stylesheet" type="text/css" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x: hidden;">
 	<div class="nav" style="background-color: #181818;">
 		<button onclick="showmenu()"><i class="fas fa-bars"></i></button>
 		<a href="https://nguyend-nam.github.io/">Nam Nguyen</a>
@@ -50,7 +51,7 @@
 
 	<div class="section about">
 		<h1>About me</h1>
-		<img src="../img/nam.jpg" width="250px">
+		<img data-aos="zoom-out" data-aos-delay="150" src="../img/nam.jpg" width="250px">
 		<p>Nice to meet you, my name is Nam Nguyen. I'm currently living at Ho Chi Minh city of Vietnam and I'm studying Computer Engineering at HCMUT. I love doing Front-end coding and designing, hope you like my stuff.</p>
 	</div>
 
@@ -70,24 +71,24 @@
 		<h1>Some of my projects</h1>
 		<div class="projs">
 			<div class="proj one">
-				<img src="../img/proj1.png" width=40% data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal">
-				<div>
+				<img src="../img/proj1.png" width=40% data-aos="fade-right" data-aos-duration="650" data-aos-anchor-placement="top-center" data-aos-offset="-129">
+				<div data-aos="fade-left" data-aos-duration="650" data-aos-anchor-placement="top-center" data-aos-offset="-129">
 					<h2>Weather Now</h2>
 					<p>Weather web-app to find out weather info of countries or cities instantly.</p>
 					<a target="_blank" href="https://nguyend-nam.github.io/Weather-Now/">See project</a>
 				</div>
 			</div>
 			<div class="proj two">
-				<img src="../img/proj2.png" width=40% data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal">
-				<div>
+				<img src="../img/proj2.png" width=40% data-aos="fade-right" data-aos-duration="650" data-aos-anchor-placement="top-center" data-aos-offset="-129">
+				<div data-aos="fade-left" data-aos-duration="650" data-aos-anchor-placement="top-center" data-aos-offset="-129">
 					<h2>Problem Randomizer</h2>
 					<p>Practice platform for competitive programmers that randomly selects coding problems.</p>
 					<a target="_blank" href="https://decsp.github.io/Problem-Randomizer/">See project</a>
 				</div>
 			</div>
 			<div class="proj three">
-				<img src="../img/proj3.jpg" width=40% data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal">
-				<div>
+				<img src="../img/proj3.jpg" width=40% data-aos="fade-right" data-aos-duration="650" data-aos-anchor-placement="top-center" data-aos-offset="-129">
+				<div data-aos="fade-left" data-aos-duration="650" data-aos-anchor-placement="top-center" data-aos-offset="-129">
 					<h2>Portfolio Website</h2>
 					<p>Simple responsive portfolio website about me.</p>
 					<a target="_blank" href="https://nguyend-nam.github.io/Portfolio_Website/">See project</a>
@@ -106,6 +107,10 @@
 		</ul>
 	</div>
 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 	<script src="https://anijs.github.io/lib/anijs/anijs.js"></script>
 	<script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
 	<script type="text/javascript" src="../app.js"></script>
