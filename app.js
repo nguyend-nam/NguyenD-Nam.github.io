@@ -4,6 +4,7 @@ var subnav = false;
 function showmenu(){
 	menu = true;
 	document.getElementById('menu').style.transition = '0.15s';
+	document.getElementById('menu').style.opacity = '1';
 	setTimeout(function() {
 		document.getElementById('menu').style.right = '0';
 	}, 10);
