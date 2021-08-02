@@ -76,7 +76,7 @@ button{
 	background-color: #000000c0;
 	line-height: 70px;
 	font-size: 25px;
-	opacity: 0;
+/* 	opacity: 0; */
 }
 .menu a{
 	text-decoration: none;
