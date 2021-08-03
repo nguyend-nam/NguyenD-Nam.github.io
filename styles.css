@@ -186,7 +186,8 @@ h1{
 }
 .about p{
 	font-size: 18px;
-	width: 60%;
+	width: 70%;
+	max-width: 650px;
 	margin: 35px auto;
 	margin-bottom: 0;
 }
