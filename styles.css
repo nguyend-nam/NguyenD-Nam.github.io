@@ -221,6 +221,7 @@ h1{
 	font-size: 22px;
 	font-weight: bold;
 /* 	text-shadow: -2px 2px 4px #00000060; */
+	user-select: none;
 	transition: 0.2s;
 }
 .sk i{
