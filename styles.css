@@ -205,8 +205,8 @@ h1{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-/* 	background-color: #dfdfd9; */
-	background-image: linear-gradient(-70deg, #dfdfd9 15%, #e5e5df 20%, #e5e5df 40%, #dfdfd9 45%);
+	background-color: #dfdfd98;
+/* 	background-image: linear-gradient(-70deg, #dfdfd9 15%, #e5e5df 20%, #e5e5df 40%, #dfdfd9 45%); */
 	text-align: center;
 	height: 100px; width: 100px;
 	border-radius: 20px;
