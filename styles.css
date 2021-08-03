@@ -207,7 +207,7 @@ h1{
 	flex-direction: column;
 	justify-content: center;
 	background-color: #dfdfd8;
-/* 	background-image: linear-gradient(-70deg, #dfdfd9 15%, #e5e5df 20%, #e5e5df 40%, #dfdfd9 45%); */
+/* 	background-image: linear-gradient(-70deg, #dfdfd8 17%, #e5e5de 17%, #e5e5de 39%, #dfdfd8 39%); */
 	text-align: center;
 	height: 100px; width: 100px;
 	border-radius: 20px;
@@ -226,6 +226,13 @@ h1{
 .sk i{
 	font-size: 65px;
 	color: #efefe8;
+}
+.sk:hover i{
+	font-size: 73px;
+	color: #fcfcf5;
+}
+.sk:hover span{
+	transform: translateY(30px);
 }
 .proj{
 	margin-top: 35px;
