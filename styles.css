@@ -205,12 +205,13 @@ h1{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #dfdfd9;
-/* 	box-shadow: -3px -3px 5px #ffffff, 3px 3px 5px #00000030; */
+/* 	background-color: #dfdfd9; */
+	background-image: linear-gradient(-70deg, #dfdfd9 15%, #e5e5df 20%, #e5e5df 40%, #dfdfd9 45%);
 	text-align: center;
 	height: 100px; width: 100px;
-	border-radius: 35px;
+	border-radius: 20px;
 	margin: 23px 18px 0 18px;
+	opacity: 0;
 }
 .sk span{
 	position: fixed;
