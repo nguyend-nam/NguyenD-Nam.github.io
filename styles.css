@@ -329,6 +329,9 @@ h1{
 	.links a{
 		cursor: default;
 	}
+	.about img{
+		width: 170px;
+	}
 	.proj{
 		flex-wrap: wrap;
 	}
