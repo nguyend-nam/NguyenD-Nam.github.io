@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Cabin';
+	letter-spacing: 1px;
 }
 button{
 	border: none;
@@ -50,7 +51,7 @@ button{
 	display: none;
 	position: fixed;
 	z-index: 10;
-	right: 130px;
+	right: 125px;
 	list-style: none;
 	background-color: #000000c0;
 	padding: 20px;
@@ -62,6 +63,9 @@ button{
 	font-size: 17px;
 	text-decoration: none;
 	color: #ffffff78;
+}
+.subnav i{
+	width: 24px;
 }
 .menu{
 	user-select: none;
@@ -102,6 +106,9 @@ button{
 	list-style: none;
 	line-height: 30px;
 }
+.submenu i{
+	width: 28px;
+}
 .submenu a{
 	cursor: default;
 	font-size: 20px;
@@ -123,6 +130,7 @@ button{
 	margin-right: 35px;
 }
 .front .name{
+	letter-spacing: 5px;
 	color: #fffffff0;
 	padding-left: 30px;
 	height: max-content;
@@ -131,6 +139,7 @@ button{
 	border-left: 2px solid #ffffffc0;
 }
 .front .name1{
+	letter-spacing: 5px;
 	margin-top: 30px;
 	text-align: center;
 	color: #fffffff0;
@@ -218,7 +227,7 @@ h1{
 	position: fixed;
 	width: 100%;
 	text-align: center;
-	font-size: 22px;
+	font-size: 21px;
 	font-weight: bold;
 /* 	text-shadow: -2px 2px 4px #00000060; */
 	user-select: none;
@@ -233,7 +242,8 @@ h1{
 	color: #fcfcf5;
 }
 .sk:hover span{
-	transform: translateY(30px);
+	color: #efefe8;
+	transform: translateX(40px) rotateZ(-90deg);
 }
 .proj{
 	margin-top: 35px;
@@ -269,7 +279,7 @@ h1{
 		display: none;
 	}
 	.name{
-		transform: translateY(140px);
+		transform: translateY(135px);
 	}
 	.name1{
 		display: none;
@@ -287,7 +297,7 @@ h1{
 		margin-right: 25px;
 	}
 	.front .name{
-		transform: translateY(155px);
+		transform: translateY(150px);
 		font-size: 50px;
 		width: 280px;
 	}
