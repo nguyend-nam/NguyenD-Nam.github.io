@@ -222,6 +222,7 @@ h1{
 	border-radius: 20px;
 	margin: 23px 18px 0 18px;
 	opacity: 0;
+	overflow: hidden;
 }
 .sk span{
 	position: fixed;
@@ -242,8 +243,13 @@ h1{
 	color: #fcfcf5;
 }
 .sk:hover span{
-	color: #efefe8;
-	transform: translateX(40px) rotateZ(-90deg);
+	animation: 0.2s showsk linear;
+	color: transparent;
+	transform: translateX(-40px);
+}
+@keyframes showsk{
+	0%{color: #181818; transform: translateX(0px);}
+	100%{color: transparent; transform: translateX(80px);}
 }
 .proj{
 	margin-top: 35px;
