@@ -44,6 +44,9 @@ button{
 	font-size: 18px;
 	margin-left: 15px; margin-right: 15px;
 }
+.navbtn a:hover{
+	border-bottom: 1px solid #ffffffc0;
+}
 #curr{
 	border-bottom: 1px solid #ffffffc0;
 }
@@ -51,21 +54,21 @@ button{
 	display: none;
 	position: fixed;
 	z-index: 10;
-	right: 125px;
+	right: 120px;
 	list-style: none;
-	background-color: #000000c0;
+	background-color: #000000a0;
 	padding: 20px;
-	line-height: 30px;
+	line-height: 33px;
 	border-radius: 2px;
 	box-shadow: -3px 3px 6px #00000030;
 }
 .subnav a{
-	font-size: 17px;
+	font-size: 18px;
 	text-decoration: none;
 	color: #ffffff78;
 }
 .subnav i{
-	width: 24px;
+	width: 25px;
 }
 .menu{
 	user-select: none;
@@ -104,7 +107,7 @@ button{
 .submenu{
 	display: none;
 	list-style: none;
-	line-height: 30px;
+	line-height: 33px;
 }
 .submenu i{
 	width: 28px;
@@ -173,11 +176,13 @@ button{
 	margin-left: 10px;
 	margin-right: 10px;
 }
+.links a:hover{
+}
 .section{
 	text-align: center;
 	padding: 30px;
 	padding-bottom: 45px;
-	background-color: #efefe8;
+	background-color: #f1f1ea;
 	color: #181818;
 	box-sizing: border-box;
 }
@@ -366,4 +371,16 @@ h1{
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
+}
+#progress-bar {
+	--scrollAmount: 0%;
+	
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+	background-image: linear-gradient(120deg, #64e8de 0%, #8a64eb 100%);
+	background-image: linear-gradient(120deg, #7fd9f9, #787ff6);
+	width: var(--scrollAmount);
+	height: 6px;
+	position: fixed;
+	z-index: 20;
+	color: #f1f1ea;
 }
