@@ -377,9 +377,9 @@ h1{
 	
 	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 	background-image: linear-gradient(120deg, #64e8de 0%, #8a64eb 100%);
-	background-image: linear-gradient(120deg, #7fd9f9, #787ff6);
+/* 	background-image: linear-gradient(120deg, #7fd9f9, #787ff6); */
 	width: var(--scrollAmount);
-	height: 6px;
+	height: 5px;
 	position: fixed;
 	z-index: 20;
 	color: #f1f1ea;
