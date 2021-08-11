@@ -57,13 +57,13 @@ button{
 	right: 120px;
 	list-style: none;
 	background-color: #000000a0;
-	padding: 20px;
-	line-height: 33px;
+	padding: 18px;
+	line-height: 31px;
 	border-radius: 2px;
 	box-shadow: -3px 3px 6px #00000030;
 }
 .subnav a{
-	font-size: 18px;
+	font-size: 17px;
 	text-decoration: none;
 	color: #ffffff78;
 }
@@ -107,14 +107,14 @@ button{
 .submenu{
 	display: none;
 	list-style: none;
-	line-height: 33px;
+	line-height: 31px;
 }
 .submenu i{
 	width: 28px;
 }
 .submenu a{
 	cursor: default;
-	font-size: 20px;
+	font-size: 18px;
 	color: #ffffff78;
 }
 .front{
