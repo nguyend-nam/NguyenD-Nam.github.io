@@ -194,6 +194,9 @@ h1{
 	border-bottom: 1px solid #181818;
 	padding: 15px;
 }
+.section h2{
+	 width: max-content;
+}
 .about img{
 	margin-top: 35px;
 	border-radius: 50%;
