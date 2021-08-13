@@ -194,16 +194,35 @@ h1{
 	border-bottom: 1px solid #181818;
 	padding: 15px;
 }
-.about img{
-	margin-top: 35px;
-	border-radius: 50%;
+.ctn{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: 40px;
+}
+.ctn:hover .subctn{
+	margin-right: -40px;
+}
+.subctn img{
+	height: 225px;
+}
+.subctn{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: -50px;
+	z-index: 1;
+	transition: 0.3s;
 }
 .about p{
+	text-align: left;
+	padding: 90px 10px 100px 60px;
 	font-size: 18px;
-	width: 70%;
-	max-width: 650px;
-	margin: 30px auto;
+	/*width: 70%;*/
+	height: max-content;
+	max-width: 500px;
 	margin-bottom: 0;
+	background-color: #dfdfd8;
 }
 .skillsets{
 	padding: 30px;
@@ -257,7 +276,7 @@ h1{
 	100%{color: transparent; transform: translateX(80px);}
 }
 .proj{
-	margin-top: 35px;
+	margin-top: 40px;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
@@ -350,8 +369,23 @@ h1{
 	.links a{
 		cursor: default;
 	}
-	.about img{
-		width: 195px;
+	.ctn{
+		display: block;
+	}
+	.ctn:hover .subctn{
+		margin: 0 auto;
+	}
+	.ctn *{
+		margin: 0 auto;
+	}
+	.subctn img{
+		border-radius: 50%;
+	}
+	.about p{
+		padding: 10px;
+		background-color: transparent;
+		text-align: center;
+		width: 70%;
 	}
 	.proj{
 		flex-wrap: wrap;
