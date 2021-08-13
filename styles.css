@@ -243,7 +243,7 @@ h1{
 /* 	background-image: linear-gradient(-70deg, #dfdfd8 17%, #e5e5de 17%, #e5e5de 39%, #dfdfd8 39%); */
 	text-align: center;
 	height: 100px; width: 100px;
-	border-radius: 20px;
+/* 	border-radius: 20px; */
 	margin: 23px 18px 0 18px;
 	opacity: 0;
 	overflow: hidden;
@@ -302,6 +302,9 @@ h1{
 	text-decoration: none;
 	color: #181818;
 	border-bottom: 1px solid #181818;
+}
+.proj h2{
+	background-image: linear-gradient(-90deg, #f1f1ea, #dfdfd8);
 }
 
 @media (min-width: 1200px){
