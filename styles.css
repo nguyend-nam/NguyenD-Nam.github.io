@@ -200,9 +200,9 @@ h1{
 	justify-content: center;
 	margin-top: 40px;
 }
-.ctn:hover .subctn{
+/* .ctn:hover .subctn{
 	margin-right: -40px;
-}
+} */
 .subctn img{
 	height: 225px;
 }
@@ -372,9 +372,9 @@ h1{
 	.ctn{
 		display: block;
 	}
-	.ctn:hover .subctn{
+/* 	.ctn:hover .subctn{
 		margin: 0 auto;
-	}
+	} */
 	.ctn *{
 		margin: 0 auto;
 	}
