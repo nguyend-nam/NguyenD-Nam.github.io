@@ -216,11 +216,11 @@ h1{
 }
 .about p{
 	text-align: left;
-	padding: 100px 20px 110px 70px;
+	padding: 100px 21px 110px 71px;
 	font-size: 18px;
 	/*width: 70%;*/
 	height: max-content;
-	max-width: 485px;
+	max-width: 475px;
 	margin-bottom: 0;
 	background-color: #dfdfd8;
 }
@@ -244,7 +244,7 @@ h1{
 	text-align: center;
 	height: 100px; width: 100px;
 /* 	border-radius: 20px; */
-	margin: 23px 18px 0 18px;
+	margin: 12px 18px 12px 18px;
 	opacity: 0;
 	overflow: hidden;
 }
