@@ -216,11 +216,11 @@ h1{
 }
 .about p{
 	text-align: left;
-	padding: 100px 15px 110px 65px;
+	padding: 100px 20px 110px 70px;
 	font-size: 18px;
 	/*width: 70%;*/
 	height: max-content;
-	max-width: 500px;
+	max-width: 485px;
 	margin-bottom: 0;
 	background-color: #dfdfd8;
 }
