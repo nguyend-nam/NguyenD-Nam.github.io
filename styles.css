@@ -295,7 +295,7 @@ h1{
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.projs h2{
+h2{
 	font-weight: normal;
 }
 .proj img{
@@ -381,6 +381,9 @@ h1{
 	}
 	.navbtn{
 		display: none;
+	}
+	#curr{
+		border-bottom: none;
 	}
 	.subnav{
 		visibility: hidden;
