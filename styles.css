@@ -439,6 +439,8 @@ h1{
 	.see{
 		margin: 0 auto;
 	}
+	.see a{
+		cursor: default;
 	.proj p{
 		margin-top: 10px;
 		margin-bottom: 10px;
