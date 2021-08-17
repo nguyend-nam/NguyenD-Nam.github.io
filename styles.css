@@ -73,7 +73,7 @@ button{
 .menu{
 	user-select: none;
 	padding: 50px;
-	z-index: 20;
+	z-index: 31;
 	position: fixed;
 	transition: 0s;
 	right: 100vw;
