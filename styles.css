@@ -312,19 +312,21 @@ h2{
 	justify-content: space-around;
 }
 .see a{
-	padding: 6px;
-	border-radius: 7px;
+	padding: 8px;
+	border-radius: 8px;
 	width: max-content;
 	text-decoration: none;
 	color: #181818;
 	box-shadow: 0 3px 10px #0000003a;
-	transition: background-color 0.5s;
+	transition: box-shadow 0.5s;
 	color: #fff;
-	background-color: #64e8de;
+	background: linear-gradient(-60deg, #7a64eb 0%, #64e8de 100%);
 }
 .see a:hover{
-	background-color: #7a64eb;
-	/*color: #7a64eb;*/
+	box-shadow: 0 3px 10px #0000003a, inset 0 0 0px 20px #6fa6e5;
+}
+.see a:nth-child(2){
+	background: linear-gradient(-60deg, #181528 0%, #181528 100%);
 }
 .see{
 	padding: 0;
@@ -332,9 +334,6 @@ h2{
 }
 .see *{
 	margin-left: 3px; margin-right: 3px;
-}
-.see i{
-	color: #000;
 }
 
 @media (min-width: 1200px){
