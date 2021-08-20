@@ -183,7 +183,7 @@ button{
 	box-sizing: border-box;
 }
 .about{
-	background: linear-gradient(174deg, #e8f2ff 57%, #fff 57%);
+	background-image: radial-gradient(125% 65% at top left, #e8f2ff 82%, #fff 82%);
 }
 h1{
 	font-weight: normal;
@@ -404,6 +404,9 @@ h2{
 	.links a{
 		cursor: default;
 	}
+	.about{
+		background-image: radial-gradient(150% 45% at top left, #e8f2ff 82%, #fff 82%);
+	}
 	.ctn{
 		display: block;
 	}
@@ -429,6 +432,8 @@ h2{
 	}
 	.proj{
 		flex-wrap: wrap;
+		background-image: radial-gradient(150% 45% at bottom right, #e8f2ff7c 82%, #fff 82%);
+		border-radius: 10px;
 	}
 	.proj img{
 		width: 98%;
