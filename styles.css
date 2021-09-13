@@ -177,7 +177,7 @@ button{
 }
 .section{
 	text-align: center;
-	padding: 40px 30px 58px 30px;
+	padding: 40px 30px 55px 30px;
 	/*background-color: #2d2d30;*/
 	background-color: #fff;
 	box-sizing: border-box;
@@ -229,13 +229,13 @@ h1{
 .skillsets{
 	padding: 25px;
 	padding-bottom: 25px;
-	padding-top: 50px;
+	padding-top: 35px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 900px;
+	max-width: 960px;
 	margin: 0 auto;
 }
 .sk{
@@ -276,15 +276,7 @@ h1{
 .sk:hover i{
 	font-size: 71px;
 }
-.sk:hover span{
-	animation: 0.2s showsk linear;
-	color: transparent;
-	transform: translateX(-40px);
-}
-@keyframes showsk{
-	0%{color: #181818; transform: translateX(0px);}
-	100%{color: transparent; transform: translateX(80px);}
-}
+
 .proj{
 	margin-top: 40px;
 	display: inline-flex;
