@@ -21,7 +21,7 @@ button{
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	box-shadow: 0 5px 5px #00000020;
+	box-shadow: 0 3px 7px #00000030;
 }
 .nav button{
 	cursor: default;
@@ -59,7 +59,7 @@ button{
 	background-color: #000000a0;
 	padding: 18px;
 	line-height: 31px;
-	border-radius: 5px;
+	border-radius: 0 0 5px 5px;
 	box-shadow: -3px 3px 6px #00000030;
 }
 .subnav a{
