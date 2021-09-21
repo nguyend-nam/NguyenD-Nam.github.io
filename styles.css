@@ -438,7 +438,7 @@ h2{
 	.proj{
 		flex-wrap: wrap;
 		background-image: radial-gradient(150% 45% at bottom right, #e8f2ff99 82%, #fff 82%);
-		border-radius: 10px;
+		border-radius: 15px;
 	}
 	.proj img{
 		width: 98%;
