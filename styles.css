@@ -185,7 +185,7 @@ button{
 }
 .section{
 	text-align: center;
-	padding: 40px 30px 50px 30px;
+	padding: 45px 30px 50px 30px;
 	/*background-color: #2d2d30;*/
 	background-color: #fff;
 	box-sizing: border-box;
@@ -211,13 +211,12 @@ button{
 	background-image: radial-gradient(125% 60% at top left, #e8f2ff 82%, #fff 82%);
 }
 h1{
-	font-weight: normal;
 	text-align: left;
-	font-size: 25px;
+	font-size: 28px;
 	width: 80%;
 	margin: 0 auto;
 	color: #ffffff;
-	padding: 12px 12px 12px 17px;
+	padding: 12px 20px 12px 20px;
 	/*background-image: linear-gradient(90deg, #7a64eb 0%, #f1f1ea00 100%);*/
 	background-image: linear-gradient(120deg, #7a64eb 0%, #64e8de 100%);
 	border-radius: 55px;
