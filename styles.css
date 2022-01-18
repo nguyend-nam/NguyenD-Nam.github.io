@@ -450,6 +450,12 @@ h2{
 	.name1{
 		display: none;
 	}
+	.projs-grid{
+		width: 83%;
+		padding: 23px;
+		gap: 23px;
+		grid-template-rows: repeat(2, 210px);
+	}
 }
 @media (max-width: 1024px){
 	.nav{
@@ -532,6 +538,12 @@ h2{
 	.sk{
 		margin: 10px 2px 10px 2px;
 		height: 90px; width: 90px;
+	}
+	.projs-grid{
+		width: 83%;
+		padding: 22px;
+		gap: 22px;
+		grid-template-rows: repeat(2, 210px);
 	}
 	.proj{
 		flex-wrap: wrap;
