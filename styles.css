@@ -247,8 +247,8 @@ h1{
 	/*background-color: #cce2ff;*/
 	background-color: #ffffff50;
 	box-shadow: 0 3px 4px #00000030;
-	-webkit-backdrop-filter: blur(9px);
-	backdrop-filter: blur(9px);
+	-webkit-backdrop-filter: blur(7px);
+	backdrop-filter: blur(7px);
 }
 .skillsets{
 	padding: 25px;
@@ -301,7 +301,7 @@ h1{
 	background-repeat: no-repeat;
 }
 .projs-grid{
-	background: #70A0E518;
+	background: #70A0E515;
 	border-radius: 20px;
 	width: 83%;
 	padding: 38px;
@@ -312,8 +312,8 @@ h1{
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 210px);
 	box-shadow: 0 3px 10px #00000030;
-	-webkit-backdrop-filter: blur(9px);
-	backdrop-filter: blur(9px);
+	-webkit-backdrop-filter: blur(7px);
+	backdrop-filter: blur(7px);
 }
 .projs-grid *{
 	border-radius: 10px;
