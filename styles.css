@@ -1,0 +1,126 @@
+*{
+	scroll-behavior: smooth;
+}
+body{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	max-height: 100vh;
+	font-family: 'Cabin';
+}
+.sidebar{
+	width: 90px;
+	height: 100vh;
+	background: #15182f;
+	box-sizing: border-box;
+	position: sticky;
+	top: 0;
+}
+.sidebar button{
+	display: block;
+	outline: none;
+	border: none;
+	padding: 15px;
+	background: #15182f;
+	width: 100%;
+	color: #aaa;
+	font-family: 'Cabin';
+	cursor: pointer;
+}
+.sidebar button *{
+	display: flex;
+	flex-direction: column;
+	margin: 5px 0 5px 0;
+}
+.sidebar button:hover{
+	background: #05081f;
+}
+.sidebar button i{
+	font-size: 2em;
+	text-shadow: 1.35px 0px 0px #aaa, -1.35px 0px 0px #aaa, 0px 1.35px 0px #aaa, 0px -1.35px 0px #aaa, 1px 1px 0px #aaa, -1px -1px 0px #aaa, -1px 1px 0px #aaa, 1px -1px 0px #aaa;
+	color: #15182f;
+}
+.sidebar button:hover > i{
+	color: #05081f;
+	animation: rotate linear 0.5s;
+}
+@keyframes rotate{
+	0%{transform: rotate(0deg);}
+	/*9%{transform: rotate(24deg);}*/
+	20%{transform: rotate(48deg);}
+	30%{transform: rotate(73deg);}
+	40%{transform: rotate(110deg);}
+	80%{transform: rotate(330deg);}
+	90%{transform: rotate(355deg);}
+	100%{transform: rotate(360deg);}
+}
+
+.curr{
+	background: #fff !important;
+}
+.curr i{
+	color: #fff !important;
+}
+.curr .fa-home{
+	text-shadow: 1.35px 0px 0px #7bd5f5, -1.35px 0px 0px #7bd5f5, 0px 1.35px 0px #7bd5f5, 0px -1.35px 0px #7bd5f5, 1px 1px 0px #7bd5f5, -1px -1px 0px #7bd5f5, -1px 1px 0px #7bd5f5, 1px -1px 0px #7bd5f5;
+}
+.curr .fa-user{
+	text-shadow: 1.35px 0px 0px #56c596, -1.35px 0px 0px #56c596, 0px 1.35px 0px #56c596, 0px -1.35px 0px #56c596, 1px 1px 0px #56c596, -1px -1px 0px #56c596, -1px 1px 0px #56c596, 1px -1px 0px #56c596;
+}
+.curr .fa-laptop-code{
+	text-shadow: 1.35px 0px 0px #f9e07f, -1.35px 0px 0px #f9e07f, 0px 1.35px 0px #f9e07f, 0px -1.35px 0px #f9e07f, 1px 1px 0px #f9e07f, -1px -1px 0px #f9e07f, -1px 1px 0px #f9e07f, 1px -1px 0px #f9e07f;
+}
+.curr .fa-at{
+	text-shadow: 1.35px 0px 0px #804393, -1.35px 0px 0px #804393, 0px 1.35px 0px #804393, 0px -1.35px 0px #804393, 1px 1px 0px #804393, -1px -1px 0px #804393, -1px 1px 0px #804393, 1px -1px 0px #804393;
+}
+.main{
+	
+}
+.iframe{
+	width: calc(100vw - 90px);
+	height: 100vh;
+}
+.cover{
+	background: #15182f;
+	z-index: 10;
+	position: absolute;
+	left: 90px;
+	width: 0px;
+	height: 100vh;
+	/*animation: switch 1s linear;*/
+}
+@keyframes switch{
+	0%{right: 0; width: 0px; opacity: 1;}
+	30%{right: 0; width: calc(85vw - 90px); opacity: 1;}
+	40%{right: 0; width: calc(95vw - 90px); opacity: 1;}
+	50%{right: 0; width: calc(100vw - 90px); opacity: 1;}
+	80%{right: 0; width: calc(100vw - 90px); opacity: 1;}
+	100%{right: 0; width: calc(100vw - 90px); opacity: 0;}
+}
+@media (max-width: 671px){
+	.iframe{
+		width: calc(100vw - 80px);
+		height: 100vh;
+	}
+	.sidebar{
+		width: 80px;
+	}
+	.sidebar button{
+		cursor: default;
+	}
+	.cover{
+		left: 80px;
+	}
+	@keyframes switch{
+		0%{right: 0; width: 0px; opacity: 1;}
+		30%{right: 0; width: calc(85vw - 80px); opacity: 1;}
+		40%{right: 0; width: calc(95vw - 80px); opacity: 1;}
+		50%{right: 0; width: calc(100vw - 80px); opacity: 1;}
+		80%{right: 0; width: calc(100vw - 80px); opacity: 1;}
+		100%{right: 0; width: calc(100vw - 80px); opacity: 0;}
+	}
+	a{
+		cursor: default !important;
+	}
+}
