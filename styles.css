@@ -92,10 +92,10 @@ body{
 }
 @keyframes switch{
 	0%{right: 0; width: 0px; opacity: 1;}
-	30%{right: 0; width: calc(85vw - 90px); opacity: 1;}
-	40%{right: 0; width: calc(95vw - 90px); opacity: 1;}
-	50%{right: 0; width: calc(100vw - 90px); opacity: 1;}
-	90%{right: 0; width: calc(100vw - 90px); opacity: 1;}
+	20%{right: 0; width: calc(85vw - 90px); opacity: 1;}
+	30%{right: 0; width: calc(95vw - 90px); opacity: 1;}
+	40%{right: 0; width: calc(100vw - 90px); opacity: 1;}
+	80%{right: 0; width: calc(100vw - 90px); opacity: 1;}
 	100%{right: 0; width: calc(100vw - 90px); opacity: 0;}
 }
 @media (max-width: 671px){
@@ -114,10 +114,10 @@ body{
 	}
 	@keyframes switch{
 		0%{right: 0; width: 0px; opacity: 1;}
-		30%{right: 0; width: calc(85vw - 80px); opacity: 1;}
-		40%{right: 0; width: calc(95vw - 80px); opacity: 1;}
-		50%{right: 0; width: calc(100vw - 80px); opacity: 1;}
-		90%{right: 0; width: calc(100vw - 80px); opacity: 1;}
+		20%{right: 0; width: calc(85vw - 80px); opacity: 1;}
+		30%{right: 0; width: calc(95vw - 80px); opacity: 1;}
+		40%{right: 0; width: calc(100vw - 80px); opacity: 1;}
+		80%{right: 0; width: calc(100vw - 80px); opacity: 1;}
 		100%{right: 0; width: calc(100vw - 80px); opacity: 0;}
 	}
 	a{
