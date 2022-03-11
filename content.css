@@ -41,11 +41,12 @@ body{
 .banner a{
 	color: #fff;
 	font-size: 39px;
-	transform: rotate(-90deg) translateY(-6px);
+	transform: rotate(-90deg) translateY(-11px);
 	position: absolute;
 	bottom: 45px;
 	text-align: center;
 	text-decoration: none;
+	padding: 5px;
 }
 .info{
 	padding: 50px 200px 50px 200px;
