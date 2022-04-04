@@ -8,6 +8,7 @@ body{
 	flex-wrap: nowrap;
 	max-height: 100vh;
 	font-family: 'Cabin';
+	overflow: hidden;
 }
 .sidebar{
 	width: 90px;
