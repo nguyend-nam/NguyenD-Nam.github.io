@@ -1,7 +1,7 @@
 function loadHtml(filename){
-	document.getElementById('cover').style.animation = "switch 0.9s linear";
-	setTimeout(function(){document.getElementById('main').innerHTML = '<iframe class="iframe" frameborder="0" src="'+filename+'">';}, 361);
-	setTimeout(function(){document.getElementById('cover').style.animation = "none";}, 901);
+	document.getElementById('cover').style.animation = "switch 1.2s linear";
+	setTimeout(function(){document.getElementById('main').innerHTML = '<iframe class="iframe" frameborder="0" src="'+filename+'">';}, 481);
+	setTimeout(function(){document.getElementById('cover').style.animation = "none";}, 1201);
 }
 function resetCur(){
 	document.getElementById('home').classList.remove('curr');
