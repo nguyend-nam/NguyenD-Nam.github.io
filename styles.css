@@ -9,6 +9,7 @@ body{
 	max-height: 100vh;
 	font-family: 'Cabin';
 	overflow: hidden;
+	background: #15182f;
 }
 .sidebar{
 	width: 90px;
@@ -44,7 +45,7 @@ body{
 }
 .sidebar button:hover > i{
 	color: #05081f;
-	animation: rotate linear 0.5s;
+	animation: rotate linear 0.75s;
 }
 @keyframes rotate{
 	0%{transform: rotate(0deg);}
@@ -93,10 +94,10 @@ body{
 }
 @keyframes switch{
 	0%{right: 0; width: 0px; opacity: 1;}
-	10%{right: 0; width: calc(55vw - 90px); opacity: 1;}
-	20%{right: 0; width: calc(80vw - 90px); opacity: 1;}
-	30%{right: 0; width: calc(95vw - 90px); opacity: 1;}
-	40%{right: 0; width: calc(100vw - 90px); opacity: 1;}
+	8%{right: 0; width: calc(55vw - 90px); opacity: 1;}
+	16%{right: 0; width: calc(80vw - 90px); opacity: 1;}
+	24%{right: 0; width: calc(95vw - 90px); opacity: 1;}
+	32%{right: 0; width: calc(100vw - 90px); opacity: 1;}
 	90%{right: 0; width: calc(100vw - 90px); opacity: 1;}
 	100%{right: 0; width: calc(100vw - 90px); opacity: 0;}
 }
@@ -116,10 +117,10 @@ body{
 	}
 	@keyframes switch{
 		0%{right: 0; width: 0px; opacity: 1;}
-		10%{right: 0; width: calc(55vw - 80px); opacity: 1;}
-		20%{right: 0; width: calc(80vw - 80px); opacity: 1;}
-		30%{right: 0; width: calc(95vw - 80px); opacity: 1;}
-		40%{right: 0; width: calc(100vw - 80px); opacity: 1;}
+		8%{right: 0; width: calc(55vw - 80px); opacity: 1;}
+		16%{right: 0; width: calc(80vw - 80px); opacity: 1;}
+		24%{right: 0; width: calc(95vw - 80px); opacity: 1;}
+		32%{right: 0; width: calc(100vw - 80px); opacity: 1;}
 		90%{right: 0; width: calc(100vw - 80px); opacity: 1;}
 		100%{right: 0; width: calc(100vw - 80px); opacity: 0;}
 	}
