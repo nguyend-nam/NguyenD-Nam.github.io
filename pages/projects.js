@@ -123,14 +123,14 @@ const ProjectsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   @media (max-width: 800px) {
-    padding: 0px 20px 50px !important;
+    padding: 0px 25px 50px !important;
     grid-template-columns: 1fr;
     grid-gap: 40px;
   }
 `;
 
 const ProjectCard = styled.div`
-  border: 1px solid ${theme.colors.shadow};
+  border: 1px solid ${theme.colors.primary};
   & > div {
     padding: 30px;
   }
@@ -141,7 +141,6 @@ const ProjectCard = styled.div`
     padding-bottom: 0;
   }
   & > div:nth-child(3) {
-    // padding: 0;
     display: flex;
     flex-wrap: wrap;
   }
@@ -334,8 +333,8 @@ export default function Projects() {
                           </span>
                         </a>
                       </HighLight>{" "}
-                      problemset solutions downloader + packager with beautiful
-                      web interface.
+                      problemset solutions downloader + packager with
+                      user-friendly web interface.
                     </ProjectDescription>
                     <div>
                       <ProjectTags>JavaScript</ProjectTags>

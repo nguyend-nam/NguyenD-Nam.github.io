@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { useState, createContext } from "react";
+import { theme } from "../constants";
 
 export const SideBarContext = createContext({
   sideBar: false,
@@ -16,6 +17,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <SideBarContext.Provider value={{ sideBar, toggleSideBar }}>
       <Component {...pageProps} />
+      <style jsx global>{`
+        body {
+          background: ${theme.colors.secondary};
+        }
+      `}</style>
     </SideBarContext.Provider>
   );
 }

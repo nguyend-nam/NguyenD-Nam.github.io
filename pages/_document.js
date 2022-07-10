@@ -22,6 +22,14 @@ export default function Document() {
         />
         <link rel="icon" href="/icon.jpg" />
         <meta name="theme-color" content={theme.colors.primary} />
+        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:url" content="https://ngdnam.netlify.app" />
+        <meta property="og:site_name" content="Nam Nguyen" />
+        <meta property="og:title" content="Nam Nguyen" />
+        <meta
+          property="og:description"
+          content="Welcome to my personal website"
+        />
       </Head>
       <body>
         <Main />
