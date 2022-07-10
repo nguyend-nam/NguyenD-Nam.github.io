@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { theme } from "../constants";
 
 export default function Document() {
   return (
@@ -20,6 +21,7 @@ export default function Document() {
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
         />
         <link rel="icon" href="/icon.jpg" />
+        <meta name="theme-color" content={theme.colors.primary} />
       </Head>
       <body>
         <Main />
