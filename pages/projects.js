@@ -309,7 +309,7 @@ export default function Projects() {
                     <div>
                       <ProjectTitle>
                         <a
-                          href="https://github.com/nguyend-nam/nextjs-calendar"
+                          href="https://github.com/DecSP/cses-downloader"
                           rel="noreferrer"
                           target="_blank"
                         >

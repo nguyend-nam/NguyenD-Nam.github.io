@@ -117,7 +117,6 @@ const ContactSection = styled.div`
     }
   }
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.primary};
 `;
 
 const MailButton = styled.button`
