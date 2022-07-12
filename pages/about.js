@@ -179,8 +179,8 @@ export default function About() {
                         Ho Chi Minh City University of Technology - HCMUT
                       </HighLight>{" "}
                       and also a <HighLight>Frontend development</HighLight>{" "}
-                      enthusiast who loves learning new technologies and
-                      developing gorgeous websites & web applications.
+                      enthusiast who loves to learn new technologies and
+                      develop gorgeous websites & web applications.
                       <br />
                       <br />
                       I&rsquo;m working in a Frontend engineer position using{" "}
