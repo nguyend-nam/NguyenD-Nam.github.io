@@ -1,10 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.JS](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # My personal website
 
-Built with React on top of Next.JS and Styled-components.
+Built with [React](https://reactjs.org/) on top of [Next.JS](https://nextjs.org/) and [Styled-components](https://styled-components.com/).
 
-**View deploy:** https://ngdnam.netlify.app
+**View deploy:** [https://ngdnam.netlify.app](https://ngdnam.netlify.app).
 
 ## Quick Start
 
@@ -40,7 +40,7 @@ to see your project.
 - [x] [ESLint](http://eslint.org/)
 
 
-## Referrences
+## References
 
 - Website UI: Virginia Orosa's [portfolio website](https://www.virginiaorosa.com/)
 - Color palette: Colorhunt [Navy palette](https://colorhunt.co/palette/242f9b646fd49ba3ebdbdffd)
