@@ -108,7 +108,6 @@ const Description = styled.div`
 const HighLight = styled.span`
   border-bottom: 1px solid ${theme.colors.shadowLight};
   color: ${theme.colors.shadow};
-  margin: 0 4px;
 `;
 
 const ViewMore = styled.div`
@@ -166,6 +165,10 @@ const MailButton = styled.button`
   margin-bottom: 30px;
   @media (max-width: 800px) {
     font-size: 16px;
+  }
+  &:hover {
+    color: ${theme.colors.primary};
+    background-color: ${theme.colors.secondary};
   }
 `;
 
