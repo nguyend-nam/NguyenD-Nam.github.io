@@ -191,6 +191,112 @@ const ProjectTags = styled.div`
   }
 `;
 
+const projects = [
+  {
+    name: "Google Fonts app clone",
+    img: "/image/proj_2.png",
+    projectUrl: "https://nextjs-google-fonts.netlify.app/",
+    repoUrl: "https://github.com/nguyend-nam/google-fonts-clone",
+    description: (
+      <>
+        <HighLight>
+          <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
+            Google Fonts app
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: "14px", fontWeight: "600" }}
+            >
+              arrow_outward
+            </span>
+          </a>
+        </HighLight>{" "}
+        clone with fully UI-UX implemented.
+      </>
+    ),
+    techStack: ["Next.JS", "TypeScript", "TailwindCSS"],
+  },
+  {
+    name: "Next.JS calendar page UI",
+    img: "/image/proj_1.png",
+    projectUrl: "https://dwarvesf-boilerplate.netlify.app/calendar",
+    repoUrl: "https://github.com/nguyend-nam/nextjs-calendar",
+    description: (
+      <>
+        Calendar section for dashboard UI built with{" "}
+        <HighLight>
+          <a
+            href="https://github.com/dwarvesf/nextjs-boilerplate"
+            rel="noreferrer"
+            target="_blank"
+          >
+            dwarvesf&rsquo;s NextJS boilerplate
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: "14px", fontWeight: "600" }}
+            >
+              arrow_outward
+            </span>
+          </a>
+        </HighLight>
+        .
+      </>
+    ),
+    techStack: ["Next.JS", "TypeScript", "TailwindCSS"],
+  },
+  {
+    name: "Aggregation App",
+    img: "/image/proj_4.png",
+    projectUrl: "https://aggregation-app.vercel.app/",
+    repoUrl: "https://github.com/nguyend-nam/Aggregation-app",
+    description: (
+      <>
+        Simple aggregation app using{" "}
+        <HighLight>
+          <a
+            href="https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api"
+            rel="noreferrer"
+            target="_blank"
+          >
+            GitHub APIs
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: "14px", fontWeight: "600" }}
+            >
+              arrow_outward
+            </span>
+          </a>
+        </HighLight>
+        .
+      </>
+    ),
+    techStack: ["React.JS", "CSS"],
+  },
+  {
+    name: "CSES Downloader",
+    img: "/image/proj_3.png",
+    projectUrl: "https://csessolutions.netlify.app/",
+    repoUrl: "https://github.com/DecSP/cses-downloader",
+    description: (
+      <>
+        <HighLight>
+          <a href="https://cses.fi/" rel="noreferrer" target="_blank">
+            CSES
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: "14px", fontWeight: "600" }}
+            >
+              arrow_outward
+            </span>
+          </a>
+        </HighLight>{" "}
+        problemset solutions downloader + packager with user-friendly web
+        interface.
+      </>
+    ),
+    techStack: ["JavaScript", "HTML", "CSS", "Python"],
+  },
+];
+
 export default function Projects() {
   const [isSSR, setIsSSR] = useState(true);
 
@@ -238,205 +344,42 @@ export default function Projects() {
                   </ViewMore>
                 </div>
                 <ProjectsContainer>
-                  <ProjectCard>
-                    <ProjectImageContainer
-                      target="_blank"
-                      href="https://nextjs-google-fonts.netlify.app/"
-                    >
-                      <Image
-                        src="/image/proj_2.png"
-                        alt="Project 2"
-                        layout="responsive"
-                        width={100}
-                        height={51}
-                        style={{ objectFit: "cover" }}
-                      />
-                    </ProjectImageContainer>
-                    <div>
-                      <ProjectTitle>
-                        <a
-                          href="https://github.com/nguyend-nam/google-fonts-clone/tree/feat/localstorage"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          Google Fonts app clone
-                        </a>
-                      </ProjectTitle>
-                    </div>
-                    <ProjectDescription>
-                      <HighLight>
-                        <a
-                          href="https://fonts.google.com"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          Google Fonts app
-                          <span
-                            className="material-symbols-outlined"
-                            style={{ fontSize: "14px", fontWeight: "600" }}
+                  {projects.map((project) => (
+                    <ProjectCard key={project.name}>
+                      <ProjectImageContainer
+                        target="_blank"
+                        href={project.projectUrl}
+                      >
+                        <Image
+                          src={project.img}
+                          alt={project.img}
+                          layout="responsive"
+                          width={100}
+                          height={51}
+                          style={{ objectFit: "cover" }}
+                        />
+                      </ProjectImageContainer>
+                      <div>
+                        <ProjectTitle>
+                          <a
+                            href={project.repoUrl}
+                            rel="noreferrer"
+                            target="_blank"
                           >
-                            arrow_outward
-                          </span>
-                        </a>
-                      </HighLight>{" "}
-                      clone with fully UI-UX implemented.
-                    </ProjectDescription>
-                    <div>
-                      <ProjectTags>Next.JS</ProjectTags>
-                      <ProjectTags>TypeScript</ProjectTags>
-                      <ProjectTags>TailwindCSS</ProjectTags>
-                    </div>
-                  </ProjectCard>
-                  <ProjectCard>
-                    <ProjectImageContainer
-                      target="_blank"
-                      href="https://dwarvesf-boilerplate.netlify.app/calendar"
-                    >
-                      <Image
-                        src="/image/proj_1.png"
-                        alt="Project 1"
-                        layout="responsive"
-                        width={100}
-                        height={51}
-                        style={{ objectFit: "cover" }}
-                      />
-                    </ProjectImageContainer>
-                    <div>
-                      <ProjectTitle>
-                        <a
-                          href="https://github.com/nguyend-nam/nextjs-calendar"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          Next.JS calendar page UI
-                        </a>
-                      </ProjectTitle>
-                    </div>
-                    <ProjectDescription>
-                      Calendar section for dashboard UI built with{" "}
-                      <HighLight>
-                        <a
-                          href="https://github.com/dwarvesf/nextjs-boilerplate"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          dwarvesf&rsquo;s NextJS boilerplate
-                          <span
-                            className="material-symbols-outlined"
-                            style={{ fontSize: "14px", fontWeight: "600" }}
-                          >
-                            arrow_outward
-                          </span>
-                        </a>
-                      </HighLight>
-                      .
-                    </ProjectDescription>
-                    <div>
-                      <ProjectTags>Next.JS</ProjectTags>
-                      <ProjectTags>TypeScript</ProjectTags>
-                      <ProjectTags>TailwindCSS</ProjectTags>
-                    </div>
-                  </ProjectCard>
-                  <ProjectCard>
-                    <ProjectImageContainer
-                      target="_blank"
-                      href="https://aggregation-app.vercel.app/"
-                    >
-                      <Image
-                        src="/image/proj_4.png"
-                        alt="Project 4"
-                        layout="responsive"
-                        width={100}
-                        height={51}
-                        style={{ objectFit: "cover" }}
-                      />
-                    </ProjectImageContainer>
-                    <div>
-                      <ProjectTitle>
-                        <a
-                          href="https://github.com/nguyend-nam/Aggregation-app"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          Aggregation App
-                        </a>
-                      </ProjectTitle>
-                    </div>
-                    <ProjectDescription>
-                      Simple aggregation app using{" "}
-                      <HighLight>
-                        <a
-                          href="https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          GitHub APIs
-                          <span
-                            className="material-symbols-outlined"
-                            style={{ fontSize: "14px", fontWeight: "600" }}
-                          >
-                            arrow_outward
-                          </span>
-                        </a>
-                      </HighLight>
-                      .
-                    </ProjectDescription>
-                    <div>
-                      <ProjectTags>React.JS</ProjectTags>
-                      <ProjectTags>CSS</ProjectTags>
-                    </div>
-                  </ProjectCard>
-                  <ProjectCard>
-                    <ProjectImageContainer
-                      target="_blank"
-                      href="https://csessolutions.netlify.app/"
-                    >
-                      <Image
-                        src="/image/proj_3.png"
-                        alt="Project 3"
-                        layout="responsive"
-                        width={100}
-                        height={51}
-                        style={{ objectFit: "cover" }}
-                      />
-                    </ProjectImageContainer>
-                    <div>
-                      <ProjectTitle>
-                        <a
-                          href="https://github.com/DecSP/cses-downloader"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          CSES Downloader
-                        </a>
-                      </ProjectTitle>
-                    </div>
-                    <ProjectDescription>
-                      <HighLight>
-                        <a
-                          href="https://cses.fi/"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          CSES
-                          <span
-                            className="material-symbols-outlined"
-                            style={{ fontSize: "14px", fontWeight: "600" }}
-                          >
-                            arrow_outward
-                          </span>
-                        </a>
-                      </HighLight>{" "}
-                      problemset solutions downloader + packager with
-                      user-friendly web interface.
-                    </ProjectDescription>
-                    <div>
-                      <ProjectTags>JavaScript</ProjectTags>
-                      <ProjectTags>HTML</ProjectTags>
-                      <ProjectTags>CSS</ProjectTags>
-                      <ProjectTags>Python</ProjectTags>
-                    </div>
-                  </ProjectCard>
+                            {project.name}
+                          </a>
+                        </ProjectTitle>
+                      </div>
+                      <ProjectDescription>
+                        {project.description}
+                      </ProjectDescription>
+                      <div>
+                        {project.techStack.map((tech, i) => (
+                          <ProjectTags key={i}>{tech}</ProjectTags>
+                        ))}
+                      </div>
+                    </ProjectCard>
+                  ))}
                 </ProjectsContainer>
               </Content>
             </>
