@@ -39,8 +39,7 @@ to see your project.
 - [x] [Prettier](https://prettier.io/)
 - [x] [ESLint](http://eslint.org/)
 
-
 ## References
 
 - Website UI: Virginia Orosa's [portfolio website](https://www.virginiaorosa.com/)
-- Color palette: Colorhunt [Navy palette](https://colorhunt.co/palette/242f9b646fd49ba3ebdbdffd)
+- Color palette: Colorhunt's [Green palette](https://colorhunt.co/palette/22577a38a3a557cc9980ed99)
