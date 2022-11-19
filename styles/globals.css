@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.atropos-scale {
+  margin: -35px 0 !important;
+}
+
+.atropos-inner {
+  max-width: 394px !important;
+}
+
+.atropos-inner > span {
+  position: unset !important;
+}

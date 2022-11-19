@@ -1,20 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import styles from "../styles/Home.module.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
-import {
-  faReact,
-  faJs,
-  faCss3Alt,
-  faHtml5,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { appear } from "../constants";
+import { SwapRightOutlined, ArrowUpOutlined } from "@ant-design/icons";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -206,12 +199,7 @@ const projects = [
         <HighLight>
           <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
             Google Fonts app
-            <span
-              className="material-symbols-outlined"
-              style={{ fontSize: "14px", fontWeight: "600" }}
-            >
-              arrow_outward
-            </span>
+            <ArrowUpOutlined rotate={45} />
           </a>
         </HighLight>{" "}
         clone with fully UI-UX implemented.
@@ -242,12 +230,7 @@ const projects = [
             target="_blank"
           >
             GitHub APIs
-            <span
-              className="material-symbols-outlined"
-              style={{ fontSize: "14px", fontWeight: "600" }}
-            >
-              arrow_outward
-            </span>
+            <ArrowUpOutlined rotate={45} />
           </a>
         </HighLight>
         .
@@ -270,12 +253,7 @@ const projects = [
             target="_blank"
           >
             dwarvesf&rsquo;s NextJS boilerplate
-            <span
-              className="material-symbols-outlined"
-              style={{ fontSize: "14px", fontWeight: "600" }}
-            >
-              arrow_outward
-            </span>
+            <ArrowUpOutlined rotate={45} />
           </a>
         </HighLight>
         .
@@ -293,12 +271,7 @@ const projects = [
         <HighLight>
           <a href="https://cses.fi/" rel="noreferrer" target="_blank">
             CSES
-            <span
-              className="material-symbols-outlined"
-              style={{ fontSize: "14px", fontWeight: "600" }}
-            >
-              arrow_outward
-            </span>
+            <ArrowUpOutlined rotate={45} />
           </a>
         </HighLight>{" "}
         problemset solutions downloader + packager with user-friendly web
@@ -345,13 +318,7 @@ export default function Projects() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      View more on GitHub{" "}
-                      <span
-                        style={{ fontSize: "14px", fontWeight: "900" }}
-                        className="material-symbols-outlined"
-                      >
-                        arrow_right_alt
-                      </span>
+                      View more on GitHub <SwapRightOutlined />
                     </a>
                   </ViewMore>
                 </div>
