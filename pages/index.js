@@ -13,9 +13,11 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import Atropos from "atropos/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
+import "atropos/atropos.css";
+import { SwapRightOutlined } from "@ant-design/icons";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -61,12 +63,15 @@ const Content = styled.div`
       margin: 50px 0 !important;
     }
     @media (max-width: 800px) {
-      display: none;
+      padding: 40px 25px;
+      border-left: 0px solid ${theme.colors.primary};
+      border-top: 1px solid ${theme.colors.primary};
     }
   }
   border-bottom: 1px solid ${theme.colors.primary};
   @media (max-width: 800px) {
     width: 100vw;
+    flex-wrap: wrap;
   }
 `;
 
@@ -182,6 +187,11 @@ const Links = styled.div`
   }
 `;
 
+const AtroposImage = styled(Image)`
+  border-radius: 10px;
+  max-width: 394px;
+`;
+
 export default function Home() {
   const [isSSR, setIsSSR] = useState(true);
   const { push } = useRouter();
@@ -196,7 +206,7 @@ export default function Home() {
         <Head>
           <title>Nam Nguyen</title>
           <meta name="description" content="Welcome to my personal website" />
-          <link rel="icon" href="/icon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
           <Sidebar />
@@ -225,23 +235,38 @@ export default function Home() {
                   </Description>
                   <ViewMore>
                     <a onClick={() => push("/about")}>
-                      More about me{" "}
-                      <span
-                        style={{ fontSize: "14px", fontWeight: "900" }}
-                        className="material-symbols-outlined"
-                      >
-                        arrow_right_alt
-                      </span>
+                      More about me <SwapRightOutlined />
                     </a>
                   </ViewMore>
                 </div>
                 <div>
-                  <Image
-                    src="/image/undraw_programming.svg"
-                    alt="Programming"
-                    width="500px"
-                    height="500px"
-                  />
+                  <Atropos
+                    activeOffset={40}
+                    shadowScale={0.9}
+                    className="atropos-banner"
+                  >
+                    <AtroposImage
+                      src="/image/atropos-bg.png"
+                      alt="Programming"
+                      width={394}
+                      height="90.333px"
+                      data-atropos-offset="0"
+                    />
+                    <AtroposImage
+                      src="/image/atropos-text.png"
+                      alt="Programming"
+                      width={394}
+                      height="90.333px"
+                      data-atropos-offset="5"
+                    />
+                    <AtroposImage
+                      src="/image/atropos-icons.png"
+                      alt="Programming"
+                      width={394}
+                      height="90.333px"
+                      data-atropos-offset="10"
+                    />
+                  </Atropos>
                 </div>
               </Content>
               <ContactSection>

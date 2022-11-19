@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../constants";
 import { SideBarContext } from "../../pages/_app";
 import { useState, useContext } from "react";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 const HeaderContainer = styled.div`
   border-bottom: 1px solid ${theme.colors.primary};
@@ -48,7 +49,7 @@ const MobileToggleButton = styled.button`
   cursor: pointer;
   color: ${theme.colors.primary};
   & > * {
-    font-size: 30px;
+    font-size: 25px;
     padding: 0;
   }
   transition: 0.3s;
@@ -71,9 +72,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <MobileToggleButton onClick={() => setSideBar(!sideBar)}>
-        <span className="material-symbols-outlined">
-          {sideBar ? "close" : "menu"}
-        </span>
+        {sideBar ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
       </MobileToggleButton>
       <HeaderTitle>
         <span>NAM</span>

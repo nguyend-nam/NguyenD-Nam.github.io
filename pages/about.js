@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import styles from "../styles/Home.module.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
@@ -14,9 +13,9 @@ import {
   faHtml5,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
+import { SwapRightOutlined, ArrowUpOutlined } from "@ant-design/icons";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -171,7 +170,7 @@ export default function About() {
         <Head>
           <title>About - Nam Nguyen</title>
           <meta name="description" content="About me" />
-          <link rel="icon" href="/icon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
           <Sidebar />
@@ -180,7 +179,7 @@ export default function About() {
             <>
               <Content>
                 <Image
-                  src="/image/gfandme.jpg"
+                  src="/image/me.jpg"
                   alt="GF and me ^^"
                   width="210px"
                   height="300px"
@@ -238,12 +237,7 @@ export default function About() {
                         target="_blank"
                       >
                         Next.JS
-                        <span
-                          className="material-symbols-outlined"
-                          style={{ fontSize: "14px", fontWeight: "600" }}
-                        >
-                          arrow_outward
-                        </span>
+                        <ArrowUpOutlined rotate={45} />
                       </a>
                     </HighLight>
                     ,{" "}
@@ -254,12 +248,7 @@ export default function About() {
                         target="_blank"
                       >
                         Styled-components
-                        <span
-                          className="material-symbols-outlined"
-                          style={{ fontSize: "14px", fontWeight: "600" }}
-                        >
-                          arrow_outward
-                        </span>
+                        <ArrowUpOutlined rotate={45} />
                       </a>
                     </HighLight>{" "}
                     and{" "}
@@ -270,25 +259,14 @@ export default function About() {
                         target="_blank"
                       >
                         TypeScript
-                        <span
-                          className="material-symbols-outlined"
-                          style={{ fontSize: "14px", fontWeight: "600" }}
-                        >
-                          arrow_outward
-                        </span>
+                        <ArrowUpOutlined rotate={45} />
                       </a>
                     </HighLight>
                     .
                   </p>
                   <ViewMore style={{ textAlign: "left" }}>
                     <a onClick={() => push("/projects")}>
-                      Checkout my projects{" "}
-                      <span
-                        style={{ fontSize: "14px", fontWeight: "900" }}
-                        className="material-symbols-outlined"
-                      >
-                        arrow_right_alt
-                      </span>
+                      Checkout my projects <SwapRightOutlined />
                     </a>
                   </ViewMore>
                 </div>

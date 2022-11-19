@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import styled from "styled-components";
 import { theme } from "../../constants";
 import { SideBarContext } from "../../pages/_app";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const SidebarContainer = styled.div`
   padding: 20px;
@@ -25,7 +26,7 @@ const ToggleButton = styled.button`
   cursor: pointer;
   color: ${theme.colors.primary};
   & > * {
-    font-size: 40px;
+    font-size: 30px;
     padding: 0;
     @media (max-width: 800px) {
       display: none;
@@ -90,9 +91,7 @@ export function Sidebar() {
   return (
     <SidebarContainer>
       <ToggleButton onClick={() => setSideBar(!sideBar)} width={sideBar}>
-        <span className="material-symbols-outlined">
-          {sideBar ? "close" : "menu"}
-        </span>
+        {sideBar ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
       </ToggleButton>
       <SidebarRoutesContainer display={sideBar}>
         <SidebarRoutes onClick={() => push(`/`)} active={currPathname === "/"}>
