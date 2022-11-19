@@ -170,7 +170,7 @@ export default function About() {
         <Head>
           <title>About - Nam Nguyen</title>
           <meta name="description" content="About me" />
-          <link rel="icon" href="/icon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
           <Sidebar />
@@ -179,7 +179,7 @@ export default function About() {
             <>
               <Content>
                 <Image
-                  src="/image/gfandme.jpg"
+                  src="/image/me.jpg"
                   alt="GF and me ^^"
                   width="210px"
                   height="300px"

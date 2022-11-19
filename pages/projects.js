@@ -208,6 +208,36 @@ const projects = [
     techStack: ["Next.JS", "TypeScript", "TailwindCSS"],
   },
   {
+    name: "React three fiber image gallery",
+    img: "/image/proj_6.png",
+    projectUrl: "https://dwarvesf-r3f.netlify.app/",
+    repoUrl: "https://github.com/nguyend-nam/r3f-image-gallery",
+    description: (
+      <>
+        Grid image gallery made with{" "}
+        <HighLight>
+          <a
+            href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
+            rel="noreferrer"
+            target="_blank"
+          >
+            React three fiber
+            <ArrowUpOutlined rotate={45} />
+          </a>
+        </HighLight>{" "}
+        and{" "}
+        <HighLight>
+          <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
+            Next.JS
+            <ArrowUpOutlined rotate={45} />
+          </a>
+        </HighLight>
+        .
+      </>
+    ),
+    techStack: ["Next.JS", "TypeScript", "React three fiber", "GLSL"],
+  },
+  {
     name: "Which holiday?",
     img: "/image/proj_5.png",
     projectUrl: "https://which-holiday.vercel.app/",
@@ -252,7 +282,7 @@ const projects = [
             rel="noreferrer"
             target="_blank"
           >
-            dwarvesf&rsquo;s NextJS boilerplate
+            dwarvesf&rsquo;s Next.JS boilerplate
             <ArrowUpOutlined rotate={45} />
           </a>
         </HighLight>
@@ -295,7 +325,7 @@ export default function Projects() {
         <Head>
           <title>Projects - Nam Nguyen</title>
           <meta name="description" content="My projects" />
-          <link rel="icon" href="/icon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
           <Sidebar />

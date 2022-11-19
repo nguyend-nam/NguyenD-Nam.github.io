@@ -11,9 +11,9 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/icon.jpg" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content={theme.colors.primary} />
-        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:image" content="/og.png" />
         <meta property="og:url" content="https://ngdnam.netlify.app" />
         <meta property="og:site_name" content="Nam Nguyen" />
         <meta property="og:title" content="Nam Nguyen" />

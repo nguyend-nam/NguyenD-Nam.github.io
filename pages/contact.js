@@ -163,7 +163,7 @@ export default function Contact() {
         <Head>
           <title>Contact - Nam Nguyen</title>
           <meta name="description" content="Contact me" />
-          <link rel="icon" href="/icon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
           <Sidebar />

@@ -16,7 +16,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Atropos from "atropos/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
-import {} from "antd";
 import "atropos/atropos.css";
 import { SwapRightOutlined } from "@ant-design/icons";
 
@@ -207,7 +206,7 @@ export default function Home() {
         <Head>
           <title>Nam Nguyen</title>
           <meta name="description" content="Welcome to my personal website" />
-          <link rel="icon" href="/icon.jpg" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
           <Sidebar />
