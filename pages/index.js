@@ -33,7 +33,7 @@ const MainContainer = styled.div`
 
 const MainContent = styled.div`
   animation: ${appear} 0.3s linear forwards;
-  width: calc(100vw - 81px);
+  width: calc(100vw - 71px);
   height: max-content;
   @media (max-width: 800px) {
     width: 100vw;
@@ -41,7 +41,7 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
-  width: calc(100vw - 81px);
+  width: calc(100vw - 71px);
   display: flex;
   justify-content: space-between;
   & > div:first-child {
