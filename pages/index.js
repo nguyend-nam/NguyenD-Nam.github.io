@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import styled from "styled-components";
 import styles from "../styles/Home.module.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
@@ -18,6 +18,7 @@ import { useRouter } from "next/router";
 import { appear } from "../constants";
 import "atropos/atropos.css";
 import { SwapRightOutlined } from "@ant-design/icons";
+import { Image } from "antd";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -46,24 +47,25 @@ const Content = styled.div`
   justify-content: space-between;
   & > div:first-child {
     padding: 60px 60px 80px 60px;
-    width: 60vw;
+    width: 75vw;
     @media (max-width: 800px) {
       padding: 40px 25px 60px 25px;
       width: 100%;
     }
   }
   & > div:nth-child(2) {
-    padding: 60px;
+    min-width: 300px;
+    max-height: 100%;
+    padding: 0px;
     border-left: 1px solid ${theme.colors.shadowLight};
     flex: 1;
-    display: grid;
-    align-items: center;
+    display: flex;
+    align-items: flex-end;
     justify-content: center;
-    & > * {
-      margin: 50px 0 !important;
-    }
     @media (max-width: 800px) {
-      padding: 40px 25px;
+      align-items: flex-start;
+      height: 500px;
+      overflow: hidden;
       border-left: 0px solid ${theme.colors.shadowLight};
       border-top: 1px solid ${theme.colors.shadowLight};
     }
@@ -187,11 +189,6 @@ const Links = styled.div`
   }
 `;
 
-const AtroposImage = styled(Image)`
-  border-radius: 10px;
-  max-width: 394px;
-`;
-
 export default function Home() {
   const [isSSR, setIsSSR] = useState(true);
   const { push } = useRouter();
@@ -240,33 +237,11 @@ export default function Home() {
                   </ViewMore>
                 </div>
                 <div>
-                  <Atropos
-                    activeOffset={40}
-                    shadowScale={0.9}
-                    className="atropos-banner"
-                  >
-                    <AtroposImage
-                      src="/image/atropos-bg.png"
-                      alt="Programming"
-                      width={394}
-                      height="90.333px"
-                      data-atropos-offset="0"
-                    />
-                    <AtroposImage
-                      src="/image/atropos-text.png"
-                      alt="Programming"
-                      width={394}
-                      height="90.333px"
-                      data-atropos-offset="5"
-                    />
-                    <AtroposImage
-                      src="/image/atropos-icons.png"
-                      alt="Programming"
-                      width={394}
-                      height="90.333px"
-                      data-atropos-offset="10"
-                    />
-                  </Atropos>
+                  <Image
+                    src="/image/shinji-bbs.png"
+                    alt="Shinji"
+                    preview={false}
+                  />
                 </div>
               </Content>
               <ContactSection>

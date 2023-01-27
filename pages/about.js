@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
@@ -16,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
 import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
+import { Image } from "antd";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -47,6 +47,14 @@ const Content = styled.div`
     border-left: 1px solid ${theme.colors.shadowLight};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
+      width: 100%;
+    }
+  }
+  & > div:nth-child(1) {
+    border-left: none;
+    width: 380px;
+    padding: 0px;
+    @media (max-width: 800px) {
       width: 100%;
     }
   }
@@ -205,11 +213,10 @@ export default function About() {
             <>
               <Content>
                 <Image
-                  src="/image/me.jpg"
-                  alt="GF and me ^^"
-                  width="210px"
-                  height="300px"
-                  objectFit="cover"
+                  src="/image/me-dalat.jpg"
+                  alt="Me"
+                  preview={false}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
                 <div>
                   <Title>
