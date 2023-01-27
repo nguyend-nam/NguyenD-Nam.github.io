@@ -54,7 +54,7 @@ const Content = styled.div`
   }
   & > div:nth-child(2) {
     padding: 60px;
-    border-left: 1px solid ${theme.colors.primary};
+    border-left: 1px solid ${theme.colors.shadowLight};
     flex: 1;
     display: grid;
     align-items: center;
@@ -64,11 +64,11 @@ const Content = styled.div`
     }
     @media (max-width: 800px) {
       padding: 40px 25px;
-      border-left: 0px solid ${theme.colors.primary};
-      border-top: 1px solid ${theme.colors.primary};
+      border-left: 0px solid ${theme.colors.shadowLight};
+      border-top: 1px solid ${theme.colors.shadowLight};
     }
   }
-  border-bottom: 1px solid ${theme.colors.primary};
+  border-bottom: 1px solid ${theme.colors.shadowLight};
   @media (max-width: 800px) {
     width: 100vw;
     flex-wrap: wrap;
@@ -118,10 +118,10 @@ const HighLight = styled.span`
 const ViewMore = styled.div`
   margin-top: 40px;
   & a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.shadow};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.primary};
+    border-bottom: 2px solid ${theme.colors.shadow};
     padding-bottom: 5px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -135,21 +135,21 @@ const ContactSection = styled.div`
   justify-content: space-around;
   & > div {
     max-width: 750px;
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.shadowLight};
     padding: 60px;
     @media (max-width: 800px) {
       padding: 35px 25px;
     }
   }
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.primary};
+  border-bottom: 1px solid ${theme.colors.shadowLight};
 `;
 
 const SectionTitle = styled.div`
   font-size: 35px;
   font-family: "Plus Jakarta Sans";
   font-weight: 700;
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.shadow};
   margin-bottom: 40px;
   text-align: left;
   @media (max-width: 800px) {
@@ -164,7 +164,7 @@ const MailButton = styled.button`
   color: ${theme.colors.secondary};
   font-size: 18px;
   cursor: pointer;
-  border: 1px solid ${theme.colors.secondary};
+  border: 1px solid ${theme.colors.primary};
   padding: 10px;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -173,7 +173,7 @@ const MailButton = styled.button`
   }
   &:hover {
     color: ${theme.colors.primary};
-    background-color: ${theme.colors.secondary};
+    background-color: ${theme.colors.shadowLight};
   }
 `;
 
@@ -181,8 +181,8 @@ const Links = styled.div`
   & > a {
     cursor: pointer;
     font-size: 30px;
-    background-color: ${theme.colors.primary};
-    color: ${theme.colors.secondary};
+    background-color: ${theme.colors.shadowLight};
+    color: ${theme.colors.primary};
     margin: 0 15px;
   }
 `;

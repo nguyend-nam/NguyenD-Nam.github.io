@@ -7,7 +7,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const SidebarContainer = styled.div`
   padding: 20px;
-  border-right: 1px solid ${theme.colors.primary};
+  border-right: 1px solid ${theme.colors.shadowLight};
   background-color: ${theme.colors.secondary};
   font-family: "Plus Jakarta Sans";
   height: 100%;
