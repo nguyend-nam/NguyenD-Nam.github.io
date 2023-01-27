@@ -42,4 +42,4 @@ to see your project.
 ## References
 
 - Website UI: Virginia Orosa's [portfolio website](https://www.virginiaorosa.com/)
-- Color palette: Colorhunt's [Green palette](https://colorhunt.co/palette/22577a38a3a557cc9980ed99)
+- Color palette: [Tokyo night palette](https://www.color-hex.com/color-palette/91636)

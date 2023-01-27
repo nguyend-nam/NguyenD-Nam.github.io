@@ -52,7 +52,7 @@ const Content = styled.div`
   }
   & > div:nth-child(2) {
     padding: 60px;
-    border-left: 1px solid ${theme.colors.primary};
+    border-left: 1px solid ${theme.colors.shadowLight};
     flex: 1;
     display: grid;
     align-items: center;
@@ -64,7 +64,7 @@ const Content = styled.div`
       display: none;
     }
   }
-  border-bottom: 1px solid ${theme.colors.primary};
+  border-bottom: 1px solid ${theme.colors.shadowLight};
   @media (max-width: 800px) {
     width: 100vw;
   }
@@ -110,7 +110,7 @@ const ContactSection = styled.div`
   justify-content: space-around;
   & > div {
     width: 100%;
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.shadowLight};
     padding: 60px;
     @media (max-width: 800px) {
       padding: 35px 25px;
@@ -126,7 +126,7 @@ const MailButton = styled.button`
   color: ${theme.colors.secondary};
   font-size: 18px;
   cursor: pointer;
-  border: 1px solid ${theme.colors.secondary};
+  border: 1px solid ${theme.colors.primary};
   padding: 10px;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -135,7 +135,7 @@ const MailButton = styled.button`
   }
   &:hover {
     color: ${theme.colors.primary};
-    background-color: ${theme.colors.secondary};
+    background-color: ${theme.colors.shadowLight};
   }
 `;
 
@@ -143,8 +143,8 @@ const Links = styled.div`
   & > a {
     cursor: pointer;
     font-size: 30px;
-    background-color: ${theme.colors.primary};
-    color: ${theme.colors.secondary};
+    background-color: ${theme.colors.shadowLight};
+    color: ${theme.colors.primary};
     margin: 0 15px;
   }
 `;

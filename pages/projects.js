@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
 import { appear } from "../constants";
-import { SwapRightOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -39,7 +39,7 @@ const Content = styled.div`
       width: 100%;
     }
   }
-  border-bottom: 1px solid ${theme.colors.primary};
+  border-bottom: 1px solid ${theme.colors.shadowLight};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
@@ -96,10 +96,10 @@ const HighLight = styled.span`
 const ViewMore = styled.div`
   margin-top: 40px;
   & a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.shadow};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.primary};
+    border-bottom: 2px solid ${theme.colors.shadow};
     padding-bottom: 5px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -129,7 +129,7 @@ const ProjectCard = styled.div`
     padding: 30px;
   }
   & > div:nth-child(2) {
-    border-top: 1px solid ${theme.colors.shadow} !important;
+    border-top: 1px solid ${theme.colors.secondary} !important;
     padding-bottom: 0;
   }
   & > div:nth-child(n + 2) {
@@ -199,7 +199,7 @@ const projects = [
         <HighLight>
           <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
             Google Fonts app
-            <ArrowUpOutlined rotate={45} />
+            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
           </a>
         </HighLight>{" "}
         clone with fully UI-UX implemented.
@@ -222,14 +222,14 @@ const projects = [
             target="_blank"
           >
             React three fiber
-            <ArrowUpOutlined rotate={45} />
+            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
           </a>
         </HighLight>{" "}
         and{" "}
         <HighLight>
           <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
             Next.JS
-            <ArrowUpOutlined rotate={45} />
+            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
           </a>
         </HighLight>
         .
@@ -260,7 +260,7 @@ const projects = [
             target="_blank"
           >
             GitHub APIs
-            <ArrowUpOutlined rotate={45} />
+            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
           </a>
         </HighLight>
         .
@@ -283,7 +283,7 @@ const projects = [
             target="_blank"
           >
             dwarvesf&rsquo;s Next.JS boilerplate
-            <ArrowUpOutlined rotate={45} />
+            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
           </a>
         </HighLight>
         .
@@ -301,7 +301,7 @@ const projects = [
         <HighLight>
           <a href="https://cses.fi/" rel="noreferrer" target="_blank">
             CSES
-            <ArrowUpOutlined rotate={45} />
+            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
           </a>
         </HighLight>{" "}
         problemset solutions downloader + packager with user-friendly web

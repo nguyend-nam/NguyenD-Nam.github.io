@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 const HeaderContainer = styled.div`
-  border-bottom: 1px solid ${theme.colors.primary};
+  border-bottom: 1px solid ${theme.colors.shadowLight};
   padding: 25px 65px;
   font-family: "Plus Jakarta Sans";
   position: sticky;
@@ -22,22 +22,22 @@ const HeaderContainer = styled.div`
 const HeaderTitle = styled.span`
   margin: 0;
   font-weight: 300;
-  background-color: ${theme.colors.shadow};
-  color: ${theme.colors.secondary};
+  background-color: ${theme.colors.shadowLight};
+  color: ${theme.colors.shadow};
   display: flex;
   align-items: center;
   width: max-content;
   padding: 0 10px;
   font-size: 25px;
   transition: 0.5s;
-  box-shadow: -8px 8px 0 ${theme.colors.primary},
-    -12px -4px 0 ${theme.colors.shadowLight};
+  box-shadow: -8px 8px 0 ${theme.colors.shadow},
+    -12px -4px 0 ${theme.colors.primary};
   & > span:nth-child(2) {
     font-weight: 700;
   }
   &:hover {
-    box-shadow: 0px 0px 0 ${theme.colors.primary},
-      0px 0px 0 ${theme.colors.shadowLight};
+    box-shadow: 0px 0px 0 ${theme.colors.shadow},
+      0px 0px 0 ${theme.colors.primary};
     transform: translateX(-8px);
   }
 `;

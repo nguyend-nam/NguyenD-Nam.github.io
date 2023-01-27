@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
@@ -15,7 +14,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
-import { SwapRightOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
+import { Image } from "antd";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -44,13 +44,21 @@ const Content = styled.div`
   & > div {
     padding: 30px;
     width: 60vw;
-    border-left: 1px solid ${theme.colors.primary};
+    border-left: 1px solid ${theme.colors.shadowLight};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
       width: 100%;
     }
   }
-  border-bottom: 1px solid ${theme.colors.primary};
+  & > div:nth-child(1) {
+    border-left: none;
+    width: 380px;
+    padding: 0px;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+  border-bottom: 1px solid ${theme.colors.shadowLight};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
@@ -59,8 +67,8 @@ const Content = styled.div`
       object-position: top !important;
     }
     & > div {
-      border-left: 0px solid ${theme.colors.primary};
-      border-top: 1px solid ${theme.colors.primary};
+      border-left: 0px solid ${theme.colors.shadowLight};
+      border-top: 1px solid ${theme.colors.shadowLight};
     }
   }
 `;
@@ -113,19 +121,45 @@ const TechStackSection = styled.div`
   display: flex;
   justify-content: space-around;
   & > div {
-    width: 800px;
+    width: 850px;
     background-color: ${theme.colors.secondary};
     padding: 30px;
-    border-left: 1px solid ${theme.colors.primary};
-    border-right: 1px solid ${theme.colors.primary};
+    border-left: 1px solid ${theme.colors.shadowLight};
+    border-right: 1px solid ${theme.colors.shadowLight};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
-      border-left: 0px solid ${theme.colors.primary};
-      border-right: 0px solid ${theme.colors.primary};
+      border-left: 0px solid ${theme.colors.shadowLight};
+      border-right: 0px solid ${theme.colors.shadowLight};
     }
   }
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.primary};
+  border-bottom: 1px solid ${theme.colors.shadowLight};
+`;
+
+const TechStackTitle = styled(Title)`
+  font-size: 50px;
+  line-height: 65px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  // color: ${theme.colors.shadow};
+  margin-bottom: 60px;
+  text-align: left;
+  & > span {
+    padding: 0;
+    @media (max-width: 800px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+  & > span:nth-child(3) {
+    color: ${theme.colors.secondary};
+    text-shadow: 4px 4px 13px ${theme.colors.shadow};
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const Links = styled.div`
@@ -143,10 +177,10 @@ const Links = styled.div`
 const ViewMore = styled.div`
   margin: 16px 0 5px;
   & a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.shadow};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.primary};
+    border-bottom: 2px solid ${theme.colors.shadow};
     padding-bottom: 5px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -179,11 +213,10 @@ export default function About() {
             <>
               <Content>
                 <Image
-                  src="/image/me.jpg"
-                  alt="GF and me ^^"
-                  width="210px"
-                  height="300px"
-                  objectFit="cover"
+                  src="/image/me-dalat.jpg"
+                  alt="Me"
+                  preview={false}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
                 <div>
                   <Title>
@@ -213,9 +246,9 @@ export default function About() {
               </Content>
               <TechStackSection>
                 <div>
-                  <Title>
+                  <TechStackTitle>
                     <span>Tech stack that I mostly use</span>
-                  </Title>
+                  </TechStackTitle>
                   <Links>
                     <FontAwesomeIcon title="React" icon={faReact} />
                     <FontAwesomeIcon title="JavaScript" icon={faJs} />
@@ -237,7 +270,7 @@ export default function About() {
                         target="_blank"
                       >
                         Next.JS
-                        <ArrowUpOutlined rotate={45} />
+                        <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
                       </a>
                     </HighLight>
                     ,{" "}
@@ -248,7 +281,7 @@ export default function About() {
                         target="_blank"
                       >
                         Styled-components
-                        <ArrowUpOutlined rotate={45} />
+                        <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
                       </a>
                     </HighLight>{" "}
                     and{" "}
@@ -259,7 +292,7 @@ export default function About() {
                         target="_blank"
                       >
                         TypeScript
-                        <ArrowUpOutlined rotate={45} />
+                        <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
                       </a>
                     </HighLight>
                     .
