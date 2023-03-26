@@ -15,7 +15,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
 import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
-import { Image } from "antd";
+import { Col, Image, Row } from "antd";
+import { HighLight } from "../components/HighLight/HighLight";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -39,12 +40,13 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
+  background-color: ${theme.colors.secondary};
   width: calc(100vw - 71px);
   display: flex;
   & > div {
     padding: 30px;
     width: 60vw;
-    border-left: 1px solid ${theme.colors.shadowLight};
+    border-left: 1px solid ${theme.colors.darkBlue};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
       width: 100%;
@@ -58,17 +60,15 @@ const Content = styled.div`
       width: 100%;
     }
   }
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
     & > span img {
-      //   object-fit: contain !important;
       object-position: top !important;
     }
     & > div {
-      border-left: 0px solid ${theme.colors.shadowLight};
-      border-top: 1px solid ${theme.colors.shadowLight};
+      border-left: 0px solid ${theme.colors.darkBlue};
     }
   }
 `;
@@ -100,7 +100,7 @@ const Title = styled.div`
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -112,9 +112,80 @@ const Description = styled.div`
   }
 `;
 
-const HighLight = styled.span`
-  border-bottom: 1px solid ${theme.colors.shadowLight};
-  color: ${theme.colors.shadow};
+const JourneySection = styled.div`
+  background-color: ${theme.colors.secondary};
+  padding: 30px;
+  border-bottom: 1px solid ${theme.colors.darkBlue};
+  @media (max-width: 800px) {
+    padding: 25px;
+  }
+`;
+
+const JourneyItemType = styled.span`
+  color: ${theme.colors.primary};
+  opacity: 0.8;
+`;
+
+const JourneyItemTitle = styled.span`
+  color: ${theme.colors.darkBlue};
+  margin: 2px 0 4px;
+  font-size: 18px;
+  font-weight: 500;
+`;
+
+const JourneyItemTime = styled.span`
+  color: ${theme.colors.darkBlue};
+  font-size: 15px;
+  opacity: 0.7;
+`;
+
+const JourneyItemDescription = styled.div`
+  margin-top: 12px;
+  font-size: 16px;
+  align-self: start;
+  white-space: pre-line;
+  color: ${theme.colors.darkBlue};
+`;
+
+const ProgressLine = styled.div`
+  width: 1px;
+  height: 100%;
+  background-color: ${theme.colors.primary};
+  // opacity: 0.3;
+  flex-shrink: 1;
+  margin: 16px 0;
+  @media (max-width: 800px) {
+    margin: 16px 0 0 22px;
+    align-self: flex-start;
+  }
+`;
+
+const StyledImg = styled.img`
+  object-fit: contain;
+  max-idth: 100%;
+  width: 70px;
+  @media (max-width: 800px) {
+    width: 45px;
+    align-self: flex-start;
+  }
+`;
+
+const StyledRow = styled(Row)`
+  align-items: flex-start;
+  flex-direction: ${(props) => (props.index % 2 === 1 ? "row-reverse" : "row")};
+  margin-bottom: 0px;
+  @media (max-width: 800px) {
+    margin-bottom: ${(props) => (props.isLast ? "0px" : "16px")};
+    flex-direction: row-reverse;
+  }
+`;
+
+const LogoRow = styled(Row)`
+  height: 100%;
+  flex-direction: ${(props) => (props.index % 2 === 1 ? "row-reverse" : "row")};
+  @media (max-width: 800px) {
+    flex-direction: row;
+  }
 `;
 
 const TechStackSection = styled.div`
@@ -124,26 +195,25 @@ const TechStackSection = styled.div`
     width: 850px;
     background-color: ${theme.colors.secondary};
     padding: 30px;
-    border-left: 1px solid ${theme.colors.shadowLight};
-    border-right: 1px solid ${theme.colors.shadowLight};
+    border-left: 1px solid ${theme.colors.darkBlue};
+    border-right: 1px solid ${theme.colors.darkBlue};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
-      border-left: 0px solid ${theme.colors.shadowLight};
-      border-right: 0px solid ${theme.colors.shadowLight};
+      border-left: 0px solid ${theme.colors.darkBlue};
+      border-right: 0px solid ${theme.colors.darkBlue};
     }
   }
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
 `;
 
-const TechStackTitle = styled(Title)`
+const SectionTitle = styled(Title)`
   font-size: 50px;
   line-height: 65px;
   display: flex;
   flex-direction: column;
   font-family: "Plus Jakarta Sans";
   font-weight: 800;
-  // color: ${theme.colors.shadow};
   margin-bottom: 60px;
   text-align: left;
   & > span {
@@ -152,10 +222,6 @@ const TechStackTitle = styled(Title)`
       font-size: 40px;
       line-height: 40px;
     }
-  }
-  & > span:nth-child(3) {
-    color: ${theme.colors.secondary};
-    text-shadow: 4px 4px 13px ${theme.colors.shadow};
   }
   @media (max-width: 800px) {
     margin-bottom: 40px;
@@ -177,10 +243,10 @@ const Links = styled.div`
 const ViewMore = styled.div`
   margin: 16px 0 5px;
   & a {
-    color: ${theme.colors.shadow};
+    color: ${theme.colors.primary};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.shadow};
+    border-bottom: 2px solid ${theme.colors.primary};
     padding-bottom: 5px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -188,6 +254,32 @@ const ViewMore = styled.div`
     }
   }
 `;
+
+const journeyItems = [
+  {
+    type: "Work experience",
+    logo: "/image/df_logo.png",
+    title: "Dwarves Foundation LLC.",
+    time: "2022 - now",
+    description:
+      "Title: Frontend engineer;I work on Frontend side of several projects using Next.JS, TypeScript and other libraries for writing CSS-in-JS, data fetching etc. I'm responsible for developing reusable components and responsive, pixel-perfect UI-UX for web applications.",
+  },
+  {
+    type: "Education",
+    logo: "/image/hcmut_logo.png",
+    title: "Ho Chi Minh city University of Technology",
+    time: "2019 - now",
+    description:
+      "Major: Computer Engineering;GPA: 7.62 / 10;Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Software Engineering, Internet of Things Application Development etc.",
+  },
+  {
+    type: "Education",
+    logo: "/image/lhpvietnam_logo.png",
+    title: "Le Hong Phong high school for the gifted",
+    time: "2016 - 2019",
+    description: "Major: Mathematics;GPA: 8.6 / 10",
+  },
+];
 
 export default function About() {
   const [isSSR, setIsSSR] = useState(true);
@@ -246,9 +338,9 @@ export default function About() {
               </Content>
               <TechStackSection>
                 <div>
-                  <TechStackTitle>
+                  <SectionTitle>
                     <span>Tech stack that I mostly use</span>
-                  </TechStackTitle>
+                  </SectionTitle>
                   <Links>
                     <FontAwesomeIcon title="React" icon={faReact} />
                     <FontAwesomeIcon title="JavaScript" icon={faJs} />
@@ -258,7 +350,7 @@ export default function About() {
                   <p
                     style={{
                       textAlign: "left",
-                      color: theme.colors.primary,
+                      color: theme.colors.darkBlue,
                       margin: "20px 0",
                     }}
                   >
@@ -304,6 +396,94 @@ export default function About() {
                   </ViewMore>
                 </div>
               </TechStackSection>
+              <JourneySection>
+                <SectionTitle>
+                  <span>My journey until now</span>
+                </SectionTitle>
+                {journeyItems.map((i, index) => (
+                  <StyledRow
+                    key={i.title}
+                    index={index}
+                    isLast={index === journeyItems.length - 1}
+                  >
+                    <Col
+                      span={19}
+                      md={{ span: 8 }}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        padding: 12,
+                        border: `1px solid ${theme.colors.darkBlue}`,
+                      }}
+                    >
+                      <JourneyItemType>{i.type}</JourneyItemType>
+                      <JourneyItemTitle>{i.title}</JourneyItemTitle>
+                      <JourneyItemTime>{i.time}</JourneyItemTime>
+                      <JourneyItemDescription>
+                        {i.description.split(";").map((d) => {
+                          if (d.includes(":")) {
+                            const key = d.split(":")[0];
+                            const value = d.split(":")[1];
+                            return (
+                              <li
+                                key={d}
+                                style={{
+                                  marginTop: 4,
+                                  listStyle: "disc outside",
+                                }}
+                              >
+                                <span style={{ color: theme.colors.primary }}>
+                                  {key}:
+                                </span>
+                                {value}
+                              </li>
+                            );
+                          }
+                          return (
+                            <li
+                              key={d}
+                              style={{
+                                marginTop: 4,
+                                listStyle: "disc outside",
+                              }}
+                            >
+                              {d}
+                            </li>
+                          );
+                        })}
+                      </JourneyItemDescription>
+                    </Col>
+                    <Col
+                      span={5}
+                      md={{ span: 16 }}
+                      style={{
+                        alignSelf: "stretch",
+                      }}
+                    >
+                      <LogoRow index={index}>
+                        <Col
+                          span={24}
+                          sm={{ span: 12 }}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "flex-start",
+                            alignItems: "center",
+                          }}
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <StyledImg src={i.logo} alt={i.title} />
+                          {index < journeyItems.length - 1 ? (
+                            <ProgressLine />
+                          ) : null}
+                        </Col>
+                      </LogoRow>
+                    </Col>
+                  </StyledRow>
+                ))}
+              </JourneySection>
             </>
             <Footer />
           </MainContent>

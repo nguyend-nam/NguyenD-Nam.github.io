@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 const HeaderContainer = styled.div`
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
   padding: 25px 65px;
   font-family: "Plus Jakarta Sans";
   position: sticky;
@@ -22,7 +22,7 @@ const HeaderContainer = styled.div`
 const HeaderTitle = styled.span`
   margin: 0;
   font-weight: 300;
-  background-color: ${theme.colors.shadowLight};
+  background-color: ${theme.colors.darkBlue};
   color: ${theme.colors.shadow};
   display: flex;
   align-items: center;
@@ -39,6 +39,9 @@ const HeaderTitle = styled.span`
     box-shadow: 0px 0px 0 ${theme.colors.shadow},
       0px 0px 0 ${theme.colors.primary};
     transform: translateX(-8px);
+  }
+  @media (max-width: 800px) {
+    font-size: 23px;
   }
 `;
 
