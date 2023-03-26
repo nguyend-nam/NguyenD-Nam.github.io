@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { theme } from "../constants";
 import { appear } from "../constants";
 import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
+import { HighLight } from "../components/HighLight/HighLight";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -31,6 +32,7 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
+  background-color: ${theme.colors.secondary};
   width: calc(100vw - 71px);
   & > div {
     padding: 30px;
@@ -39,7 +41,7 @@ const Content = styled.div`
       width: 100%;
     }
   }
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
@@ -69,17 +71,13 @@ const Title = styled.div`
       line-height: 40px;
     }
   }
-  & > span:nth-child(3) {
-    color: ${theme.colors.secondary};
-    text-shadow: 4px 4px 13px ${theme.colors.shadow};
-  }
   @media (max-width: 800px) {
     margin-bottom: 40px;
   }
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -88,18 +86,13 @@ const Description = styled.div`
   }
 `;
 
-const HighLight = styled.span`
-  border-bottom: 1px solid ${theme.colors.shadowLight};
-  color: ${theme.colors.shadow};
-`;
-
 const ViewMore = styled.div`
   margin-top: 40px;
   & a {
-    color: ${theme.colors.shadow};
+    color: ${theme.colors.primary};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.shadow};
+    border-bottom: 2px solid ${theme.colors.primary};
     padding-bottom: 5px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -121,15 +114,13 @@ const ProjectsContainer = styled.div`
   }
 `;
 
-const ProjectImageContainer = styled.a``;
-
 const ProjectCard = styled.div`
   border: 1px solid ${theme.colors.primary};
   & > div {
     padding: 30px;
   }
   & > div:nth-child(2) {
-    border-top: 1px solid ${theme.colors.secondary} !important;
+    border-top: 1px solid ${theme.colors.primary} !important;
     padding-bottom: 0;
   }
   & > div:nth-child(n + 2) {
@@ -163,7 +154,7 @@ const ProjectTitle = styled.div`
 `;
 
 const ProjectDescription = styled.div`
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   font-size: 16px;
   @media (max-width: 800px) {
     font-size: 15px;
@@ -172,9 +163,9 @@ const ProjectDescription = styled.div`
 
 const ProjectTags = styled.div`
   background-color: ${theme.colors.secondary};
-  color: ${theme.colors.shadow};
+  color: ${theme.colors.primary};
   font-size: 16px;
-  border: 1px solid ${theme.colors.shadow};
+  border: 1px solid ${theme.colors.primary};
   padding: 6px;
   margin-right: 10px;
   margin-top: 10px;
@@ -355,8 +346,9 @@ export default function Projects() {
                 <ProjectsContainer>
                   {projects.map((project) => (
                     <ProjectCard key={project.name}>
-                      <ProjectImageContainer
+                      <a
                         target="_blank"
+                        rel="noreferrer"
                         href={project.projectUrl}
                       >
                         <Image
@@ -367,7 +359,7 @@ export default function Projects() {
                           height={51}
                           style={{ objectFit: "cover" }}
                         />
-                      </ProjectImageContainer>
+                      </a>
                       <div>
                         <ProjectTitle>
                           <a

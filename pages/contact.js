@@ -39,6 +39,7 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
+  background-color: ${theme.colors.secondary};
   width: calc(100vw - 71px);
   display: flex;
   justify-content: space-between;
@@ -52,7 +53,7 @@ const Content = styled.div`
   }
   & > div:nth-child(2) {
     padding: 60px;
-    border-left: 1px solid ${theme.colors.shadowLight};
+    border-left: 1px solid ${theme.colors.darkBlue};
     flex: 1;
     display: grid;
     align-items: center;
@@ -64,7 +65,7 @@ const Content = styled.div`
       display: none;
     }
   }
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     width: 100vw;
   }
@@ -86,17 +87,13 @@ const Title = styled.div`
       line-height: 40px;
     }
   }
-  & > span:nth-child(3) {
-    color: ${theme.colors.secondary};
-    text-shadow: 4px 4px 13px ${theme.colors.shadow};
-  }
   @media (max-width: 800px) {
     margin-bottom: 40px;
   }
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -110,7 +107,7 @@ const ContactSection = styled.div`
   justify-content: space-around;
   & > div {
     width: 100%;
-    background-color: ${theme.colors.shadowLight};
+    background-color: ${theme.colors.darkBlue};
     padding: 60px;
     @media (max-width: 800px) {
       padding: 35px 25px;
@@ -123,7 +120,7 @@ const MailButton = styled.button`
   border: none;
   outline: none;
   background-color: ${theme.colors.primary};
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.darkBlue};
   font-size: 18px;
   cursor: pointer;
   border: 1px solid ${theme.colors.primary};
@@ -135,7 +132,7 @@ const MailButton = styled.button`
   }
   &:hover {
     color: ${theme.colors.primary};
-    background-color: ${theme.colors.shadowLight};
+    background-color: ${theme.colors.darkBlue};
   }
 `;
 
@@ -143,7 +140,7 @@ const Links = styled.div`
   & > a {
     cursor: pointer;
     font-size: 30px;
-    background-color: ${theme.colors.shadowLight};
+    background-color: ${theme.colors.darkBlue};
     color: ${theme.colors.primary};
     margin: 0 15px;
   }

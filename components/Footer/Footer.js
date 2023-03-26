@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { theme } from "../../constants";
 
 const FooterContainer = styled.div`
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
   padding: 40px;
   text-align: center;
   font-family: "Plus Jakarta Sans";

@@ -1,5 +1,4 @@
 import Head from "next/head";
-// import Image from "next/image";
 import styled from "styled-components";
 import styles from "../styles/Home.module.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
@@ -19,6 +18,7 @@ import { appear } from "../constants";
 import "atropos/atropos.css";
 import { SwapRightOutlined } from "@ant-design/icons";
 import { Image } from "antd";
+import { HighLight } from "../components/HighLight/HighLight";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -42,6 +42,7 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
+  background-color: ${theme.colors.secondary};
   width: calc(100vw - 71px);
   display: flex;
   justify-content: space-between;
@@ -57,7 +58,7 @@ const Content = styled.div`
     min-width: 300px;
     max-height: 100%;
     padding: 0px;
-    border-left: 1px solid ${theme.colors.shadowLight};
+    border-left: 1px solid ${theme.colors.darkBlue};
     flex: 1;
     display: flex;
     align-items: flex-end;
@@ -66,11 +67,11 @@ const Content = styled.div`
       align-items: flex-start;
       height: 500px;
       overflow: hidden;
-      border-left: 0px solid ${theme.colors.shadowLight};
-      border-top: 1px solid ${theme.colors.shadowLight};
+      border-left: 0px solid ${theme.colors.darkBlue};
+      border-top: 1px solid ${theme.colors.darkBlue};
     }
   }
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     width: 100vw;
     flex-wrap: wrap;
@@ -94,8 +95,14 @@ const Title = styled.div`
     }
   }
   & > span:nth-child(3) {
-    color: ${theme.colors.secondary};
-    text-shadow: 4px 4px 13px ${theme.colors.shadow};
+    color: ${theme.colors.primary};
+    text-shadow: 5px 0px 0px ${theme.colors.shadow},
+      4px 4px 20px ${theme.colors.darkBlue};
+    background-color: ${theme.colors.darkBlue};
+    @media (max-width: 800px) {
+      text-shadow: 2px 0px 0px ${theme.colors.shadow},
+        4px 1px 16px ${theme.colors.darkBlue};
+    }
   }
   @media (max-width: 800px) {
     margin-bottom: 40px;
@@ -103,7 +110,7 @@ const Title = styled.div`
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -112,18 +119,13 @@ const Description = styled.div`
   }
 `;
 
-const HighLight = styled.span`
-  border-bottom: 1px solid ${theme.colors.shadowLight};
-  color: ${theme.colors.shadow};
-`;
-
 const ViewMore = styled.div`
   margin-top: 40px;
   & a {
-    color: ${theme.colors.shadow};
+    color: ${theme.colors.primary};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.shadow};
+    border-bottom: 2px solid ${theme.colors.primary};
     padding-bottom: 5px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -137,14 +139,14 @@ const ContactSection = styled.div`
   justify-content: space-around;
   & > div {
     max-width: 750px;
-    background-color: ${theme.colors.shadowLight};
+    background-color: ${theme.colors.darkBlue};
     padding: 60px;
     @media (max-width: 800px) {
       padding: 35px 25px;
     }
   }
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.shadowLight};
+  border-bottom: 1px solid ${theme.colors.darkBlue};
 `;
 
 const SectionTitle = styled.div`
@@ -163,7 +165,7 @@ const MailButton = styled.button`
   border: none;
   outline: none;
   background-color: ${theme.colors.primary};
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.darkBlue};
   font-size: 18px;
   cursor: pointer;
   border: 1px solid ${theme.colors.primary};
@@ -175,7 +177,7 @@ const MailButton = styled.button`
   }
   &:hover {
     color: ${theme.colors.primary};
-    background-color: ${theme.colors.shadowLight};
+    background-color: ${theme.colors.darkBlue};
   }
 `;
 
@@ -183,7 +185,7 @@ const Links = styled.div`
   & > a {
     cursor: pointer;
     font-size: 30px;
-    background-color: ${theme.colors.shadowLight};
+    background-color: ${theme.colors.darkBlue};
     color: ${theme.colors.primary};
     margin: 0 15px;
   }

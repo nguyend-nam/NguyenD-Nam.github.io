@@ -7,7 +7,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const SidebarContainer = styled.div`
   padding: 20px;
-  border-right: 1px solid ${theme.colors.shadowLight};
+  border-right: 1px solid ${theme.colors.darkBlue};
   background-color: ${theme.colors.secondary};
   font-family: "Plus Jakarta Sans";
   height: 100%;
@@ -46,7 +46,7 @@ const ToggleButton = styled.button`
 
 const SidebarRoutesContainer = styled.ul`
   transition: margin-left 0.3s;
-  margin-left: ${(props) => (props.display ? "0" : "-150px")};
+  margin-left: ${(props) => (props.isDisplayed ? "0" : "-150px")};
   & > li {
     list-style-type: none;
   }
@@ -93,7 +93,7 @@ export function Sidebar() {
       <ToggleButton onClick={() => setSideBar(!sideBar)} width={sideBar}>
         {sideBar ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
       </ToggleButton>
-      <SidebarRoutesContainer display={sideBar}>
+      <SidebarRoutesContainer isDisplayed={sideBar}>
         <SidebarRoutes onClick={() => push(`/`)} active={currPathname === "/"}>
           Home
         </SidebarRoutes>
