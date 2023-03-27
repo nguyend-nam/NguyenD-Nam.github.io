@@ -144,7 +144,6 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectTitle = styled.div`
-  width: max-content;
   font-size: 19px;
   font-weight: 600;
   color: ${theme.colors.primary};
@@ -164,7 +163,7 @@ const ProjectDescription = styled.div`
 const ProjectTags = styled.div`
   background-color: ${theme.colors.secondary};
   color: ${theme.colors.primary};
-  font-size: 16px;
+  font-size: 15px;
   border: 1px solid ${theme.colors.primary};
   padding: 6px;
   margin-right: 10px;
@@ -173,7 +172,7 @@ const ProjectTags = styled.div`
     font-size: 16px;
   }
   @media (max-width: 800px) {
-    font-size: 15px;
+    font-size: 13px;
     margin-right: 7px;
     margin-top: 7px;
   }
