@@ -1,6 +1,4 @@
 import "../styles/globals.css";
-import "atropos/css";
-import "atropos/atropos.css";
 import { useState, createContext } from "react";
 import { theme } from "../constants";
 

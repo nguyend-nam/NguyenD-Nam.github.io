@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
@@ -7,8 +6,11 @@ import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
 import { appear } from "../constants";
-import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
+import { SwapRightOutlined } from "@ant-design/icons";
 import { HighLight } from "../components/HighLight/HighLight";
+import { Icon } from "@iconify/react";
+import { Image } from "antd";
+import { useIsMDSize } from "../hooks/useIsMDSize";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -87,7 +89,7 @@ const Description = styled.div`
 `;
 
 const ViewMore = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
   & a {
     color: ${theme.colors.primary};
     font-size: 18px;
@@ -104,23 +106,36 @@ const ViewMore = styled.div`
 const ProjectsContainer = styled.div`
   font-family: "Plus Jakarta Sans";
   padding: 25px 100px 50px !important;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  & > div {
+    width: calc(50% - 25px) !important;
+    & > a > div {
+      height: 100%;
+      width: 100%;
+      & > img {
+        height: 100% !important;
+        width: 100% !important;
+      }
+    }
+  }
   @media (max-width: 800px) {
     padding: 0px 25px 50px !important;
-    grid-template-columns: 1fr;
-    grid-gap: 40px;
+    gap: 40px;
+    & > div {
+      width: 100% !important;
+    }
   }
 `;
 
 const ProjectCard = styled.div`
-  border: 1px solid ${theme.colors.primary};
+  border: 1px solid ${theme.colors.darkBlue};
   & > div {
     padding: 30px;
   }
   & > div:nth-child(2) {
-    border-top: 1px solid ${theme.colors.primary} !important;
+    border-top: 1px solid ${theme.colors.darkBlue} !important;
     padding-bottom: 0;
   }
   & > div:nth-child(n + 2) {
@@ -180,8 +195,57 @@ const ProjectTags = styled.div`
 
 const projects = [
   {
+    name: "Scrollery",
+    img: "/image/proj-scrollery.png",
+    projectUrl: "https://scrollery.netlify.app/",
+    repoUrl: "https://github.com/nguyend-nam/scrollery",
+    description: (
+      <>
+        React TypeScript library that empowers developers to effortlessly
+        animate images on scroll. View the library on{" "}
+        <HighLight>
+          <a
+            href="https://www.npmjs.com/package/@nguyend-nam/scrollery-ts"
+            rel="noreferrer"
+            target="_blank"
+          >
+            NPM
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
+          </a>
+        </HighLight>{" "}
+        or{" "}
+        <HighLight>
+          <a
+            href="https://github.com/nguyend-nam/scrollery"
+            rel="noreferrer"
+            target="_blank"
+          >
+            GitHub
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
+          </a>
+        </HighLight>
+        .
+      </>
+    ),
+    techStack: ["Next.js", "TypeScript", "NPM"],
+  },
+  {
     name: "Google Fonts app clone",
-    img: "/image/proj_2.png",
+    img: "/image/proj-ggfonts.png",
     projectUrl: "https://nextjs-google-fonts.netlify.app/",
     repoUrl: "https://github.com/nguyend-nam/google-fonts-clone",
     description: (
@@ -189,17 +253,24 @@ const projects = [
         <HighLight>
           <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
             Google Fonts app
-            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
           </a>
         </HighLight>{" "}
-        clone with fully UI-UX implemented.
+        clone.
       </>
     ),
-    techStack: ["Next.JS", "TypeScript", "TailwindCSS"],
+    techStack: ["Next.js", "TypeScript", "TailwindCSS"],
   },
   {
     name: "React three fiber image gallery",
-    img: "/image/proj_6.png",
+    img: "/image/proj-r3fimages.png",
     projectUrl: "https://dwarvesf-r3f.netlify.app/",
     repoUrl: "https://github.com/nguyend-nam/r3f-image-gallery",
     description: (
@@ -212,32 +283,46 @@ const projects = [
             target="_blank"
           >
             React three fiber
-            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
           </a>
         </HighLight>{" "}
         and{" "}
         <HighLight>
           <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
-            Next.JS
-            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+            Next.js
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
           </a>
         </HighLight>
         .
       </>
     ),
-    techStack: ["Next.JS", "TypeScript", "React three fiber", "GLSL"],
+    techStack: ["Next.js", "TypeScript", "React three fiber", "GLSL"],
   },
   {
     name: "Which holiday?",
-    img: "/image/proj_5.png",
+    img: "/image/proj-holiday.png",
     projectUrl: "https://which-holiday.vercel.app/",
     repoUrl: "https://github.com/nguyend-nam/which-holiday",
     description: <>View holidays of each country and their date on calendar.</>,
-    techStack: ["Next.JS", "SWR", "Styled-components", "TailwindCSS"],
+    techStack: ["Next.js", "SWR", "styled-components", "TailwindCSS"],
   },
   {
     name: "Aggregation App",
-    img: "/image/proj_4.png",
+    img: "/image/proj-aggapp.png",
     projectUrl: "https://aggregation-app.vercel.app/",
     repoUrl: "https://github.com/nguyend-nam/Aggregation-app",
     description: (
@@ -250,17 +335,24 @@ const projects = [
             target="_blank"
           >
             GitHub APIs
-            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
           </a>
         </HighLight>
         .
       </>
     ),
-    techStack: ["React.JS", "CSS"],
+    techStack: ["ReactJS", "CSS"],
   },
   {
-    name: "Next.JS calendar page UI",
-    img: "/image/proj_1.png",
+    name: "Next.js calendar page UI",
+    img: "/image/proj-calui.png",
     projectUrl: "https://dwarvesf-boilerplate.netlify.app/calendar",
     repoUrl: "https://github.com/nguyend-nam/nextjs-calendar",
     description: (
@@ -272,18 +364,25 @@ const projects = [
             rel="noreferrer"
             target="_blank"
           >
-            dwarvesf&rsquo;s Next.JS boilerplate
-            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+            dwarvesf&rsquo;s Next.js boilerplate
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
           </a>
         </HighLight>
         .
       </>
     ),
-    techStack: ["Next.JS", "TypeScript", "TailwindCSS"],
+    techStack: ["Next.js", "TypeScript", "TailwindCSS"],
   },
   {
     name: "CSES Downloader",
-    img: "/image/proj_3.png",
+    img: "/image/proj-cses.png",
     projectUrl: "https://csessolutions.netlify.app/",
     repoUrl: "https://github.com/DecSP/cses-downloader",
     description: (
@@ -291,7 +390,14 @@ const projects = [
         <HighLight>
           <a href="https://cses.fi/" rel="noreferrer" target="_blank">
             CSES
-            <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+            <Icon
+              icon="mdi:link"
+              style={{
+                fontSize: 20,
+                verticalAlign: "sub",
+                marginLeft: 2,
+              }}
+            />
           </a>
         </HighLight>{" "}
         problemset solutions downloader + packager with user-friendly web
@@ -304,6 +410,8 @@ const projects = [
 
 export default function Projects() {
   const [isSSR, setIsSSR] = useState(true);
+
+  const isMD = useIsMDSize();
 
   useEffect(() => {
     setIsSSR(false);
@@ -328,9 +436,7 @@ export default function Projects() {
                     <span>Projects</span>
                   </Title>
                   <Description>
-                    <p>
-                      Some projects for courses, training and my self-studying.
-                    </p>
+                    <p>Some of my open sources and projects.</p>
                   </Description>
                   <ViewMore>
                     <a
@@ -349,14 +455,18 @@ export default function Projects() {
                         target="_blank"
                         rel="noreferrer"
                         href={project.projectUrl}
+                        style={{
+                          display: "block",
+                          height: isMD ? 200 : 300,
+                        }}
                       >
                         <Image
                           src={project.img}
                           alt={project.img}
-                          layout="responsive"
-                          width={100}
-                          height={51}
-                          style={{ objectFit: "cover" }}
+                          preview={false}
+                          style={{
+                            objectFit: "cover",
+                          }}
                         />
                       </a>
                       <div>
