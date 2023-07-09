@@ -1,21 +1,13 @@
 import Head from "next/head";
 import styled from "styled-components";
-import styles from "../styles/Home.module.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
-import {
-  faGithub,
-  faLinkedin,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Atropos from "atropos/react";
+import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
-import "atropos/atropos.css";
 import { SwapRightOutlined } from "@ant-design/icons";
 import { Image } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
@@ -61,14 +53,22 @@ const Content = styled.div`
     border-left: 1px solid ${theme.colors.darkBlue};
     flex: 1;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
     @media (max-width: 800px) {
-      align-items: flex-start;
       height: 500px;
       overflow: hidden;
       border-left: 0px solid ${theme.colors.darkBlue};
       border-top: 1px solid ${theme.colors.darkBlue};
+    }
+    & > div {
+      height: 100%;
+      width: 100%;
+      & > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
   border-bottom: 1px solid ${theme.colors.darkBlue};
@@ -224,12 +224,11 @@ export default function Home() {
                       I&rsquo;m a Frontend engineer who loves to develop
                       gorgeous UI & UX for websites & web applications.
                       <br />
-                      <br />
-                      My favourite technology stack for developing is{" "}
-                      <HighLight>React</HighLight> with{" "}
-                      <HighLight>Next.JS</HighLight>,{" "}
-                      <HighLight>Styled-components</HighLight> and{" "}
-                      <HighLight>TypeScript</HighLight>.
+                      <br />I usually develop websites or web applications using{" "}
+                      <HighLight>ReactJS</HighLight> with{" "}
+                      <HighLight>Next.js</HighLight>,{" "}
+                      <HighLight>TypeScript</HighLight> and{" "}
+                      <HighLight>TailwindCSS</HighLight>.
                     </p>
                   </Description>
                   <ViewMore>
@@ -239,11 +238,7 @@ export default function Home() {
                   </ViewMore>
                 </div>
                 <div>
-                  <Image
-                    src="/image/shinji-bbs.png"
-                    alt="Shinji"
-                    preview={false}
-                  />
+                  <Image src="/image/namnd.jpg" alt="Namnd" preview={false} />
                 </div>
               </Content>
               <ContactSection>
@@ -260,21 +255,14 @@ export default function Home() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <FontAwesomeIcon icon={faGithub} />
+                      <Icon icon="mdi:github" style={{ fontSize: 36 }} />
                     </a>
                     <a
                       href="https://www.linkedin.com/in/nguyendinhnam0320/"
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a
-                      href="https://www.facebook.com/nguyendinhnam20.03/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <FontAwesomeIcon icon={faFacebook} />
+                      <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
                     </a>
                   </Links>
                 </div>

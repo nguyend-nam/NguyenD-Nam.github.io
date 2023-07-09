@@ -19,7 +19,7 @@ const FooterContainer = styled.div`
 export function Footer() {
   return (
     <FooterContainer>
-      <span>&copy; 2022 Nam Nguyen Dinh. All rights reserved.</span>
+      <span>&copy; 2023 Nam Nguyen Dinh. All rights reserved.</span>
     </FooterContainer>
   );
 }

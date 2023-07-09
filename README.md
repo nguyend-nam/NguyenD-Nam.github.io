@@ -1,8 +1,8 @@
-This is a [Next.JS](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # My personal website
 
-Built with [React](https://reactjs.org/) on top of [Next.JS](https://nextjs.org/) and [Styled-components](https://styled-components.com/).
+Built with [React](https://reactjs.org/) on top of [Next.js](https://nextjs.org/) and [styled-components](https://styled-components.com/).
 
 **View deploy:** [https://ngdnam.netlify.app](https://ngdnam.netlify.app).
 
@@ -28,11 +28,11 @@ to see your project.
 ### Core
 
 - [x] [React](https://reactjs.org/)
-- [x] [Next.JS](https://nextjs.org/)
+- [x] [Next.js](https://nextjs.org/)
 
 ### UI & styling
 
-- [x] [Styled-components](https://styled-components.com/)
+- [x] [styled-components](https://styled-components.com/)
 
 ### Static type checking & linting
 

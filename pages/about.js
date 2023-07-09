@@ -5,16 +5,10 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
-import {
-  faReact,
-  faJs,
-  faCss3Alt,
-  faHtml5,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
-import { SwapRightOutlined, LinkOutlined } from "@ant-design/icons";
+import { SwapRightOutlined } from "@ant-design/icons";
 import { Col, Image, Row } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
 
@@ -103,7 +97,7 @@ const Description = styled.div`
   color: ${theme.colors.darkBlue};
   font-size: 17px;
   line-height: 22px;
-  max-width: 500px;
+  max-width: 560px;
   @media (max-width: 800px) {
     font-size: 16px;
     & > p {
@@ -262,7 +256,7 @@ const journeyItems = [
     title: "Dwarves Foundation LLC.",
     time: "2022 - now",
     description:
-      "Title: Frontend engineer;I work on Frontend side of several projects using Next.JS, TypeScript and other libraries for writing CSS-in-JS, data fetching etc. I'm responsible for developing reusable components and responsive, pixel-perfect UI-UX for web applications.",
+      "Title: Frontend Engineer;I work on Frontend side of several projects using Next.js, TypeScript and other libraries for writing CSS-in-JS, data fetching etc. I'm responsible for developing reusable components and responsive, pixel-perfect UI-UX for web applications.",
   },
   {
     type: "Education",
@@ -270,7 +264,7 @@ const journeyItems = [
     title: "Ho Chi Minh city University of Technology",
     time: "2019 - now",
     description:
-      "Major: Computer Engineering;GPA: 7.62 / 10;Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Software Engineering, Internet of Things Application Development etc.",
+      "Major: Computer Engineering;GPA: 7.6 / 10;Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Software Engineering, Internet of Things Application Development etc.",
   },
   {
     type: "Education",
@@ -322,16 +316,38 @@ export default function About() {
                       <HighLight>
                         Ho Chi Minh City University of Technology - HCMUT
                       </HighLight>{" "}
-                      and also a <HighLight>Frontend development</HighLight>{" "}
+                      and also a <HighLight>Frontend Development</HighLight>{" "}
                       enthusiast who loves to learn new technologies and develop
                       gorgeous websites & web applications.
                       <br />
                       <br />
-                      I&rsquo;m working in a Frontend engineer position using{" "}
-                      <HighLight>React</HighLight> with{" "}
-                      <HighLight>Next.JS</HighLight>,{" "}
-                      <HighLight>Styled-components</HighLight> and{" "}
-                      <HighLight>TypeScript</HighLight>.
+                      I&rsquo;m working in a Frontend Engineer position using{" "}
+                      <HighLight>ReactJS</HighLight> with{" "}
+                      <HighLight>Next.js</HighLight>,{" "}
+                      <HighLight>TypeScript</HighLight> and{" "}
+                      <HighLight>TailwindCSS</HighLight>.
+                      <br />
+                      <br />
+                      I&rsquo;m also focusing on my personal project,{" "}
+                      <HighLight>
+                        <a
+                          href="https://scrollery.netlify.app"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          Scrollery
+                          <Icon
+                            icon="mdi:link"
+                            style={{
+                              fontSize: 20,
+                              verticalAlign: "sub",
+                              marginLeft: 2,
+                            }}
+                          />
+                        </a>
+                      </HighLight>
+                      , which is a React TypeScript library that empowers
+                      developers to effortlessly animate images on scroll.
                     </p>
                   </Description>
                 </div>
@@ -342,10 +358,13 @@ export default function About() {
                     <span>Tech stack that I mostly use</span>
                   </SectionTitle>
                   <Links>
-                    <FontAwesomeIcon title="React" icon={faReact} />
-                    <FontAwesomeIcon title="JavaScript" icon={faJs} />
-                    <FontAwesomeIcon title="HTML" icon={faHtml5} />
-                    <FontAwesomeIcon title="CSS" icon={faCss3Alt} />
+                    <Icon icon="mdi:react" style={{ fontSize: 48 }} />
+                    <Icon
+                      icon="mdi:language-typescript"
+                      style={{ fontSize: 48 }}
+                    />
+                    <Icon icon="mdi:language-html5" style={{ fontSize: 48 }} />
+                    <Icon icon="mdi:language-css3" style={{ fontSize: 48 }} />
                   </Links>
                   <p
                     style={{
@@ -361,30 +380,51 @@ export default function About() {
                         rel="noreferrer"
                         target="_blank"
                       >
-                        Next.JS
-                        <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+                        Next.js
+                        <Icon
+                          icon="mdi:link"
+                          style={{
+                            fontSize: 20,
+                            verticalAlign: "sub",
+                            marginLeft: 2,
+                          }}
+                        />
                       </a>
                     </HighLight>
                     ,{" "}
                     <HighLight>
                       <a
-                        href="https://styled-components.com/"
+                        href="https://tailwindcss.com/"
                         rel="noreferrer"
                         target="_blank"
                       >
-                        Styled-components
-                        <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+                        TailwindCSS
+                        <Icon
+                          icon="mdi:link"
+                          style={{
+                            fontSize: 20,
+                            verticalAlign: "sub",
+                            marginLeft: 2,
+                          }}
+                        />
                       </a>
                     </HighLight>{" "}
                     and{" "}
                     <HighLight>
                       <a
-                        href="https://www.typescriptlang.org/"
+                        href="https://mui.com/"
                         rel="noreferrer"
                         target="_blank"
                       >
-                        TypeScript
-                        <LinkOutlined style={{ marginLeft: 2 }} rotate={45} />
+                        MUI
+                        <Icon
+                          icon="mdi:link"
+                          style={{
+                            fontSize: 20,
+                            verticalAlign: "sub",
+                            marginLeft: 2,
+                          }}
+                        />
                       </a>
                     </HighLight>
                     .

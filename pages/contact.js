@@ -7,13 +7,7 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
-import {
-  faGithub,
-  faLinkedin,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
 
@@ -188,21 +182,14 @@ export default function Contact() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <FontAwesomeIcon icon={faGithub} />
+                      <Icon icon="mdi:github" style={{ fontSize: 36 }} />
                     </a>
                     <a
                       href="https://www.linkedin.com/in/nguyendinhnam0320/"
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a
-                      href="https://www.facebook.com/nguyendinhnam20.03/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <FontAwesomeIcon icon={faFacebook} />
+                      <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
                     </a>
                   </Links>
                 </div>
