@@ -51,8 +51,19 @@ export const SwipeWrapper = ({ children }) => {
     }
   };
 
+  const onTouchOrMouseEnd = () => {
+    setTouchStart(null);
+  };
+
   return (
-    <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onMouseDown={onMouseDown} onMouseMove={onMouseMove}>
+    <div
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchOrMouseEnd}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onTouchOrMouseEnd}
+    >
       {children}
     </div>
   );
