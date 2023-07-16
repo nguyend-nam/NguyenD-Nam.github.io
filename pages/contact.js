@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
-import styles from "../styles/Home.module.css";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
@@ -10,6 +8,7 @@ import { theme } from "../constants";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
+import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -159,42 +158,46 @@ export default function Contact() {
         <MainContainer>
           <Sidebar />
           <MainContent>
-            <Header />
-            <>
-              <Content>
-                <div>
-                  <Title>
-                    <span>Contact</span>
-                  </Title>
-                  <Description>
-                    <p>Feel free to connect with me through channels below.</p>
-                  </Description>
-                </div>
-              </Content>
-              <ContactSection>
-                <div>
-                  <MailButton>
-                    <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
-                  </MailButton>
-                  <Links>
-                    <a
-                      href="https://github.com/nguyend-nam"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <Icon icon="mdi:github" style={{ fontSize: 36 }} />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/nguyendinhnam0320/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
-                    </a>
-                  </Links>
-                </div>
-              </ContactSection>
-            </>
+            <SwipeWrapper>
+              <Header />
+              <>
+                <Content>
+                  <div>
+                    <Title>
+                      <span>Contact</span>
+                    </Title>
+                    <Description>
+                      <p>
+                        Feel free to connect with me through channels below.
+                      </p>
+                    </Description>
+                  </div>
+                </Content>
+                <ContactSection>
+                  <div>
+                    <MailButton>
+                      <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
+                    </MailButton>
+                    <Links>
+                      <a
+                        href="https://github.com/nguyend-nam"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <Icon icon="mdi:github" style={{ fontSize: 36 }} />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/nguyendinhnam0320/"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
+                      </a>
+                    </Links>
+                  </div>
+                </ContactSection>
+              </>
+            </SwipeWrapper>
             <Footer />
           </MainContent>
         </MainContainer>

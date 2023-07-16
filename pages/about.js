@@ -11,6 +11,7 @@ import { appear } from "../constants";
 import { SwapRightOutlined } from "@ant-design/icons";
 import { Col, Image, Row } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
+import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -295,47 +296,100 @@ export default function About() {
         <MainContainer>
           <Sidebar />
           <MainContent>
-            <Header />
-            <>
-              <Content>
-                <Image
-                  src="/image/me-dalat.jpg"
-                  alt="Me"
-                  preview={false}
-                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                />
-                <div>
-                  <Title>
-                    <span>Few things about me</span>
-                  </Title>
-                  <Description>
-                    <p>
-                      Nice to meet you. My name is Nam Nguyen Dinh and I&rsquo;m
-                      living in Ho Chi Minh city. I&rsquo;m currently a
-                      final-year student at{" "}
-                      <HighLight>
-                        Ho Chi Minh City University of Technology - HCMUT
-                      </HighLight>{" "}
-                      and also a <HighLight>Frontend Development</HighLight>{" "}
-                      enthusiast who loves to learn new technologies and develop
-                      gorgeous websites & web applications.
-                      <br />
-                      <br />
-                      I&rsquo;m working in a Frontend Engineer position using{" "}
-                      <HighLight>ReactJS</HighLight> with{" "}
-                      <HighLight>Next.js</HighLight>,{" "}
-                      <HighLight>TypeScript</HighLight> and{" "}
-                      <HighLight>TailwindCSS</HighLight>.
-                      <br />
-                      <br />
-                      I&rsquo;m also focusing on my personal project,{" "}
+            <SwipeWrapper>
+              <Header />
+              <>
+                <Content>
+                  <Image
+                    src="/image/me-dalat.jpg"
+                    alt="Me"
+                    preview={false}
+                    style={{
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                  <div>
+                    <Title>
+                      <span>Few things about me</span>
+                    </Title>
+                    <Description>
+                      <p>
+                        Nice to meet you. My name is Nam Nguyen Dinh and
+                        I&rsquo;m living in Ho Chi Minh city. I&rsquo;m
+                        currently a final-year student at{" "}
+                        <HighLight>
+                          Ho Chi Minh City University of Technology - HCMUT
+                        </HighLight>{" "}
+                        and also a <HighLight>Frontend Development</HighLight>{" "}
+                        enthusiast who loves to learn new technologies and
+                        develop gorgeous websites & web applications.
+                        <br />
+                        <br />
+                        I&rsquo;m working in a Frontend Engineer position using{" "}
+                        <HighLight>ReactJS</HighLight> with{" "}
+                        <HighLight>Next.js</HighLight>,{" "}
+                        <HighLight>TypeScript</HighLight> and{" "}
+                        <HighLight>TailwindCSS</HighLight>.
+                        <br />
+                        <br />
+                        I&rsquo;m also focusing on my personal project,{" "}
+                        <HighLight>
+                          <a
+                            href="https://scrollery.netlify.app"
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            Scrollery
+                            <Icon
+                              icon="mdi:link"
+                              style={{
+                                fontSize: 20,
+                                verticalAlign: "sub",
+                                marginLeft: 2,
+                              }}
+                            />
+                          </a>
+                        </HighLight>
+                        , which is a React TypeScript library that empowers
+                        developers to effortlessly animate images on scroll.
+                      </p>
+                    </Description>
+                  </div>
+                </Content>
+                <TechStackSection>
+                  <div>
+                    <SectionTitle>
+                      <span>Tech stack that I mostly use</span>
+                    </SectionTitle>
+                    <Links>
+                      <Icon icon="mdi:react" style={{ fontSize: 48 }} />
+                      <Icon
+                        icon="mdi:language-typescript"
+                        style={{ fontSize: 48 }}
+                      />
+                      <Icon
+                        icon="mdi:language-html5"
+                        style={{ fontSize: 48 }}
+                      />
+                      <Icon icon="mdi:language-css3" style={{ fontSize: 48 }} />
+                    </Links>
+                    <p
+                      style={{
+                        textAlign: "left",
+                        color: theme.colors.darkBlue,
+                        margin: "20px 0",
+                      }}
+                    >
+                      With some additional technologies for developing including{" "}
                       <HighLight>
                         <a
-                          href="https://scrollery.netlify.app"
+                          href="https://nextjs.org"
                           rel="noreferrer"
                           target="_blank"
                         >
-                          Scrollery
+                          Next.js
                           <Icon
                             icon="mdi:link"
                             style={{
@@ -346,126 +400,96 @@ export default function About() {
                           />
                         </a>
                       </HighLight>
-                      , which is a React TypeScript library that empowers
-                      developers to effortlessly animate images on scroll.
+                      ,{" "}
+                      <HighLight>
+                        <a
+                          href="https://tailwindcss.com/"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          TailwindCSS
+                          <Icon
+                            icon="mdi:link"
+                            style={{
+                              fontSize: 20,
+                              verticalAlign: "sub",
+                              marginLeft: 2,
+                            }}
+                          />
+                        </a>
+                      </HighLight>{" "}
+                      and{" "}
+                      <HighLight>
+                        <a
+                          href="https://mui.com/"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          MUI
+                          <Icon
+                            icon="mdi:link"
+                            style={{
+                              fontSize: 20,
+                              verticalAlign: "sub",
+                              marginLeft: 2,
+                            }}
+                          />
+                        </a>
+                      </HighLight>
+                      .
                     </p>
-                  </Description>
-                </div>
-              </Content>
-              <TechStackSection>
-                <div>
+                    <ViewMore style={{ textAlign: "left" }}>
+                      <a onClick={() => push("/projects")}>
+                        Checkout my projects <SwapRightOutlined />
+                      </a>
+                    </ViewMore>
+                  </div>
+                </TechStackSection>
+                <JourneySection>
                   <SectionTitle>
-                    <span>Tech stack that I mostly use</span>
+                    <span>My journey until now</span>
                   </SectionTitle>
-                  <Links>
-                    <Icon icon="mdi:react" style={{ fontSize: 48 }} />
-                    <Icon
-                      icon="mdi:language-typescript"
-                      style={{ fontSize: 48 }}
-                    />
-                    <Icon icon="mdi:language-html5" style={{ fontSize: 48 }} />
-                    <Icon icon="mdi:language-css3" style={{ fontSize: 48 }} />
-                  </Links>
-                  <p
-                    style={{
-                      textAlign: "left",
-                      color: theme.colors.darkBlue,
-                      margin: "20px 0",
-                    }}
-                  >
-                    With some additional technologies for developing including{" "}
-                    <HighLight>
-                      <a
-                        href="https://nextjs.org"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        Next.js
-                        <Icon
-                          icon="mdi:link"
-                          style={{
-                            fontSize: 20,
-                            verticalAlign: "sub",
-                            marginLeft: 2,
-                          }}
-                        />
-                      </a>
-                    </HighLight>
-                    ,{" "}
-                    <HighLight>
-                      <a
-                        href="https://tailwindcss.com/"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        TailwindCSS
-                        <Icon
-                          icon="mdi:link"
-                          style={{
-                            fontSize: 20,
-                            verticalAlign: "sub",
-                            marginLeft: 2,
-                          }}
-                        />
-                      </a>
-                    </HighLight>{" "}
-                    and{" "}
-                    <HighLight>
-                      <a
-                        href="https://mui.com/"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        MUI
-                        <Icon
-                          icon="mdi:link"
-                          style={{
-                            fontSize: 20,
-                            verticalAlign: "sub",
-                            marginLeft: 2,
-                          }}
-                        />
-                      </a>
-                    </HighLight>
-                    .
-                  </p>
-                  <ViewMore style={{ textAlign: "left" }}>
-                    <a onClick={() => push("/projects")}>
-                      Checkout my projects <SwapRightOutlined />
-                    </a>
-                  </ViewMore>
-                </div>
-              </TechStackSection>
-              <JourneySection>
-                <SectionTitle>
-                  <span>My journey until now</span>
-                </SectionTitle>
-                {journeyItems.map((i, index) => (
-                  <StyledRow
-                    key={i.title}
-                    index={index}
-                    isLast={index === journeyItems.length - 1}
-                  >
-                    <Col
-                      span={19}
-                      md={{ span: 8 }}
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        padding: 12,
-                        border: `1px solid ${theme.colors.darkBlue}`,
-                      }}
+                  {journeyItems.map((i, index) => (
+                    <StyledRow
+                      key={i.title}
+                      index={index}
+                      isLast={index === journeyItems.length - 1}
                     >
-                      <JourneyItemType>{i.type}</JourneyItemType>
-                      <JourneyItemTitle>{i.title}</JourneyItemTitle>
-                      <JourneyItemTime>{i.time}</JourneyItemTime>
-                      <JourneyItemDescription>
-                        {i.description.split(";").map((d) => {
-                          if (d.includes(":")) {
-                            const key = d.split(":")[0];
-                            const value = d.split(":")[1];
+                      <Col
+                        span={19}
+                        md={{ span: 8 }}
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          padding: 12,
+                          border: `1px solid ${theme.colors.darkBlue}`,
+                        }}
+                      >
+                        <JourneyItemType>{i.type}</JourneyItemType>
+                        <JourneyItemTitle>{i.title}</JourneyItemTitle>
+                        <JourneyItemTime>{i.time}</JourneyItemTime>
+                        <JourneyItemDescription>
+                          {i.description.split(";").map((d) => {
+                            if (d.includes(":")) {
+                              const key = d.split(":")[0];
+                              const value = d.split(":")[1];
+                              return (
+                                <li
+                                  key={d}
+                                  style={{
+                                    marginTop: 4,
+                                    listStyle: "disc outside",
+                                  }}
+                                >
+                                  <span style={{ color: theme.colors.primary }}>
+                                    {key}:
+                                  </span>
+                                  {value}
+                                </li>
+                              );
+                            }
                             return (
                               <li
                                 key={d}
@@ -474,57 +498,43 @@ export default function About() {
                                   listStyle: "disc outside",
                                 }}
                               >
-                                <span style={{ color: theme.colors.primary }}>
-                                  {key}:
-                                </span>
-                                {value}
+                                {d}
                               </li>
                             );
-                          }
-                          return (
-                            <li
-                              key={d}
-                              style={{
-                                marginTop: 4,
-                                listStyle: "disc outside",
-                              }}
-                            >
-                              {d}
-                            </li>
-                          );
-                        })}
-                      </JourneyItemDescription>
-                    </Col>
-                    <Col
-                      span={5}
-                      md={{ span: 16 }}
-                      style={{
-                        alignSelf: "stretch",
-                      }}
-                    >
-                      <LogoRow index={index}>
-                        <Col
-                          span={24}
-                          sm={{ span: 12 }}
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "flex-start",
-                            alignItems: "center",
-                          }}
-                        >
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <StyledImg src={i.logo} alt={i.title} />
-                          {index < journeyItems.length - 1 ? (
-                            <ProgressLine />
-                          ) : null}
-                        </Col>
-                      </LogoRow>
-                    </Col>
-                  </StyledRow>
-                ))}
-              </JourneySection>
-            </>
+                          })}
+                        </JourneyItemDescription>
+                      </Col>
+                      <Col
+                        span={5}
+                        md={{ span: 16 }}
+                        style={{
+                          alignSelf: "stretch",
+                        }}
+                      >
+                        <LogoRow index={index}>
+                          <Col
+                            span={24}
+                            sm={{ span: 12 }}
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "flex-start",
+                              alignItems: "center",
+                            }}
+                          >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <StyledImg src={i.logo} alt={i.title} />
+                            {index < journeyItems.length - 1 ? (
+                              <ProgressLine />
+                            ) : null}
+                          </Col>
+                        </LogoRow>
+                      </Col>
+                    </StyledRow>
+                  ))}
+                </JourneySection>
+              </>
+            </SwipeWrapper>
             <Footer />
           </MainContent>
         </MainContainer>

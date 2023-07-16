@@ -5,14 +5,14 @@ import { theme } from "../constants";
 export const SideBarContext = createContext({
   sideBar: false,
   toggleSideBar: (sideBar) => {
-    sideBar = !sideBar;
+    sideBar = sideBar;
   },
 });
 
 function MyApp({ Component, pageProps }) {
   const [sideBar, setSideBar] = useState(false);
-  const toggleSideBar = () => {
-    setSideBar(!sideBar);
+  const toggleSideBar = (value) => {
+    setSideBar(value);
   };
   return (
     <SideBarContext.Provider value={{ sideBar, toggleSideBar }}>
