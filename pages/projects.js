@@ -11,6 +11,7 @@ import { HighLight } from "../components/HighLight/HighLight";
 import { Icon } from "@iconify/react";
 import { Image } from "antd";
 import { useIsMDSize } from "../hooks/useIsMDSize";
+import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -428,71 +429,73 @@ export default function Projects() {
         <MainContainer>
           <Sidebar />
           <MainContent>
-            <Header />
-            <>
-              <Content>
-                <div>
-                  <Title>
-                    <span>Projects</span>
-                  </Title>
-                  <Description>
-                    <p>Some of my open sources and projects.</p>
-                  </Description>
-                  <ViewMore>
-                    <a
-                      href="https://github.com/nguyend-nam/?tab=repositories"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      View more on GitHub <SwapRightOutlined />
-                    </a>
-                  </ViewMore>
-                </div>
-                <ProjectsContainer>
-                  {projects.map((project) => (
-                    <ProjectCard key={project.name}>
+            <SwipeWrapper>
+              <Header />
+              <>
+                <Content>
+                  <div>
+                    <Title>
+                      <span>Projects</span>
+                    </Title>
+                    <Description>
+                      <p>Some of my open sources and projects.</p>
+                    </Description>
+                    <ViewMore>
                       <a
-                        target="_blank"
+                        href="https://github.com/nguyend-nam/?tab=repositories"
                         rel="noreferrer"
-                        href={project.projectUrl}
-                        style={{
-                          display: "block",
-                          height: isMD ? 200 : 300,
-                        }}
+                        target="_blank"
                       >
-                        <Image
-                          src={project.img}
-                          alt={project.img}
-                          preview={false}
-                          style={{
-                            objectFit: "cover",
-                          }}
-                        />
+                        View more on GitHub <SwapRightOutlined />
                       </a>
-                      <div>
-                        <ProjectTitle>
-                          <a
-                            href={project.repoUrl}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            {project.name}
-                          </a>
-                        </ProjectTitle>
-                      </div>
-                      <ProjectDescription>
-                        {project.description}
-                      </ProjectDescription>
-                      <div>
-                        {project.techStack.map((tech, i) => (
-                          <ProjectTags key={i}>{tech}</ProjectTags>
-                        ))}
-                      </div>
-                    </ProjectCard>
-                  ))}
-                </ProjectsContainer>
-              </Content>
-            </>
+                    </ViewMore>
+                  </div>
+                  <ProjectsContainer>
+                    {projects.map((project) => (
+                      <ProjectCard key={project.name}>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href={project.projectUrl}
+                          style={{
+                            display: "block",
+                            height: isMD ? 200 : 300,
+                          }}
+                        >
+                          <Image
+                            src={project.img}
+                            alt={project.img}
+                            preview={false}
+                            style={{
+                              objectFit: "cover",
+                            }}
+                          />
+                        </a>
+                        <div>
+                          <ProjectTitle>
+                            <a
+                              href={project.repoUrl}
+                              rel="noreferrer"
+                              target="_blank"
+                            >
+                              {project.name}
+                            </a>
+                          </ProjectTitle>
+                        </div>
+                        <ProjectDescription>
+                          {project.description}
+                        </ProjectDescription>
+                        <div>
+                          {project.techStack.map((tech, i) => (
+                            <ProjectTags key={i}>{tech}</ProjectTags>
+                          ))}
+                        </div>
+                      </ProjectCard>
+                    ))}
+                  </ProjectsContainer>
+                </Content>
+              </>
+            </SwipeWrapper>
             <Footer />
           </MainContent>
         </MainContainer>

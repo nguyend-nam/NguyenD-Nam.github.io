@@ -11,6 +11,7 @@ import { appear } from "../constants";
 import { SwapRightOutlined } from "@ant-design/icons";
 import { Image } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
+import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.secondary};
@@ -210,64 +211,66 @@ export default function Home() {
         <MainContainer>
           <Sidebar />
           <MainContent>
-            <Header />
-            <>
-              <Content>
-                <div>
-                  <Title>
-                    <span>Hello,</span>
-                    <span>My name is</span>
-                    <span>Nam Nguyen</span>
-                  </Title>
-                  <Description>
-                    <p>
-                      I&rsquo;m a Frontend engineer who loves to develop
-                      gorgeous UI & UX for websites & web applications.
-                      <br />
-                      <br />I usually develop websites or web applications using{" "}
-                      <HighLight>ReactJS</HighLight> with{" "}
-                      <HighLight>Next.js</HighLight>,{" "}
-                      <HighLight>TypeScript</HighLight> and{" "}
-                      <HighLight>TailwindCSS</HighLight>.
-                    </p>
-                  </Description>
-                  <ViewMore>
-                    <a onClick={() => push("/about")}>
-                      More about me <SwapRightOutlined />
-                    </a>
-                  </ViewMore>
-                </div>
-                <div>
-                  <Image src="/image/namnd.jpg" alt="Namnd" preview={false} />
-                </div>
-              </Content>
-              <ContactSection>
-                <div>
-                  <SectionTitle>
-                    <span>Let&rsquo;s connect and make difference</span>
-                  </SectionTitle>
-                  <MailButton>
-                    <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
-                  </MailButton>
-                  <Links>
-                    <a
-                      href="https://github.com/nguyend-nam"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <Icon icon="mdi:github" style={{ fontSize: 36 }} />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/nguyendinhnam0320/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
-                    </a>
-                  </Links>
-                </div>
-              </ContactSection>
-            </>
+            <SwipeWrapper>
+              <Header />
+              <>
+                <Content>
+                  <div>
+                    <Title>
+                      <span>Hello,</span>
+                      <span>My name is</span>
+                      <span>Nam Nguyen</span>
+                    </Title>
+                    <Description>
+                      <p>
+                        I&rsquo;m a Frontend engineer who loves to develop
+                        gorgeous UI & UX for websites & web applications.
+                        <br />
+                        <br />I usually develop websites or web applications
+                        using <HighLight>ReactJS</HighLight> with{" "}
+                        <HighLight>Next.js</HighLight>,{" "}
+                        <HighLight>TypeScript</HighLight> and{" "}
+                        <HighLight>TailwindCSS</HighLight>.
+                      </p>
+                    </Description>
+                    <ViewMore>
+                      <a onClick={() => push("/about")}>
+                        More about me <SwapRightOutlined />
+                      </a>
+                    </ViewMore>
+                  </div>
+                  <div>
+                    <Image src="/image/namnd.jpg" alt="Namnd" preview={false} />
+                  </div>
+                </Content>
+                <ContactSection>
+                  <div>
+                    <SectionTitle>
+                      <span>Let&rsquo;s connect and make difference</span>
+                    </SectionTitle>
+                    <MailButton>
+                      <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
+                    </MailButton>
+                    <Links>
+                      <a
+                        href="https://github.com/nguyend-nam"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <Icon icon="mdi:github" style={{ fontSize: 36 }} />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/nguyendinhnam0320/"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
+                      </a>
+                    </Links>
+                  </div>
+                </ContactSection>
+              </>
+            </SwipeWrapper>
             <Footer />
           </MainContent>
         </MainContainer>

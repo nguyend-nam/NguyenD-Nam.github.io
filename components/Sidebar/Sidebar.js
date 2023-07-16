@@ -33,14 +33,14 @@ const ToggleButton = styled.button`
     }
   }
   transition: 0.3s;
-  margin-right: ${(props) => (props.width ? "190px" : "0")};
+  margin-right: ${(props) => (props.hasWidth ? "190px" : "0")};
   overflow: hidden;
   padding: 0;
   &:hover {
     transform: scale(1.1);
   }
   @media (max-width: 800px) {
-    margin-right: ${(props) => (props.width ? "175px" : "0")};
+    margin-right: ${(props) => (props.hasWidth ? "175px" : "0")};
   }
 `;
 
@@ -90,7 +90,7 @@ export function Sidebar() {
   const currPathname = window.location.pathname;
   return (
     <SidebarContainer>
-      <ToggleButton onClick={() => setSideBar(!sideBar)} width={sideBar}>
+      <ToggleButton onClick={() => setSideBar(!sideBar)} hasWidth={sideBar}>
         {sideBar ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
       </ToggleButton>
       <SidebarRoutesContainer isDisplayed={sideBar}>
