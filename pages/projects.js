@@ -198,7 +198,7 @@ const projects = [
   {
     name: "Scrollery",
     img: "/image/proj-scrollery.png",
-    projectUrl: "https://scrollery.netlify.app/",
+    projectUrl: "https://scrollery.js.org",
     repoUrl: "https://github.com/nguyend-nam/scrollery",
     description: (
       <>
@@ -247,7 +247,7 @@ const projects = [
   {
     name: "Google Fonts app clone",
     img: "/image/proj-ggfonts.png",
-    projectUrl: "https://nextjs-google-fonts.netlify.app/",
+    projectUrl: "https://nextjs-google-fonts.netlify.app",
     repoUrl: "https://github.com/nguyend-nam/google-fonts-clone",
     description: (
       <>
@@ -272,7 +272,7 @@ const projects = [
   {
     name: "React three fiber image gallery",
     img: "/image/proj-r3fimages.png",
-    projectUrl: "https://dwarvesf-r3f.netlify.app/",
+    projectUrl: "https://dwarvesf-r3f.netlify.app",
     repoUrl: "https://github.com/nguyend-nam/r3f-image-gallery",
     description: (
       <>
@@ -384,7 +384,7 @@ const projects = [
   {
     name: "CSES Downloader",
     img: "/image/proj-cses.png",
-    projectUrl: "https://csessolutions.netlify.app/",
+    projectUrl: "https://csessolutions.netlify.app",
     repoUrl: "https://github.com/DecSP/cses-downloader",
     description: (
       <>
