@@ -337,7 +337,7 @@ export default function About() {
                         I&rsquo;m also focusing on my personal project,{" "}
                         <HighLight>
                           <a
-                            href="https://scrollery.netlify.app"
+                            href="https://scrollery.js.org"
                             rel="noreferrer"
                             target="_blank"
                           >
