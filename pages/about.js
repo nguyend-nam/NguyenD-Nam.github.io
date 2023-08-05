@@ -353,7 +353,7 @@ export default function About() {
                           </a>
                         </HighLight>
                         , which is a React TypeScript library that empowers
-                        developers to effortlessly animate images on scroll.
+                        developers to effortlessly animate contents on scroll.
                       </p>
                     </Description>
                   </div>

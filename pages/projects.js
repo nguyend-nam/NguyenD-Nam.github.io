@@ -203,7 +203,7 @@ const projects = [
     description: (
       <>
         React TypeScript library that empowers developers to effortlessly
-        animate images on scroll. View the library on{" "}
+        animate contents on scroll. View the library on{" "}
         <HighLight>
           <a
             href="https://www.npmjs.com/package/@nguyend-nam/scrollery-ts"
