@@ -316,7 +316,7 @@ const projects = [
   {
     name: "Which holiday?",
     img: "/image/proj-holiday.png",
-    projectUrl: "https://which-holiday.vercel.app/",
+    projectUrl: "https://whichholiday.vercel.app/",
     repoUrl: "https://github.com/nguyend-nam/which-holiday",
     description: <>View holidays of each country and their date on calendar.</>,
     techStack: ["Next.js", "SWR", "styled-components", "TailwindCSS"],
