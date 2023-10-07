@@ -7,7 +7,6 @@ const FooterContainer = styled.div`
   z-index: -1;
   padding: 40px;
   text-align: center;
-  font-family: "Plus Jakarta Sans";
   width: 100%;
   background-color: ${theme.colors.secondary};
   color: ${theme.colors.primary};

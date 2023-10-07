@@ -6,7 +6,6 @@ import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
 import { appear } from "../constants";
-import { SwapRightOutlined } from "@ant-design/icons";
 import { HighLight } from "../components/HighLight/HighLight";
 import { Icon } from "@iconify/react";
 import { Image } from "antd";
@@ -18,16 +17,14 @@ const MainContainer = styled.div`
   display: flex;
   height: 100vh;
   overflow-x: hidden;
-  font-family: "Plus Jakarta Sans";
   @media (max-width: 800px) {
-    width: calc(100vw + 1px);
-    transform: translateX(-1px);
+    width: 100vw;
   }
 `;
 
 const MainContent = styled.div`
   animation: ${appear} 0.3s linear forwards;
-  width: calc(100vw - 71px);
+  width: calc(100vw - 70px);
   height: max-content;
   @media (max-width: 800px) {
     width: 100vw;
@@ -36,7 +33,7 @@ const MainContent = styled.div`
 
 const Content = styled.div`
   background-color: ${theme.colors.secondary};
-  width: calc(100vw - 71px);
+  width: calc(100vw - 70px);
   & > div {
     padding: 30px;
     @media (max-width: 800px) {
@@ -44,7 +41,7 @@ const Content = styled.div`
       width: 100%;
     }
   }
-  border-bottom: 1px solid ${theme.colors.darkBlue};
+  border-bottom: 3px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
@@ -57,14 +54,14 @@ const Content = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Title = styled.h2`
   font-size: 65px;
   line-height: 65px;
   display: flex;
   flex-direction: column;
-  font-family: "Plus Jakarta Sans";
-  font-weight: 800;
-  color: ${theme.colors.primary};
+  font-weight: 700;
+  color: ${theme.colors.darkBlue};
+  margin: 0;
   margin-bottom: 60px;
   text-align: left;
   & > span {
@@ -90,22 +87,28 @@ const Description = styled.div`
 `;
 
 const ViewMore = styled.div`
-  margin-top: 20px;
+  margin-top: 30px;
+  transform: translateX(12px);
   & a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.darkBlue};
+    border-radius: 100px;
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.primary};
-    padding-bottom: 5px;
+    border: 2px solid ${theme.colors.primary};
+    box-shadow: -12px 4px 0 ${theme.colors.primary};
+    padding: 8px 12px;
     text-transform: uppercase;
     @media (max-width: 800px) {
       font-size: 16px;
     }
   }
+
+  & svg {
+    vertical-align: sub;
+  }
 `;
 
 const ProjectsContainer = styled.div`
-  font-family: "Plus Jakarta Sans";
   padding: 25px 100px 50px !important;
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +124,7 @@ const ProjectsContainer = styled.div`
       }
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
     padding: 0px 25px 50px !important;
     gap: 40px;
     & > div {
@@ -131,12 +134,15 @@ const ProjectsContainer = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  border: 1px solid ${theme.colors.darkBlue};
+  border: 2px solid ${theme.colors.darkBlue};
+  box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
+  border-radius: 30px;
+  overflow: hidden;
   & > div {
     padding: 30px;
   }
   & > div:nth-child(2) {
-    border-top: 1px solid ${theme.colors.darkBlue} !important;
+    border-top: 2px solid ${theme.colors.darkBlue} !important;
     padding-bottom: 0;
   }
   & > div:nth-child(n + 2) {
@@ -160,11 +166,14 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectTitle = styled.div`
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 600;
   color: ${theme.colors.primary};
-  &:hover {
+  & > a:hover {
     color: ${theme.colors.shadow};
+  }
+  @media (max-width: 800px) {
+    font-size: 19px;
   }
 `;
 
@@ -179,9 +188,10 @@ const ProjectDescription = styled.div`
 const ProjectTags = styled.div`
   background-color: ${theme.colors.secondary};
   color: ${theme.colors.primary};
+  border-radius: 100px;
   font-size: 15px;
-  border: 1px solid ${theme.colors.primary};
-  padding: 6px;
+  border: 2px solid ${theme.colors.primary};
+  padding: 6px 8px;
   margin-right: 10px;
   margin-top: 10px;
   @media (max-width: 800px) {
@@ -242,7 +252,7 @@ const projects = [
         .
       </>
     ),
-    techStack: ["Next.js", "TypeScript", "NPM"],
+    techStack: ["Next.js", "TypeScript", "NPM", "TailwindCSS"],
   },
   {
     name: "Google Fonts app clone",
@@ -446,7 +456,8 @@ export default function Projects() {
                         rel="noreferrer"
                         target="_blank"
                       >
-                        View more on GitHub <SwapRightOutlined />
+                        View more on GitHub{" "}
+                        <Icon icon="ant-design:swap-right-outlined" />
                       </a>
                     </ViewMore>
                   </div>

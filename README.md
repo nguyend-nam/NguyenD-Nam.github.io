@@ -42,4 +42,4 @@ to see your project.
 ## References
 
 - Website UI: Virginia Orosa's [portfolio website](https://www.virginiaorosa.com/)
-- Color palette: [Tokyo night palette](https://www.color-hex.com/color-palette/91636)
+- Color palette: [Teal palette](https://colorhunt.co/palette/04364a176b8764ccc5dafffb)

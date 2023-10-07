@@ -1,10 +1,10 @@
 import { keyframes } from "styled-components";
 export const theme = {
   colors: {
-    primary: "#32C4C0",
-    secondary: "#FFF",
+    primary: "#64CCC5",
+    secondary: "#F2F7FF",
     darkBlue: "#223",
-    shadow: "#F7DB6A",
+    shadow: "#FEC260",
   },
 };
 export const appear = keyframes`
