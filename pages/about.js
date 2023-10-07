@@ -8,7 +8,6 @@ import { theme } from "../constants";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import { appear } from "../constants";
-import { SwapRightOutlined } from "@ant-design/icons";
 import { Col, Image, Row } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
 import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
@@ -18,16 +17,14 @@ const MainContainer = styled.div`
   display: flex;
   height: 100vh;
   overflow-x: hidden;
-  font-family: "Plus Jakarta Sans";
   @media (max-width: 800px) {
-    width: calc(100vw + 1px);
-    transform: translateX(-1px);
+    width: 100vw;
   }
 `;
 
 const MainContent = styled.div`
   animation: ${appear} 0.3s linear forwards;
-  width: calc(100vw - 71px);
+  width: calc(100vw - 70px);
   height: max-content;
   @media (max-width: 800px) {
     width: 100vw;
@@ -36,12 +33,12 @@ const MainContent = styled.div`
 
 const Content = styled.div`
   background-color: ${theme.colors.secondary};
-  width: calc(100vw - 71px);
+  width: calc(100vw - 70px);
   display: flex;
   & > div {
     padding: 30px;
     width: 60vw;
-    border-left: 1px solid ${theme.colors.darkBlue};
+    border-left: 3px solid ${theme.colors.darkBlue};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
       width: 100%;
@@ -55,7 +52,7 @@ const Content = styled.div`
       width: 100%;
     }
   }
-  border-bottom: 1px solid ${theme.colors.darkBlue};
+  border-bottom: 3px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
@@ -68,14 +65,14 @@ const Content = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Title = styled.h2`
   font-size: 65px;
   line-height: 65px;
   display: flex;
   flex-direction: column;
-  font-family: "Plus Jakarta Sans";
-  font-weight: 800;
-  color: ${theme.colors.primary};
+  font-weight: 700;
+  color: ${theme.colors.darkBlue};
+  margin: 0;
   margin-bottom: 60px;
   text-align: left;
   & > span {
@@ -110,7 +107,7 @@ const Description = styled.div`
 const JourneySection = styled.div`
   background-color: ${theme.colors.secondary};
   padding: 30px;
-  border-bottom: 1px solid ${theme.colors.darkBlue};
+  border-bottom: 3px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     padding: 25px;
   }
@@ -136,20 +133,25 @@ const JourneyItemTime = styled.span`
 
 const JourneyItemDescription = styled.div`
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 17px;
   align-self: start;
   white-space: pre-line;
   color: ${theme.colors.darkBlue};
+  @media (max-width: 800px) {
+    font-size: 16px;
+    & > p {
+      margin: 0;
+    }
+  }
 `;
 
 const ProgressLine = styled.div`
-  width: 1px;
+  width: 2px;
   height: 100%;
   background-color: ${theme.colors.primary};
-  // opacity: 0.3;
   flex-shrink: 1;
   margin: 16px 0;
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
     margin: 16px 0 0 22px;
     align-self: flex-start;
   }
@@ -159,7 +161,7 @@ const StyledImg = styled.img`
   object-fit: contain;
   max-idth: 100%;
   width: 70px;
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
     width: 45px;
     align-self: flex-start;
   }
@@ -169,7 +171,7 @@ const StyledRow = styled(Row)`
   align-items: flex-start;
   flex-direction: ${(props) => (props.index % 2 === 1 ? "row-reverse" : "row")};
   margin-bottom: 0px;
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
     margin-bottom: ${(props) => (props.isLast ? "0px" : "16px")};
     flex-direction: row-reverse;
   }
@@ -178,7 +180,7 @@ const StyledRow = styled(Row)`
 const LogoRow = styled(Row)`
   height: 100%;
   flex-direction: ${(props) => (props.index % 2 === 1 ? "row-reverse" : "row")};
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
     flex-direction: row;
   }
 `;
@@ -190,16 +192,22 @@ const TechStackSection = styled.div`
     width: 850px;
     background-color: ${theme.colors.secondary};
     padding: 30px;
-    border-left: 1px solid ${theme.colors.darkBlue};
-    border-right: 1px solid ${theme.colors.darkBlue};
+    border-left: 3px solid ${theme.colors.darkBlue};
+    border-right: 3px solid ${theme.colors.darkBlue};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
       border-left: 0px solid ${theme.colors.darkBlue};
       border-right: 0px solid ${theme.colors.darkBlue};
     }
   }
+  & p {
+    font-size: 17px;
+    @media (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.darkBlue};
+  border-bottom: 3px solid ${theme.colors.darkBlue};
 `;
 
 const SectionTitle = styled(Title)`
@@ -207,8 +215,7 @@ const SectionTitle = styled(Title)`
   line-height: 65px;
   display: flex;
   flex-direction: column;
-  font-family: "Plus Jakarta Sans";
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 60px;
   text-align: left;
   & > span {
@@ -226,7 +233,8 @@ const SectionTitle = styled(Title)`
 const Links = styled.div`
   & > * {
     font-size: 45px;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.shadow};
+    background-clip: text;
     margin: 0 15px;
     @media (max-width: 800px) {
       font-size: 40px;
@@ -236,17 +244,24 @@ const Links = styled.div`
 `;
 
 const ViewMore = styled.div`
-  margin: 16px 0 5px;
+  margin: 28px 0 12px;
+  transform: translateX(12px);
   & a {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.darkBlue};
+    border-radius: 100px;
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid ${theme.colors.primary};
-    padding-bottom: 5px;
+    border: 2px solid ${theme.colors.primary};
+    box-shadow: -12px 4px 0 ${theme.colors.primary};
+    padding: 8px 12px;
     text-transform: uppercase;
     @media (max-width: 800px) {
       font-size: 16px;
     }
+  }
+
+  & svg {
+    vertical-align: sub;
   }
 `;
 
@@ -400,25 +415,7 @@ export default function About() {
                           />
                         </a>
                       </HighLight>
-                      ,{" "}
-                      <HighLight>
-                        <a
-                          href="https://tailwindcss.com/"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          TailwindCSS
-                          <Icon
-                            icon="mdi:link"
-                            style={{
-                              fontSize: 20,
-                              verticalAlign: "sub",
-                              marginLeft: 2,
-                            }}
-                          />
-                        </a>
-                      </HighLight>{" "}
-                      and{" "}
+                      , <HighLight>SCSS</HighLight> and{" "}
                       <HighLight>
                         <a
                           href="https://mui.com/"
@@ -440,7 +437,8 @@ export default function About() {
                     </p>
                     <ViewMore style={{ textAlign: "left" }}>
                       <a onClick={() => push("/projects")}>
-                        Checkout my projects <SwapRightOutlined />
+                        Checkout my projects{" "}
+                        <Icon icon="ant-design:swap-right-outlined" />
                       </a>
                     </ViewMore>
                   </div>
@@ -457,14 +455,16 @@ export default function About() {
                     >
                       <Col
                         span={19}
-                        md={{ span: 8 }}
+                        lg={{ span: 8 }}
                         style={{
                           display: "flex",
                           justifyContent: "center",
                           flexDirection: "column",
                           alignItems: "center",
-                          padding: 12,
-                          border: `1px solid ${theme.colors.darkBlue}`,
+                          padding: 15,
+                          borderRadius: 30,
+                          border: `2px solid ${theme.colors.darkBlue}`,
+                          boxShadow: `-12px 4px 0 ${theme.colors.darkBlue}`,
                         }}
                       >
                         <JourneyItemType>{i.type}</JourneyItemType>
@@ -506,7 +506,7 @@ export default function About() {
                       </Col>
                       <Col
                         span={5}
-                        md={{ span: 16 }}
+                        lg={{ span: 16 }}
                         style={{
                           alignSelf: "stretch",
                         }}

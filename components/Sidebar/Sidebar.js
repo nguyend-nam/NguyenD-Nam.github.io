@@ -1,15 +1,13 @@
 import { useRouter } from "next/router";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
 import { theme } from "../../constants";
 import { SideBarContext } from "../../pages/_app";
-import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
+import { Icon } from "@iconify/react";
 
 const SidebarContainer = styled.div`
-  padding: 20px;
-  border-right: 1px solid ${theme.colors.darkBlue};
-  background-color: ${theme.colors.secondary};
-  font-family: "Plus Jakarta Sans";
+  padding: 28px 20px;
+  background-color: ${theme.colors.darkBlue};
   height: 100%;
   position: sticky;
   top: 0;
@@ -22,6 +20,8 @@ const SidebarContainer = styled.div`
 const ToggleButton = styled.button`
   outline: none;
   border: none;
+  height: 34px;
+  width: 30px;
   background-color: transparent;
   cursor: pointer;
   color: ${theme.colors.primary};
@@ -41,6 +41,7 @@ const ToggleButton = styled.button`
   }
   @media (max-width: 800px) {
     margin-right: ${(props) => (props.hasWidth ? "175px" : "0")};
+    width: 0;
   }
 `;
 
@@ -91,7 +92,11 @@ export function Sidebar() {
   return (
     <SidebarContainer>
       <ToggleButton onClick={() => setSideBar(!sideBar)} hasWidth={sideBar}>
-        {sideBar ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+        {sideBar ? (
+          <Icon icon="ic:sharp-menu-open" />
+        ) : (
+          <Icon icon="ic:sharp-menu-open" rotate={2} />
+        )}
       </ToggleButton>
       <SidebarRoutesContainer isDisplayed={sideBar}>
         <SidebarRoutes onClick={() => push(`/`)} active={currPathname === "/"}>

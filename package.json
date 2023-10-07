@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.8.0",
     "@dwarvesf/react-hooks": "^0.7.0",
     "@iconify/react": "^4.1.1",
     "antd": "^5.0.0",

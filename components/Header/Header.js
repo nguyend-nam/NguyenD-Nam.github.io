@@ -1,44 +1,39 @@
 import styled from "styled-components";
 import { theme } from "../../constants";
 import { SideBarContext } from "../../pages/_app";
-import { useState, useContext } from "react";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { useContext } from "react";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const HeaderContainer = styled.div`
-  border-bottom: 1px solid ${theme.colors.darkBlue};
+  border-bottom: 3px solid ${theme.colors.darkBlue};
   padding: 25px 65px;
-  font-family: "Plus Jakarta Sans";
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.primary};
   display: flex;
   @media (max-width: 800px) {
     padding: 25px;
   }
 `;
 
-const HeaderTitle = styled.span`
+const HeaderTitle = styled.h1`
   margin: 0;
   font-weight: 300;
-  background-color: ${theme.colors.darkBlue};
-  color: ${theme.colors.shadow};
+  border-radius: 100px;
+  background-color: ${theme.colors.shadow};
+  color: ${theme.colors.darkBlue};
   display: flex;
   align-items: center;
   width: max-content;
-  padding: 0 10px;
+  padding: 3px 14px;
   font-size: 25px;
-  transition: 0.5s;
-  box-shadow: -8px 8px 0 ${theme.colors.shadow},
-    -12px -4px 0 ${theme.colors.primary};
+  box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
+  border: 2px solid ${theme.colors.darkBlue};
   & > span:nth-child(2) {
     font-weight: 700;
-  }
-  &:hover {
-    box-shadow: 0px 0px 0 ${theme.colors.shadow},
-      0px 0px 0 ${theme.colors.primary};
-    transform: translateX(-8px);
   }
   @media (max-width: 800px) {
     font-size: 23px;
@@ -48,9 +43,11 @@ const HeaderTitle = styled.span`
 const MobileToggleButton = styled.button`
   outline: none;
   border: none;
+  max-height: 39px;
+  align-items: center;
   background-color: transparent;
   cursor: pointer;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   & > * {
     font-size: 25px;
     padding: 0;
@@ -64,7 +61,7 @@ const MobileToggleButton = styled.button`
   }
   display: none;
   @media (max-width: 800px) {
-    display: block;
+    display: flex;
   }
 `;
 
@@ -75,12 +72,18 @@ export function Header() {
   return (
     <HeaderContainer>
       <MobileToggleButton onClick={() => setSideBar(!sideBar)}>
-        {sideBar ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+        {sideBar ? (
+          <Icon icon="ic:sharp-menu-open" />
+        ) : (
+          <Icon icon="ic:sharp-menu-open" rotate={2} />
+        )}
       </MobileToggleButton>
-      <HeaderTitle>
-        <span>NAM</span>
-        <span>NGUYEN</span>
-      </HeaderTitle>
+      <Link href="/">
+        <HeaderTitle>
+          <span>NAM</span>
+          <span>NGUYEN</span>
+        </HeaderTitle>
+      </Link>
     </HeaderContainer>
   );
 }
