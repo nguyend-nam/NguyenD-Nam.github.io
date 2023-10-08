@@ -144,6 +144,7 @@ const ViewMore = styled.div`
 const ContactSection = styled.div`
   display: flex;
   justify-content: space-around;
+  background-color: ${theme.colors.shadow};
   & > div {
     max-width: 750px;
     background-color: ${theme.colors.shadow};

@@ -35,7 +35,7 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   & > div:first-child {
-    padding: 30px;
+    padding: 30px 65px;
     width: 60vw;
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
@@ -141,7 +141,7 @@ export default function Contact() {
     !isSSR && (
       <div>
         <Head>
-          <title>Contact - Nam Nguyen</title>
+          <title>Contact | Nam Nguyen</title>
           <meta name="description" content="Contact me" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
