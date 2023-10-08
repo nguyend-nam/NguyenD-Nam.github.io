@@ -68,6 +68,7 @@ const SidebarRoutes = styled.li`
   align-items: center;
   width: max-content;
   font-weight: 300;
+  user-select: none;
   &:before {
     margin-right: ${(props) => (props.active ? "10px" : "0px")};
     content: "";
