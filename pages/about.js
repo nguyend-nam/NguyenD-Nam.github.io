@@ -351,7 +351,7 @@ export default function About() {
                         <HighLight>ReactJS</HighLight> with{" "}
                         <HighLight>Next.js</HighLight>,{" "}
                         <HighLight>TypeScript</HighLight> and{" "}
-                        <HighLight>TailwindCSS</HighLight>.
+                        <HighLight>SCSS</HighLight>.
                         <br />
                         <br />
                         I&rsquo;m also focusing on my personal project,{" "}
