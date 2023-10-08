@@ -35,7 +35,7 @@ const Content = styled.div`
   background-color: ${theme.colors.secondary};
   width: calc(100vw - 70px);
   & > div {
-    padding: 30px;
+    padding: 30px 65px;
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
       width: 100%;
@@ -90,6 +90,7 @@ const ViewMore = styled.div`
   margin-top: 30px;
   transform: translateX(12px);
   & a {
+    // background-color: ${theme.colors.shadow};
     color: ${theme.colors.darkBlue};
     border-radius: 100px;
     font-size: 18px;
@@ -125,16 +126,20 @@ const ProjectsContainer = styled.div`
     }
   }
   @media (max-width: 991px) {
-    padding: 0px 25px 50px !important;
+    padding: 0px 65px 50px !important;
     gap: 40px;
     & > div {
       width: 100% !important;
     }
   }
+  @media (max-width: 800px) {
+    padding: 0px 25px 50px !important;
+  }
 `;
 
 const ProjectCard = styled.div`
   border: 2px solid ${theme.colors.darkBlue};
+  background-color: ${theme.colors.primary};
   box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
   border-radius: 30px;
   overflow: hidden;
@@ -168,7 +173,7 @@ const ProjectCard = styled.div`
 const ProjectTitle = styled.div`
   font-size: 21px;
   font-weight: 600;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.darkBlue};
   & > a:hover {
     color: ${theme.colors.shadow};
   }
@@ -183,14 +188,18 @@ const ProjectDescription = styled.div`
   @media (max-width: 800px) {
     font-size: 15px;
   }
+  & span {
+    border-color: ${theme.colors.shadow} !important;
+  }
 `;
 
 const ProjectTags = styled.div`
-  background-color: ${theme.colors.secondary};
-  color: ${theme.colors.primary};
+  background-color: ${theme.colors.primary};
+  color: ${theme.colors.secondary};
   border-radius: 100px;
   font-size: 15px;
-  border: 2px solid ${theme.colors.primary};
+  font-weight: 500;
+  border: 2px solid ${theme.colors.secondary};
   padding: 6px 8px;
   margin-right: 10px;
   margin-top: 10px;
@@ -432,7 +441,7 @@ export default function Projects() {
     !isSSR && (
       <div>
         <Head>
-          <title>Projects - Nam Nguyen</title>
+          <title>Projects | Nam Nguyen</title>
           <meta name="description" content="My projects" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -448,7 +457,7 @@ export default function Projects() {
                       <span>Projects</span>
                     </Title>
                     <Description>
-                      <p>Some of my open sources and projects.</p>
+                      <p>Some of my open sources and personal projects.</p>
                     </Description>
                     <ViewMore>
                       <a

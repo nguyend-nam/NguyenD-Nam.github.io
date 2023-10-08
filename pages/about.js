@@ -36,10 +36,10 @@ const Content = styled.div`
   width: calc(100vw - 70px);
   display: flex;
   & > div {
-    padding: 30px;
+    padding: 30px 65px;
     width: 60vw;
     border-left: 3px solid ${theme.colors.darkBlue};
-    @media (max-width: 800px) {
+    @media (max-width: 991px) {
       padding: 25px 25px 40px 25px;
       width: 100%;
     }
@@ -48,19 +48,24 @@ const Content = styled.div`
     border-left: none;
     width: 380px;
     padding: 0px;
-    @media (max-width: 800px) {
+    @media (max-width: 991px) {
       width: 100%;
     }
   }
   border-bottom: 3px solid ${theme.colors.darkBlue};
-  @media (max-width: 800px) {
+  @media (max-width: 991px) {
     width: 100vw;
     flex-direction: column;
-    & > span img {
-      object-position: top !important;
-    }
     & > div {
       border-left: 0px solid ${theme.colors.darkBlue};
+    }
+    & > div img {
+      object-position: top !important;
+      border-bottom: 3px solid ${theme.colors.darkBlue};
+    }
+    & > div:first-of-type {
+      border-left: 0px solid ${theme.colors.darkBlue};
+      height: 280px;
     }
   }
 `;
@@ -106,10 +111,10 @@ const Description = styled.div`
 
 const JourneySection = styled.div`
   background-color: ${theme.colors.secondary};
-  padding: 30px;
+  padding: 30px 65px;
   border-bottom: 3px solid ${theme.colors.darkBlue};
   @media (max-width: 800px) {
-    padding: 25px;
+    padding: 25px 25px 40px 25px;
   }
 `;
 
@@ -188,16 +193,15 @@ const LogoRow = styled(Row)`
 const TechStackSection = styled.div`
   display: flex;
   justify-content: space-around;
+  background-color: ${theme.colors.shadow};
   & > div {
     width: 850px;
-    background-color: ${theme.colors.secondary};
-    padding: 30px;
+    background-color: ${theme.colors.shadow};
+    padding: 30px 65px;
     border-left: 3px solid ${theme.colors.darkBlue};
     border-right: 3px solid ${theme.colors.darkBlue};
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
-      border-left: 0px solid ${theme.colors.darkBlue};
-      border-right: 0px solid ${theme.colors.darkBlue};
     }
   }
   & p {
@@ -233,7 +237,7 @@ const SectionTitle = styled(Title)`
 const Links = styled.div`
   & > * {
     font-size: 45px;
-    color: ${theme.colors.shadow};
+    color: ${theme.colors.darkBlue};
     background-clip: text;
     margin: 0 15px;
     @media (max-width: 800px) {
@@ -247,12 +251,13 @@ const ViewMore = styled.div`
   margin: 28px 0 12px;
   transform: translateX(12px);
   & a {
+    background-color: ${theme.colors.primary};
     color: ${theme.colors.darkBlue};
     border-radius: 100px;
     font-size: 18px;
     cursor: pointer;
-    border: 2px solid ${theme.colors.primary};
-    box-shadow: -12px 4px 0 ${theme.colors.primary};
+    border: 2px solid ${theme.colors.darkBlue};
+    box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
     padding: 8px 12px;
     text-transform: uppercase;
     @media (max-width: 800px) {
@@ -304,7 +309,7 @@ export default function About() {
     !isSSR && (
       <div>
         <Head>
-          <title>About - Nam Nguyen</title>
+          <title>About | Nam Nguyen</title>
           <meta name="description" content="About me" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -346,7 +351,7 @@ export default function About() {
                         <HighLight>ReactJS</HighLight> with{" "}
                         <HighLight>Next.js</HighLight>,{" "}
                         <HighLight>TypeScript</HighLight> and{" "}
-                        <HighLight>TailwindCSS</HighLight>.
+                        <HighLight>SCSS</HighLight>.
                         <br />
                         <br />
                         I&rsquo;m also focusing on my personal project,{" "}
@@ -415,7 +420,25 @@ export default function About() {
                           />
                         </a>
                       </HighLight>
-                      , <HighLight>SCSS</HighLight> and{" "}
+                      , <HighLight>SCSS</HighLight>,{" "}
+                      <HighLight>
+                        <a
+                          href="https://eslint.org/"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          ESLint
+                          <Icon
+                            icon="mdi:link"
+                            style={{
+                              fontSize: 20,
+                              verticalAlign: "sub",
+                              marginLeft: 2,
+                            }}
+                          />
+                        </a>
+                      </HighLight>{" "}
+                      and{" "}
                       <HighLight>
                         <a
                           href="https://mui.com/"
