@@ -56,12 +56,16 @@ const Content = styled.div`
   @media (max-width: 991px) {
     width: 100vw;
     flex-direction: column;
-    & img {
+    & > div {
+      border-left: 0px solid ${theme.colors.darkBlue};
+    }
+    & > div img {
       object-position: top !important;
       border-bottom: 3px solid ${theme.colors.darkBlue};
     }
-    & > div {
+    & > div:first-of-type {
       border-left: 0px solid ${theme.colors.darkBlue};
+      height: 280px;
     }
   }
 `;
