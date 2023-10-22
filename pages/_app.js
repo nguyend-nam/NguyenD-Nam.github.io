@@ -14,14 +14,15 @@ function MyApp({ Component, pageProps }) {
   const toggleSideBar = (value) => {
     setSideBar(value);
   };
+
   return (
     <SideBarContext.Provider value={{ sideBar, toggleSideBar }}>
-      <Component {...pageProps} />
       <style jsx global>{`
         body {
-          background: ${theme.colors.secondary};
+          background: ${theme.colors.lightGrey};
         }
       `}</style>
+      <Component {...pageProps} />
     </SideBarContext.Provider>
   );
 }

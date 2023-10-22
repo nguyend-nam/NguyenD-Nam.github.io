@@ -2,14 +2,11 @@ import styled from "styled-components";
 import { theme } from "../../constants";
 
 const FooterContainer = styled.div`
-  position: sticky;
-  bottom: 0;
-  z-index: -1;
   padding: 40px;
   text-align: center;
   width: 100%;
-  background-color: ${theme.colors.secondary};
-  color: ${theme.colors.primary};
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.darkBlue};
   @media (max-width: 800px) {
     font-size: 15px;
   }

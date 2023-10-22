@@ -24,7 +24,7 @@ const ToggleButton = styled.button`
   width: 30px;
   background-color: transparent;
   cursor: pointer;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.white};
   & > * {
     font-size: 30px;
     padding: 0;
@@ -61,21 +61,20 @@ const SidebarRoutesContainer = styled.ul`
 const SidebarRoutes = styled.li`
   cursor: pointer;
   font-size: 20px;
-  color: ${(props) =>
-    props.active ? theme.colors.shadow : theme.colors.primary};
+  color: ${(props) => (props.active ? theme.colors.grey : theme.colors.white)};
   margin: 30px 0;
   display: flex;
   align-items: center;
   width: max-content;
-  font-weight: 300;
+  font-weight: 400;
   user-select: none;
   &:before {
     margin-right: ${(props) => (props.active ? "10px" : "0px")};
     content: "";
-    height: 2px;
+    height: 1px;
     transition: 0.3s;
     width: ${(props) => (props.active ? "20px" : "0px")};
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.grey};
     position: relative;
   }
   &:hover:before {

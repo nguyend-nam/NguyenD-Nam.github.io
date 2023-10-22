@@ -6,13 +6,13 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const HeaderContainer = styled.div`
-  border-bottom: 3px solid ${theme.colors.darkBlue};
-  padding: 25px 65px;
+  border-bottom: 1px solid ${theme.colors.grey};
+  padding: 25px 64px;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: ${theme.colors.primary};
+  background-color: ${theme.colors.lightGrey};
   display: flex;
   @media (max-width: 800px) {
     padding: 25px;
@@ -21,17 +21,17 @@ const HeaderContainer = styled.div`
 
 const HeaderTitle = styled.h1`
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   border-radius: 100px;
-  background-color: ${theme.colors.shadow};
+  background-color: ${theme.colors.lightGrey};
   color: ${theme.colors.darkBlue};
   display: flex;
   align-items: center;
   width: max-content;
   padding: 3px 14px;
   font-size: 25px;
-  box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
-  border: 2px solid ${theme.colors.darkBlue};
+  box-shadow: -12px 4px 0 ${theme.colors.grey};
+  border: 1px solid ${theme.colors.darkBlue};
   & > span:nth-child(2) {
     font-weight: 700;
   }

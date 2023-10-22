@@ -5,15 +5,15 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
-import { appear } from "../constants";
 import { HighLight } from "../components/HighLight/HighLight";
 import { Icon } from "@iconify/react";
 import { Image } from "antd";
 import { useIsMDSize } from "../hooks/useIsMDSize";
 import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
+import { useAnimation } from "../hooks/useAnimation";
 
 const MainContainer = styled.div`
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   display: flex;
   height: 100vh;
   overflow-x: hidden;
@@ -23,7 +23,6 @@ const MainContainer = styled.div`
 `;
 
 const MainContent = styled.div`
-  animation: ${appear} 0.3s linear forwards;
   width: calc(100vw - 70px);
   height: max-content;
   @media (max-width: 800px) {
@@ -32,16 +31,16 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   width: calc(100vw - 70px);
   & > div {
-    padding: 30px 65px;
+    padding: 60px 64px 30px;
     @media (max-width: 800px) {
-      padding: 25px 25px 40px 25px;
+      padding: 40px 25px 20px;
       width: 100%;
     }
   }
-  border-bottom: 3px solid ${theme.colors.darkBlue};
+  border-bottom: 1px solid ${theme.colors.grey};
   @media (max-width: 800px) {
     width: 100vw;
     flex-direction: column;
@@ -55,8 +54,8 @@ const Content = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 65px;
-  line-height: 65px;
+  font-size: 64px;
+  line-height: 64px;
   display: flex;
   flex-direction: column;
   font-weight: 700;
@@ -88,17 +87,14 @@ const Description = styled.div`
 
 const ViewMore = styled.div`
   margin-top: 30px;
-  transform: translateX(12px);
+
   & a {
-    // background-color: ${theme.colors.shadow};
     color: ${theme.colors.darkBlue};
-    border-radius: 100px;
     font-size: 18px;
     cursor: pointer;
-    border: 2px solid ${theme.colors.primary};
-    box-shadow: -12px 4px 0 ${theme.colors.primary};
-    padding: 8px 12px;
-    text-transform: uppercase;
+    border-bottom: 1px solid ${theme.colors.darkBlue};
+    padding-bottom: 8px;
+
     @media (max-width: 800px) {
       font-size: 16px;
     }
@@ -110,7 +106,7 @@ const ViewMore = styled.div`
 `;
 
 const ProjectsContainer = styled.div`
-  padding: 25px 100px 50px !important;
+  padding: 30px 100px 60px !important;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -126,28 +122,26 @@ const ProjectsContainer = styled.div`
     }
   }
   @media (max-width: 991px) {
-    padding: 0px 65px 50px !important;
+    padding: 20px 64px 50px !important;
     gap: 40px;
     & > div {
       width: 100% !important;
     }
   }
   @media (max-width: 800px) {
-    padding: 0px 25px 50px !important;
+    padding: 20px 25px 50px !important;
   }
 `;
 
 const ProjectCard = styled.div`
-  border: 2px solid ${theme.colors.darkBlue};
-  background-color: ${theme.colors.primary};
-  box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
-  border-radius: 30px;
+  border: 1px solid ${theme.colors.grey};
+  background-color: ${theme.colors.lightGrey};
   overflow: hidden;
   & > div {
     padding: 30px;
   }
   & > div:nth-child(2) {
-    border-top: 2px solid ${theme.colors.darkBlue} !important;
+    border-top: 1px solid ${theme.colors.grey} !important;
     padding-bottom: 0;
   }
   & > div:nth-child(n + 2) {
@@ -174,8 +168,9 @@ const ProjectTitle = styled.div`
   font-size: 21px;
   font-weight: 600;
   color: ${theme.colors.darkBlue};
+
   & > a:hover {
-    color: ${theme.colors.shadow};
+    opacity: 0.6;
   }
   @media (max-width: 800px) {
     font-size: 19px;
@@ -188,18 +183,15 @@ const ProjectDescription = styled.div`
   @media (max-width: 800px) {
     font-size: 15px;
   }
-  & span {
-    border-color: ${theme.colors.shadow} !important;
-  }
 `;
 
 const ProjectTags = styled.div`
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.darkBlue};
   border-radius: 100px;
   font-size: 15px;
-  font-weight: 500;
-  border: 2px solid ${theme.colors.secondary};
+  font-weight: 400;
+  border: 1px solid ${theme.colors.grey};
   padding: 6px 8px;
   margin-right: 10px;
   margin-top: 10px;
@@ -437,6 +429,8 @@ export default function Projects() {
     setIsSSR(false);
   }, []);
 
+  useAnimation(isSSR, ".scroll-container");
+
   return (
     !isSSR && (
       <div>
@@ -445,21 +439,21 @@ export default function Projects() {
           <meta name="description" content="My projects" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <MainContainer>
+        <MainContainer className="scroll-container">
           <Sidebar />
           <MainContent>
             <SwipeWrapper>
               <Header />
               <>
-                <Content>
-                  <div>
-                    <Title>
+                <Content className="site-ani-group">
+                  <div className="site-ani-auto site-ani__fade-in">
+                    <Title className="site-ani-auto site-ani__fade-in">
                       <span>Projects</span>
                     </Title>
-                    <Description>
+                    <Description className="site-ani-auto site-ani__fade-in">
                       <p>Some of my open sources and personal projects.</p>
                     </Description>
-                    <ViewMore>
+                    <ViewMore className="site-ani-auto site-ani__fade-in">
                       <a
                         href="https://github.com/nguyend-nam/?tab=repositories"
                         rel="noreferrer"
@@ -470,9 +464,12 @@ export default function Projects() {
                       </a>
                     </ViewMore>
                   </div>
-                  <ProjectsContainer>
+                  <ProjectsContainer className="site-ani-auto site-ani__fade-in">
                     {projects.map((project) => (
-                      <ProjectCard key={project.name}>
+                      <ProjectCard
+                        key={project.name}
+                        className="site-ani-auto site-ani__slide-up"
+                      >
                         <a
                           target="_blank"
                           rel="noreferrer"

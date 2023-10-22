@@ -7,13 +7,13 @@ import { useState, useEffect } from "react";
 import { theme } from "../constants";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
-import { appear } from "../constants";
 import { Col, Image, Row } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
 import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
+import { useAnimation } from "../hooks/useAnimation";
 
 const MainContainer = styled.div`
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   display: flex;
   height: 100vh;
   overflow-x: hidden;
@@ -23,7 +23,6 @@ const MainContainer = styled.div`
 `;
 
 const MainContent = styled.div`
-  animation: ${appear} 0.3s linear forwards;
   width: calc(100vw - 70px);
   height: max-content;
   @media (max-width: 800px) {
@@ -32,15 +31,15 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   width: calc(100vw - 70px);
   display: flex;
   & > div {
-    padding: 30px 65px;
+    padding: 60px 64px;
     width: 60vw;
-    border-left: 3px solid ${theme.colors.darkBlue};
+    border-left: 1px solid ${theme.colors.grey};
     @media (max-width: 991px) {
-      padding: 25px 25px 40px 25px;
+      padding: 40px 25px;
       width: 100%;
     }
   }
@@ -52,34 +51,34 @@ const Content = styled.div`
       width: 100%;
     }
   }
-  border-bottom: 3px solid ${theme.colors.darkBlue};
+  border-bottom: 1px solid ${theme.colors.grey};
   @media (max-width: 991px) {
     width: 100vw;
     flex-direction: column;
     & > div {
-      border-left: 0px solid ${theme.colors.darkBlue};
+      border-left: 0px solid ${theme.colors.grey};
     }
     & > div img {
-      object-position: top !important;
-      border-bottom: 3px solid ${theme.colors.darkBlue};
+      border-bottom: 1px solid ${theme.colors.grey};
     }
     & > div:first-of-type {
-      border-left: 0px solid ${theme.colors.darkBlue};
+      border-left: 0px solid ${theme.colors.grey};
       height: 280px;
     }
   }
 `;
 
 const Title = styled.h2`
-  font-size: 65px;
-  line-height: 65px;
+  font-size: 64px;
+  line-height: 64px;
   display: flex;
   flex-direction: column;
   font-weight: 700;
   color: ${theme.colors.darkBlue};
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   text-align: left;
+
   & > span {
     padding: 0;
     @media (max-width: 800px) {
@@ -87,10 +86,7 @@ const Title = styled.h2`
       line-height: 40px;
     }
   }
-  & > span:nth-child(3) {
-    color: ${theme.colors.secondary};
-    text-shadow: 4px 4px 13px ${theme.colors.shadow};
-  }
+
   @media (max-width: 800px) {
     margin-bottom: 40px;
   }
@@ -101,26 +97,29 @@ const Description = styled.div`
   font-size: 17px;
   line-height: 22px;
   max-width: 560px;
+
   @media (max-width: 800px) {
     font-size: 16px;
-    & > p {
-      margin: 0;
-    }
+  }
+
+  & p {
+    margin: 0;
   }
 `;
 
 const JourneySection = styled.div`
-  background-color: ${theme.colors.secondary};
-  padding: 30px 65px;
-  border-bottom: 3px solid ${theme.colors.darkBlue};
+  background-color: ${theme.colors.white};
+  padding: 64px;
+  border-bottom: 1px solid ${theme.colors.grey};
   @media (max-width: 800px) {
     padding: 25px 25px 40px 25px;
   }
 `;
 
 const JourneyItemType = styled.span`
-  color: ${theme.colors.primary};
-  opacity: 0.8;
+  color: ${theme.colors.darkBlue};
+  font-size: 14px;
+  opacity: 0.6;
 `;
 
 const JourneyItemTitle = styled.span`
@@ -128,20 +127,25 @@ const JourneyItemTitle = styled.span`
   margin: 2px 0 4px;
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
 `;
 
 const JourneyItemTime = styled.span`
   color: ${theme.colors.darkBlue};
   font-size: 15px;
-  opacity: 0.7;
+  opacity: 0.6;
 `;
 
-const JourneyItemDescription = styled.div`
-  margin-top: 12px;
-  font-size: 17px;
+const JourneyItemDescription = styled.ul`
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 16px;
   align-self: start;
   white-space: pre-line;
   color: ${theme.colors.darkBlue};
+  padding-left: 16px;
+  list-style-type: circle;
+
   @media (max-width: 800px) {
     font-size: 16px;
     & > p {
@@ -151,9 +155,9 @@ const JourneyItemDescription = styled.div`
 `;
 
 const ProgressLine = styled.div`
-  width: 2px;
+  width: 1px;
   height: 100%;
-  background-color: ${theme.colors.primary};
+  background-color: ${theme.colors.grey};
   flex-shrink: 1;
   margin: 16px 0;
   @media (max-width: 991px) {
@@ -177,7 +181,7 @@ const StyledRow = styled(Row)`
   flex-direction: ${(props) => (props.index % 2 === 1 ? "row-reverse" : "row")};
   margin-bottom: 0px;
   @media (max-width: 991px) {
-    margin-bottom: ${(props) => (props.isLast ? "0px" : "16px")};
+    margin-bottom: ${(props) => (props?.isLastRow ? "0px" : "16px")};
     flex-direction: row-reverse;
   }
 `;
@@ -193,15 +197,18 @@ const LogoRow = styled(Row)`
 const TechStackSection = styled.div`
   display: flex;
   justify-content: space-around;
-  background-color: ${theme.colors.shadow};
+  background-color: ${theme.colors.white};
   & > div {
     width: 850px;
-    background-color: ${theme.colors.shadow};
-    padding: 30px 65px;
-    border-left: 3px solid ${theme.colors.darkBlue};
-    border-right: 3px solid ${theme.colors.darkBlue};
+    background-color: ${theme.colors.lightGrey};
+    padding: 30px 64px;
+    border-left: 1px solid ${theme.colors.grey};
+    border-right: 1px solid ${theme.colors.grey};
+
     @media (max-width: 800px) {
       padding: 25px 25px 40px 25px;
+      border-left: 0px solid ${theme.colors.grey};
+      border-right: 0px solid ${theme.colors.grey};
     }
   }
   & p {
@@ -211,12 +218,12 @@ const TechStackSection = styled.div`
     }
   }
   text-align: center;
-  border-bottom: 3px solid ${theme.colors.darkBlue};
+  border-bottom: 1px solid ${theme.colors.grey};
 `;
 
 const SectionTitle = styled(Title)`
   font-size: 50px;
-  line-height: 65px;
+  line-height: 64px;
   display: flex;
   flex-direction: column;
   font-weight: 700;
@@ -249,17 +256,15 @@ const Links = styled.div`
 
 const ViewMore = styled.div`
   margin: 28px 0 12px;
-  transform: translateX(12px);
+
   & a {
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.lightGrey};
     color: ${theme.colors.darkBlue};
-    border-radius: 100px;
     font-size: 18px;
     cursor: pointer;
-    border: 2px solid ${theme.colors.darkBlue};
-    box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
-    padding: 8px 12px;
-    text-transform: uppercase;
+    border-bottom: 1px solid ${theme.colors.darkBlue};
+    padding-bottom: 8px;
+
     @media (max-width: 800px) {
       font-size: 16px;
     }
@@ -282,7 +287,7 @@ const journeyItems = [
   {
     type: "Education",
     logo: "/image/hcmut_logo.png",
-    title: "Ho Chi Minh city University of Technology",
+    title: "Ho Chi Minh City University of Technology",
     time: "2019 - now",
     description:
       "Major: Computer Engineering;GPA: 7.6 / 10;Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Software Engineering, Internet of Things Application Development etc.",
@@ -305,6 +310,8 @@ export default function About() {
 
   const { push } = useRouter();
 
+  useAnimation(isSSR, ".scroll-container");
+
   return (
     !isSSR && (
       <div>
@@ -313,7 +320,7 @@ export default function About() {
           <meta name="description" content="About me" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <MainContainer>
+        <MainContainer className="scroll-container">
           <Sidebar />
           <MainContent>
             <SwipeWrapper>
@@ -326,15 +333,16 @@ export default function About() {
                     preview={false}
                     style={{
                       objectFit: "cover",
+                      objectPosition: "30%",
                       width: "100%",
                       height: "100%",
                     }}
                   />
-                  <div>
-                    <Title>
+                  <div className="site-ani-group">
+                    <Title className="site-ani-auto site-ani__fade-in">
                       <span>Few things about me</span>
                     </Title>
-                    <Description>
+                    <Description className="site-ani-auto site-ani__fade-in">
                       <p>
                         Nice to meet you. My name is Nam Nguyen Dinh and
                         I&rsquo;m living in Ho Chi Minh city. I&rsquo;m
@@ -379,11 +387,11 @@ export default function About() {
                   </div>
                 </Content>
                 <TechStackSection>
-                  <div>
-                    <SectionTitle>
+                  <div className="site-ani-group">
+                    <SectionTitle className="site-ani-auto site-ani__fade-in">
                       <span>Tech stack that I mostly use</span>
                     </SectionTitle>
-                    <Links>
+                    <Links className="site-ani-auto site-ani__fade-in">
                       <Icon icon="mdi:react" style={{ fontSize: 48 }} />
                       <Icon
                         icon="mdi:language-typescript"
@@ -401,6 +409,7 @@ export default function About() {
                         color: theme.colors.darkBlue,
                         margin: "20px 0",
                       }}
+                      className="site-ani-auto site-ani__fade-in"
                     >
                       With some additional technologies for developing including{" "}
                       <HighLight>
@@ -458,7 +467,10 @@ export default function About() {
                       </HighLight>
                       .
                     </p>
-                    <ViewMore style={{ textAlign: "left" }}>
+                    <ViewMore
+                      style={{ textAlign: "left" }}
+                      className="site-ani-auto site-ani__fade-in"
+                    >
                       <a onClick={() => push("/projects")}>
                         Checkout my projects{" "}
                         <Icon icon="ant-design:swap-right-outlined" />
@@ -467,94 +479,103 @@ export default function About() {
                   </div>
                 </TechStackSection>
                 <JourneySection>
-                  <SectionTitle>
+                  <SectionTitle className="site-ani-auto site-ani__fade-in">
                     <span>My journey until now</span>
                   </SectionTitle>
-                  {journeyItems.map((i, index) => (
-                    <StyledRow
-                      key={i.title}
-                      index={index}
-                      isLast={index === journeyItems.length - 1}
-                    >
-                      <Col
-                        span={19}
-                        lg={{ span: 8 }}
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          padding: 15,
-                          borderRadius: 30,
-                          border: `2px solid ${theme.colors.darkBlue}`,
-                          boxShadow: `-12px 4px 0 ${theme.colors.darkBlue}`,
-                        }}
+                  <div className="site-ani-group">
+                    {journeyItems.map((i, index) => (
+                      <StyledRow
+                        key={i.title}
+                        index={index}
+                        isLastRow={index === journeyItems.length - 1}
+                        className="site-ani-auto site-ani__slide-up"
                       >
-                        <JourneyItemType>{i.type}</JourneyItemType>
-                        <JourneyItemTitle>{i.title}</JourneyItemTitle>
-                        <JourneyItemTime>{i.time}</JourneyItemTime>
-                        <JourneyItemDescription>
-                          {i.description.split(";").map((d) => {
-                            if (d.includes(":")) {
-                              const key = d.split(":")[0];
-                              const value = d.split(":")[1];
+                        <Col
+                          span={19}
+                          lg={{ span: 8 }}
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            padding: 16,
+                            border: `1px solid ${theme.colors.grey}`,
+                            backgroundColor: theme.colors.lightGrey,
+                          }}
+                        >
+                          <JourneyItemType>{i.type}</JourneyItemType>
+                          <JourneyItemTitle>{i.title}</JourneyItemTitle>
+                          <JourneyItemTime>{i.time}</JourneyItemTime>
+                          <JourneyItemDescription>
+                            {i.description.split(";").map((d) => {
+                              if (d.includes(":")) {
+                                const key = d.split(":")[0];
+                                const value = d.split(":")[1];
+                                return (
+                                  <li
+                                    key={d}
+                                    style={{
+                                      marginTop: 4,
+                                    }}
+                                  >
+                                    <span
+                                      style={{
+                                        color: theme.colors.darkBlue,
+                                        fontWeight: 700,
+                                        fontSize: 13,
+                                        // textTransform: "uppercase",
+                                        borderBottom: `1px solid ${theme.colors.grey}`,
+                                        marginRight: 4,
+                                      }}
+                                    >
+                                      {key}
+                                    </span>
+                                    {value}
+                                  </li>
+                                );
+                              }
                               return (
                                 <li
                                   key={d}
                                   style={{
                                     marginTop: 4,
-                                    listStyle: "disc outside",
                                   }}
                                 >
-                                  <span style={{ color: theme.colors.primary }}>
-                                    {key}:
-                                  </span>
-                                  {value}
+                                  {d}
                                 </li>
                               );
-                            }
-                            return (
-                              <li
-                                key={d}
-                                style={{
-                                  marginTop: 4,
-                                  listStyle: "disc outside",
-                                }}
-                              >
-                                {d}
-                              </li>
-                            );
-                          })}
-                        </JourneyItemDescription>
-                      </Col>
-                      <Col
-                        span={5}
-                        lg={{ span: 16 }}
-                        style={{
-                          alignSelf: "stretch",
-                        }}
-                      >
-                        <LogoRow index={index}>
-                          <Col
-                            span={24}
-                            sm={{ span: 12 }}
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                              justifyContent: "flex-start",
-                              alignItems: "center",
-                            }}
-                          >
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <StyledImg src={i.logo} alt={i.title} />
-                            {index < journeyItems.length - 1 ? (
-                              <ProgressLine />
-                            ) : null}
-                          </Col>
-                        </LogoRow>
-                      </Col>
-                    </StyledRow>
-                  ))}
+                            })}
+                          </JourneyItemDescription>
+                        </Col>
+                        <Col
+                          span={5}
+                          lg={{ span: 16 }}
+                          style={{
+                            alignSelf: "stretch",
+                          }}
+                        >
+                          <LogoRow index={index}>
+                            <Col
+                              span={24}
+                              sm={{ span: 12 }}
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                              }}
+                            >
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <StyledImg src={i.logo} alt={i.title} />
+                              {index < journeyItems.length - 1 ? (
+                                <ProgressLine />
+                              ) : null}
+                            </Col>
+                          </LogoRow>
+                        </Col>
+                      </StyledRow>
+                    ))}
+                  </div>
                 </JourneySection>
               </>
             </SwipeWrapper>
