@@ -23,7 +23,7 @@ const HeaderTitle = styled.h1`
   margin: 0;
   font-weight: 400;
   background-color: ${theme.colors.lightGrey};
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   display: flex;
   align-items: center;
   width: max-content;
@@ -44,7 +44,7 @@ const MobileToggleButton = styled.button`
   align-items: center;
   background-color: transparent;
   cursor: pointer;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   & > * {
     font-size: 25px;
     padding: 0;

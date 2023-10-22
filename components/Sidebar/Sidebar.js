@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 
 const SidebarContainer = styled.div`
   padding: 28px 20px;
-  background-color: ${theme.colors.darkBlue};
+  background-color: ${theme.colors.darkGrey};
   height: 100%;
   position: sticky;
   top: 0;

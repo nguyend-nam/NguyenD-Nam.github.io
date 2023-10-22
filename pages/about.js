@@ -74,7 +74,7 @@ const Title = styled.h2`
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   margin: 0;
   margin-bottom: 80px;
   text-align: left;
@@ -93,7 +93,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 17px;
   line-height: 22px;
   max-width: 560px;
@@ -117,13 +117,13 @@ const JourneySection = styled.div`
 `;
 
 const JourneyItemType = styled.span`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 14px;
   opacity: 0.6;
 `;
 
 const JourneyItemTitle = styled.span`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   margin: 2px 0 4px;
   font-size: 18px;
   font-weight: 500;
@@ -131,7 +131,7 @@ const JourneyItemTitle = styled.span`
 `;
 
 const JourneyItemTime = styled.span`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 15px;
   opacity: 0.6;
 `;
@@ -142,7 +142,7 @@ const JourneyItemDescription = styled.ul`
   font-size: 16px;
   align-self: start;
   white-space: pre-line;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   padding-left: 16px;
   list-style-type: circle;
 
@@ -244,7 +244,7 @@ const SectionTitle = styled(Title)`
 const Links = styled.div`
   & > * {
     font-size: 45px;
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     background-clip: text;
     margin: 0 15px;
     @media (max-width: 800px) {
@@ -259,10 +259,10 @@ const ViewMore = styled.div`
 
   & a {
     background-color: ${theme.colors.lightGrey};
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 1px solid ${theme.colors.darkBlue};
+    border-bottom: 1px solid ${theme.colors.darkGrey};
     padding-bottom: 8px;
 
     @media (max-width: 800px) {
@@ -406,7 +406,7 @@ export default function About() {
                     <p
                       style={{
                         textAlign: "left",
-                        color: theme.colors.darkBlue,
+                        color: theme.colors.darkGrey,
                         margin: "20px 0",
                       }}
                       className="site-ani-auto site-ani__fade-in"
@@ -520,7 +520,7 @@ export default function About() {
                                   >
                                     <span
                                       style={{
-                                        color: theme.colors.darkBlue,
+                                        color: theme.colors.darkGrey,
                                         fontWeight: 700,
                                         fontSize: 13,
                                         // textTransform: "uppercase",

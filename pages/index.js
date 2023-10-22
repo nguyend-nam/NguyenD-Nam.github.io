@@ -81,7 +81,7 @@ const Title = styled.h2`
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   margin: 0;
   margin-bottom: 100px;
   & > span {
@@ -97,7 +97,7 @@ const Title = styled.h2`
     font-weight: 700;
     border-radius: 100px;
     text-transform: uppercase;
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     @media (max-width: 800px) {
       font-size: 48px;
       line-height: 48px;
@@ -109,7 +109,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -122,10 +122,10 @@ const ViewMore = styled.div`
   margin-top: 40px;
 
   & a {
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 1px solid ${theme.colors.darkBlue};
+    border-bottom: 1px solid ${theme.colors.darkGrey};
     padding-bottom: 8px;
 
     @media (max-width: 800px) {
@@ -166,7 +166,7 @@ const ContactSection = styled.div`
 const SectionTitle = styled.div`
   font-size: 36px;
   font-weight: 600;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   margin-bottom: 40px;
   text-align: left;
   @media (max-width: 800px) {
@@ -180,7 +180,7 @@ const MailButton = styled.button`
   border-radius: 100px;
   box-shadow: -12px 4px 0 ${theme.colors.grey};
   background-color: ${theme.colors.lightGrey};
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 18px;
   cursor: pointer;
   border: 1px solid ${theme.colors.grey};
@@ -193,7 +193,7 @@ const MailButton = styled.button`
   }
 
   :hover {
-    border: 1px solid ${theme.colors.darkBlue};
+    border: 1px solid ${theme.colors.darkGrey};
   }
 `;
 
@@ -204,7 +204,7 @@ const Links = styled.div`
     cursor: pointer;
     font-size: 30px;
     background-color: ${theme.colors.lightGrey};
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     margin: 0 15px;
     display: flex;
     width: max-content;

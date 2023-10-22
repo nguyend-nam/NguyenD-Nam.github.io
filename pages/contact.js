@@ -52,7 +52,7 @@ const Title = styled.h2`
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   margin: 0;
   margin-bottom: 60px;
   & > span {
@@ -68,7 +68,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -99,7 +99,7 @@ const MailButton = styled.button`
   border-radius: 100px;
   box-shadow: -12px 4px 0 ${theme.colors.grey};
   background-color: ${theme.colors.lightGrey};
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 18px;
   cursor: pointer;
   border: 1px solid ${theme.colors.grey};
@@ -112,7 +112,7 @@ const MailButton = styled.button`
   }
 
   :hover {
-    border: 1px solid ${theme.colors.darkBlue};
+    border: 1px solid ${theme.colors.darkGrey};
   }
 `;
 
@@ -123,7 +123,7 @@ const Links = styled.div`
     cursor: pointer;
     font-size: 30px;
     background-color: ${theme.colors.lightGrey};
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     margin: 0 15px;
     display: flex;
     width: max-content;

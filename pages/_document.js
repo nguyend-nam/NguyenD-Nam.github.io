@@ -12,7 +12,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content={theme.colors.primary} />
+        <meta name="theme-color" content={theme.colors.grey} />
         <meta property="og:image" content="/og.png" />
         <meta property="og:url" content="https://ngdnam.netlify.app" />
         <meta property="og:site_name" content="Nam Nguyen" />

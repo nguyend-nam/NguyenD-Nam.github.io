@@ -48,7 +48,7 @@ const Content = styled.div`
       object-position: top !important;
     }
     & > div {
-      border-left: 0px solid ${theme.colors.primary};
+      border-left: 0px solid ${theme.colors.grey};
     }
   }
 `;
@@ -59,7 +59,7 @@ const Title = styled.h2`
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   margin: 0;
   margin-bottom: 60px;
   text-align: left;
@@ -76,7 +76,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -89,10 +89,10 @@ const ViewMore = styled.div`
   margin-top: 30px;
 
   & a {
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.darkGrey};
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 1px solid ${theme.colors.darkBlue};
+    border-bottom: 1px solid ${theme.colors.darkGrey};
     padding-bottom: 8px;
 
     @media (max-width: 800px) {
@@ -167,7 +167,7 @@ const ProjectCard = styled.div`
 const ProjectTitle = styled.div`
   font-size: 21px;
   font-weight: 600;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
 
   & > a:hover {
     opacity: 0.6;
@@ -178,7 +178,7 @@ const ProjectTitle = styled.div`
 `;
 
 const ProjectDescription = styled.div`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 16px;
   @media (max-width: 800px) {
     font-size: 15px;
@@ -187,7 +187,7 @@ const ProjectDescription = styled.div`
 
 const ProjectTags = styled.div`
   background-color: ${theme.colors.white};
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   border-radius: 100px;
   font-size: 15px;
   font-weight: 400;
