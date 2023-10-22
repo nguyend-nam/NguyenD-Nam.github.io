@@ -39,6 +39,7 @@ const HeaderTitle = styled.h1`
 
 const MobileToggleButton = styled.button`
   outline: none;
+  flex-shrink: 0;
   border: none;
   max-height: 39px;
   align-items: center;
