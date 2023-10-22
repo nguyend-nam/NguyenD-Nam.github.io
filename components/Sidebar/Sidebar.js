@@ -92,11 +92,7 @@ export function Sidebar() {
   return (
     <SidebarContainer>
       <ToggleButton onClick={() => setSideBar(!sideBar)} hasWidth={sideBar}>
-        {sideBar ? (
-          <Icon icon="grommet-icons:close" />
-        ) : (
-          <Icon icon="grommet-icons:menu" />
-        )}
+        {sideBar ? <Icon icon="cil:x" /> : <Icon icon="cil:menu" />}
       </ToggleButton>
       <SidebarRoutesContainer isDisplayed={sideBar}>
         <SidebarRoutes onClick={() => push(`/`)} active={currPathname === "/"}>
