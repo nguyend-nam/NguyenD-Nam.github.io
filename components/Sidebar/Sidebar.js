@@ -93,9 +93,9 @@ export function Sidebar() {
     <SidebarContainer>
       <ToggleButton onClick={() => setSideBar(!sideBar)} hasWidth={sideBar}>
         {sideBar ? (
-          <Icon icon="ic:sharp-menu-open" />
+          <Icon icon="grommet-icons:close" />
         ) : (
-          <Icon icon="ic:sharp-menu-open" rotate={2} />
+          <Icon icon="grommet-icons:menu" />
         )}
       </ToggleButton>
       <SidebarRoutesContainer isDisplayed={sideBar}>

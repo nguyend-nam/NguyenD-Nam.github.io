@@ -22,16 +22,13 @@ const HeaderContainer = styled.div`
 const HeaderTitle = styled.h1`
   margin: 0;
   font-weight: 400;
-  border-radius: 100px;
   background-color: ${theme.colors.lightGrey};
   color: ${theme.colors.darkBlue};
   display: flex;
   align-items: center;
   width: max-content;
-  padding: 3px 14px;
+  padding: 3px 0;
   font-size: 25px;
-  box-shadow: -12px 4px 0 ${theme.colors.grey};
-  border: 1px solid ${theme.colors.darkBlue};
   & > span:nth-child(2) {
     font-weight: 700;
   }
@@ -73,9 +70,9 @@ export function Header() {
     <HeaderContainer>
       <MobileToggleButton onClick={() => setSideBar(!sideBar)}>
         {sideBar ? (
-          <Icon icon="ic:sharp-menu-open" />
+          <Icon icon="grommet-icons:close" />
         ) : (
-          <Icon icon="ic:sharp-menu-open" rotate={2} />
+          <Icon icon="grommet-icons:menu" />
         )}
       </MobileToggleButton>
       <Link href="/">
