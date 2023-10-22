@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "suisse";
+  src: url("/fonts/suisse/SuisseIntl-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "suisse";
+  src: url("/fonts/suisse/SuisseIntl-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "suisse";
+  src: url("/fonts/suisse/SuisseIntl-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "suisse";
+  src: url("/fonts/suisse/SuisseIntl-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
@@ -11,5 +39,36 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: "Space Grotesk";
+  font-family: "suisse";
+}
+
+.site-ani__fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.site-ani__fade-in.state-ani-go {
+  opacity: 1;
+}
+
+.site-ani__slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+}
+
+.site-ani__slide-up.state-ani-go {
+  transform: none;
+  opacity: 1;
+}
+
+.site-ani__pop-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s, transform 1s;
+}
+
+.site-ani__pop-in.state-ani-go {
+  opacity: 1;
+  transform: none;
 }

@@ -3,17 +3,17 @@ import styled from "styled-components";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { theme } from "../constants";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
-import { appear } from "../constants";
 import { Image } from "antd";
 import { HighLight } from "../components/HighLight/HighLight";
 import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
+import { useAnimation } from "../hooks/useAnimation";
 
 const MainContainer = styled.div`
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   display: flex;
   height: 100vh;
   overflow-x: hidden;
@@ -23,7 +23,6 @@ const MainContainer = styled.div`
 `;
 
 const MainContent = styled.div`
-  animation: ${appear} 0.3s linear forwards;
   width: calc(100vw - 70px);
   height: max-content;
   @media (max-width: 800px) {
@@ -32,7 +31,7 @@ const MainContent = styled.div`
 `;
 
 const Content = styled.div`
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   width: calc(100vw - 70px);
   display: flex;
   justify-content: space-between;
@@ -45,10 +44,10 @@ const Content = styled.div`
     }
   }
   & > div:nth-child(2) {
-    min-width: 300px;
+    min-width: 330px;
     max-height: 100%;
     padding: 0px;
-    border-left: 3px solid ${theme.colors.darkBlue};
+    border-left: 1px solid ${theme.colors.grey};
     flex: 1;
     display: flex;
     align-items: flex-start;
@@ -56,8 +55,8 @@ const Content = styled.div`
     @media (max-width: 800px) {
       height: 500px;
       overflow: hidden;
-      border-left: 0px solid ${theme.colors.darkBlue};
-      border-top: 3px solid ${theme.colors.darkBlue};
+      border-left: 0px solid ${theme.colors.grey};
+      border-top: 1px solid ${theme.colors.grey};
     }
     & > div {
       height: 100%;
@@ -69,7 +68,7 @@ const Content = styled.div`
       }
     }
   }
-  border-bottom: 3px solid ${theme.colors.darkBlue};
+  border-bottom: 1px solid ${theme.colors.grey};
   @media (max-width: 800px) {
     width: 100vw;
     flex-wrap: wrap;
@@ -77,14 +76,14 @@ const Content = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 65px;
-  line-height: 65px;
+  font-size: 64px;
+  line-height: 64px;
   display: flex;
   flex-direction: column;
-  font-weight: 600;
-  color: ${theme.colors.darkBlue};
+  font-weight: 500;
+  color: ${theme.colors.darkGrey};
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   & > span {
     padding: 0;
     @media (max-width: 800px) {
@@ -93,24 +92,24 @@ const Title = styled.h2`
     }
   }
   & > span:nth-child(3) {
+    font-size: 72px;
+    line-height: 72px;
     font-weight: 700;
     border-radius: 100px;
-    padding: 3px 21px;
-    transform: translateX(-21px);
-    color: ${theme.colors.primary};
-    background-color: ${theme.colors.darkBlue};
+    text-transform: uppercase;
+    color: ${theme.colors.darkGrey};
     @media (max-width: 800px) {
-      padding: 2px 12px;
-      transform: translateX(-12px);
+      font-size: 48px;
+      line-height: 48px;
     }
   }
   @media (max-width: 800px) {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 `;
 
 const Description = styled.div`
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   font-size: 17px;
   line-height: 22px;
   max-width: 500px;
@@ -121,16 +120,14 @@ const Description = styled.div`
 
 const ViewMore = styled.div`
   margin-top: 40px;
-  transform: translateX(12px);
+
   & a {
-    color: ${theme.colors.darkBlue};
-    border-radius: 100px;
+    color: ${theme.colors.darkGrey};
     font-size: 18px;
     cursor: pointer;
-    border: 2px solid ${theme.colors.primary};
-    box-shadow: -12px 4px 0 ${theme.colors.primary};
-    padding: 8px 12px;
-    text-transform: uppercase;
+    border-bottom: 1px solid ${theme.colors.darkGrey};
+    padding-bottom: 8px;
+
     @media (max-width: 800px) {
       font-size: 16px;
     }
@@ -144,25 +141,32 @@ const ViewMore = styled.div`
 const ContactSection = styled.div`
   display: flex;
   justify-content: space-around;
-  background-color: ${theme.colors.shadow};
+  background-color: ${theme.colors.white};
   & > div {
     max-width: 750px;
-    background-color: ${theme.colors.shadow};
+    background-color: ${theme.colors.lightGrey};
     padding: 60px;
-    border-left: 3px solid ${theme.colors.darkBlue};
-    border-right: 3px solid ${theme.colors.darkBlue};
+    border-left: 1px solid ${theme.colors.grey};
+    border-right: 1px solid ${theme.colors.grey};
+
     @media (max-width: 800px) {
       padding: 35px 25px;
+      border-left: 1px solid ${theme.colors.lightGrey};
+      border-right: 1px solid ${theme.colors.lightGrey};
     }
   }
   text-align: center;
-  border-bottom: 3px solid ${theme.colors.darkBlue};
+  border-bottom: 1px solid ${theme.colors.grey};
+
+  @media (max-width: 800px) {
+    background-color: ${theme.colors.lightGrey};
+  }
 `;
 
 const SectionTitle = styled.div`
-  font-size: 35px;
-  font-weight: 700;
-  color: ${theme.colors.darkBlue};
+  font-size: 36px;
+  font-weight: 600;
+  color: ${theme.colors.darkGrey};
   margin-bottom: 40px;
   text-align: left;
   @media (max-width: 800px) {
@@ -174,17 +178,22 @@ const MailButton = styled.button`
   border: none;
   outline: none;
   border-radius: 100px;
-  box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.darkBlue};
+  box-shadow: -12px 4px 0 ${theme.colors.grey};
+  background-color: ${theme.colors.lightGrey};
+  color: ${theme.colors.darkGrey};
   font-size: 18px;
   cursor: pointer;
-  border: 2px solid ${theme.colors.darkBlue};
+  border: 1px solid ${theme.colors.grey};
   padding: 8px 18px;
   text-transform: uppercase;
   margin-bottom: 30px;
+
   @media (max-width: 800px) {
     font-size: 16px;
+  }
+
+  :hover {
+    border: 1px solid ${theme.colors.darkGrey};
   }
 `;
 
@@ -194,8 +203,8 @@ const Links = styled.div`
   & > a {
     cursor: pointer;
     font-size: 30px;
-    background-color: ${theme.colors.shadow};
-    color: ${theme.colors.darkBlue};
+    background-color: ${theme.colors.lightGrey};
+    color: ${theme.colors.darkGrey};
     margin: 0 15px;
     display: flex;
     width: max-content;
@@ -205,10 +214,13 @@ const Links = styled.div`
 export default function Home() {
   const [isSSR, setIsSSR] = useState(true);
   const { push } = useRouter();
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     setIsSSR(false);
   }, []);
+
+  useAnimation(isSSR, ".scroll-container");
 
   return (
     !isSSR && (
@@ -218,20 +230,26 @@ export default function Home() {
           <meta name="description" content="Welcome to my personal website" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <MainContainer>
+        <MainContainer className="scroll-container">
           <Sidebar />
           <MainContent>
             <SwipeWrapper>
               <Header />
               <>
-                <Content>
-                  <div>
-                    <Title>
-                      <span>Hello,</span>
-                      <span>My name is</span>
-                      <span>Nam Nguyen</span>
+                <Content className="site-ani-group">
+                  <div ref={scrollRef}>
+                    <Title className="site-ani-auto site-ani__fade-in site-ani-group">
+                      <span className="site-ani-auto site-ani__slide-up">
+                        Hello,
+                      </span>
+                      <span className="site-ani-auto site-ani__slide-up">
+                        My name is
+                      </span>
+                      <span className="site-ani-auto site-ani__slide-up">
+                        Nam Nguyen
+                      </span>
                     </Title>
-                    <Description>
+                    <Description className="site-ani-auto site-ani__fade-in">
                       <p>
                         I&rsquo;m a Frontend engineer who loves to develop
                         gorgeous UI & UX for websites & web applications.
@@ -243,7 +261,7 @@ export default function Home() {
                         <HighLight>SCSS</HighLight>.
                       </p>
                     </Description>
-                    <ViewMore>
+                    <ViewMore className="site-ani-auto site-ani__fade-in">
                       <a onClick={() => push("/about")}>
                         More about me{" "}
                         <Icon icon="ant-design:swap-right-outlined" />
@@ -254,19 +272,20 @@ export default function Home() {
                     <Image src="/image/namnd.jpg" alt="Namnd" preview={false} />
                   </div>
                 </Content>
-                <ContactSection>
+                <ContactSection className="site-ani-group">
                   <div>
-                    <SectionTitle>
+                    <SectionTitle className="site-ani-auto site-ani__fade-in">
                       <span>Let&rsquo;s connect and make difference</span>
                     </SectionTitle>
-                    <MailButton>
+                    <MailButton className="site-ani-auto site-ani__fade-in">
                       <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
                     </MailButton>
-                    <Links>
+                    <Links className="site-ani-group site-ani-auto site-ani__fade-in">
                       <a
                         href="https://github.com/nguyend-nam"
                         rel="noreferrer"
                         target="_blank"
+                        className="site-ani-auto site-ani__fade-in"
                       >
                         <Icon icon="mdi:github" style={{ fontSize: 36 }} />
                       </a>
@@ -274,6 +293,7 @@ export default function Home() {
                         href="https://www.linkedin.com/in/nguyendinhnam0320/"
                         rel="noreferrer"
                         target="_blank"
+                        className="site-ani-auto site-ani__fade-in"
                       >
                         <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
                       </a>

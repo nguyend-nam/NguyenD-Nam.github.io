@@ -6,13 +6,13 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const HeaderContainer = styled.div`
-  border-bottom: 3px solid ${theme.colors.darkBlue};
-  padding: 25px 65px;
+  border-bottom: 1px solid ${theme.colors.grey};
+  padding: 25px 64px;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: ${theme.colors.primary};
+  background-color: ${theme.colors.lightGrey};
   display: flex;
   @media (max-width: 800px) {
     padding: 25px;
@@ -21,17 +21,14 @@ const HeaderContainer = styled.div`
 
 const HeaderTitle = styled.h1`
   margin: 0;
-  font-weight: 300;
-  border-radius: 100px;
-  background-color: ${theme.colors.shadow};
-  color: ${theme.colors.darkBlue};
+  font-weight: 400;
+  background-color: ${theme.colors.lightGrey};
+  color: ${theme.colors.darkGrey};
   display: flex;
   align-items: center;
   width: max-content;
-  padding: 3px 14px;
+  padding: 3px 0;
   font-size: 25px;
-  box-shadow: -12px 4px 0 ${theme.colors.darkBlue};
-  border: 2px solid ${theme.colors.darkBlue};
   & > span:nth-child(2) {
     font-weight: 700;
   }
@@ -47,7 +44,7 @@ const MobileToggleButton = styled.button`
   align-items: center;
   background-color: transparent;
   cursor: pointer;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.darkGrey};
   & > * {
     font-size: 25px;
     padding: 0;
@@ -73,9 +70,9 @@ export function Header() {
     <HeaderContainer>
       <MobileToggleButton onClick={() => setSideBar(!sideBar)}>
         {sideBar ? (
-          <Icon icon="ic:sharp-menu-open" />
+          <Icon icon="grommet-icons:close" />
         ) : (
-          <Icon icon="ic:sharp-menu-open" rotate={2} />
+          <Icon icon="grommet-icons:menu" />
         )}
       </MobileToggleButton>
       <Link href="/">
