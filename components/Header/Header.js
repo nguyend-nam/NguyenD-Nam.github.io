@@ -51,7 +51,7 @@ const MobileToggleButton = styled.button`
     padding: 0;
   }
   transition: 0.3s;
-  margin-right: 30px;
+  margin-right: 25px;
   overflow: hidden;
   padding: 0;
   &:hover {
@@ -70,11 +70,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <MobileToggleButton onClick={() => setSideBar(!sideBar)}>
-        {sideBar ? (
-          <Icon icon="grommet-icons:close" />
-        ) : (
-          <Icon icon="grommet-icons:menu" />
-        )}
+        {sideBar ? <Icon icon="cil:x" /> : <Icon icon="cil:menu" />}
       </MobileToggleButton>
       <Link href="/">
         <HeaderTitle>

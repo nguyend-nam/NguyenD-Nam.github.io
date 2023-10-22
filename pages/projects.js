@@ -169,6 +169,10 @@ const ProjectTitle = styled.div`
   font-weight: 600;
   color: ${theme.colors.darkGrey};
 
+  & > a {
+    transition: opacity 0.25s;
+  }
+
   & > a:hover {
     opacity: 0.6;
   }
