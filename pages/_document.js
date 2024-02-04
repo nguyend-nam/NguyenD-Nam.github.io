@@ -5,21 +5,21 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" />
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content={theme.colors.grey} />
-        <meta property="og:image" content="/og.png" />
-        <meta property="og:url" content="https://ngdnam.netlify.app" />
-        <meta property="og:site_name" content="Nam Nguyen" />
-        <meta property="og:title" content="Nam Nguyen" />
+        <link href="/favicon.ico" rel="icon" />
+        <meta content={theme.colors.grey} name="theme-color" />
+        <meta content="/og.png" property="og:image" />
+        <meta content="https://ngdnam.netlify.app" property="og:url" />
+        <meta content="Nam Nguyen" property="og:site_name" />
+        <meta content="Nam Nguyen" property="og:title" />
         <meta
-          property="og:description"
           content="Welcome to my personal website"
+          property="og:description"
         />
       </Head>
       <body>

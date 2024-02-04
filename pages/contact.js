@@ -6,7 +6,6 @@ import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
 import { Icon } from "@iconify/react";
-import { useRouter } from "next/router";
 import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
 import { useAnimation } from "../hooks/useAnimation";
 
@@ -132,7 +131,6 @@ const Links = styled.div`
 
 export default function Contact() {
   const [isSSR, setIsSSR] = useState(true);
-  const { push } = useRouter();
 
   useEffect(() => {
     setIsSSR(false);
@@ -145,8 +143,8 @@ export default function Contact() {
       <div>
         <Head>
           <title>Contact | Nam Nguyen</title>
-          <meta name="description" content="Contact me" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta content="Contact me" name="description" />
+          <link href="/favicon.ico" rel="icon" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -173,18 +171,18 @@ export default function Contact() {
                     </MailButton>
                     <Links>
                       <a
+                        className="site-ani-auto site-ani__fade-in"
                         href="https://github.com/nguyend-nam"
                         rel="noreferrer"
                         target="_blank"
-                        className="site-ani-auto site-ani__fade-in"
                       >
                         <Icon icon="mdi:github" style={{ fontSize: 36 }} />
                       </a>
                       <a
+                        className="site-ani-auto site-ani__fade-in"
                         href="https://www.linkedin.com/in/nguyendinhnam0320/"
                         rel="noreferrer"
                         target="_blank"
-                        className="site-ani-auto site-ani__fade-in"
                       >
                         <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
                       </a>

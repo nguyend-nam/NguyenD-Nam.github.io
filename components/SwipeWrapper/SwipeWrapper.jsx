@@ -78,12 +78,12 @@ export const SwipeWrapper = ({ children }) => {
 
   return (
     <div
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchOrMouseEnd}
       onMouseDown={onMouseDown}
       onMouseMove={onMouseMove}
       onMouseUp={onTouchOrMouseEnd}
+      onTouchEnd={onTouchOrMouseEnd}
+      onTouchMove={onTouchMove}
+      onTouchStart={onTouchStart}
     >
       {children}
     </div>

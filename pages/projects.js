@@ -5,12 +5,12 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { theme } from "../constants";
-import { HighLight } from "../components/HighLight/HighLight";
 import { Icon } from "@iconify/react";
 import { Image } from "antd";
 import { useIsMDSize } from "../hooks/useIsMDSize";
 import { SwipeWrapper } from "../components/SwipeWrapper/SwipeWrapper";
 import { useAnimation } from "../hooks/useAnimation";
+import { projects } from "../constants/project";
 
 const MainContainer = styled.div`
   background-color: ${theme.colors.white};
@@ -115,9 +115,15 @@ const ProjectsContainer = styled.div`
     & > a > div {
       height: 100%;
       width: 100%;
+      overflow: hidden;
       & > img {
         height: 100% !important;
         width: 100% !important;
+        transition: transform 0.5s;
+        transform: scale(1.05);
+        &:hover{
+          transform: scale(1);
+        }
       }
     }
   }
@@ -209,221 +215,6 @@ const ProjectTags = styled.div`
   }
 `;
 
-const projects = [
-  {
-    name: "Scrollery",
-    img: "/image/proj-scrollery.png",
-    projectUrl: "https://scrollery.js.org",
-    repoUrl: "https://github.com/nguyend-nam/scrollery",
-    description: (
-      <>
-        React TypeScript library that empowers developers to effortlessly
-        animate contents on scroll. View the library on{" "}
-        <HighLight>
-          <a
-            href="https://www.npmjs.com/package/@nguyend-nam/scrollery-ts"
-            rel="noreferrer"
-            target="_blank"
-          >
-            NPM
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>{" "}
-        or{" "}
-        <HighLight>
-          <a
-            href="https://github.com/nguyend-nam/scrollery"
-            rel="noreferrer"
-            target="_blank"
-          >
-            GitHub
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>
-        .
-      </>
-    ),
-    techStack: ["Next.js", "TypeScript", "NPM", "TailwindCSS"],
-  },
-  {
-    name: "Google Fonts app clone",
-    img: "/image/proj-ggfonts.png",
-    projectUrl: "https://nextjs-google-fonts.netlify.app",
-    repoUrl: "https://github.com/nguyend-nam/google-fonts-clone",
-    description: (
-      <>
-        <HighLight>
-          <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
-            Google Fonts app
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>{" "}
-        clone.
-      </>
-    ),
-    techStack: ["Next.js", "TypeScript", "TailwindCSS"],
-  },
-  {
-    name: "React three fiber image gallery",
-    img: "/image/proj-r3fimages.png",
-    projectUrl: "https://dwarvesf-r3f.netlify.app",
-    repoUrl: "https://github.com/nguyend-nam/r3f-image-gallery",
-    description: (
-      <>
-        Grid image gallery made with{" "}
-        <HighLight>
-          <a
-            href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
-            rel="noreferrer"
-            target="_blank"
-          >
-            React three fiber
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>{" "}
-        and{" "}
-        <HighLight>
-          <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
-            Next.js
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>
-        .
-      </>
-    ),
-    techStack: ["Next.js", "TypeScript", "React three fiber", "GLSL"],
-  },
-  {
-    name: "Which holiday?",
-    img: "/image/proj-holiday.png",
-    projectUrl: "https://whichholiday.vercel.app/",
-    repoUrl: "https://github.com/nguyend-nam/which-holiday",
-    description: <>View holidays of each country and their date on calendar.</>,
-    techStack: ["Next.js", "SWR", "styled-components", "TailwindCSS"],
-  },
-  {
-    name: "Aggregation App",
-    img: "/image/proj-aggapp.png",
-    projectUrl: "https://aggregation-app.vercel.app/",
-    repoUrl: "https://github.com/nguyend-nam/Aggregation-app",
-    description: (
-      <>
-        Simple aggregation app using{" "}
-        <HighLight>
-          <a
-            href="https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api"
-            rel="noreferrer"
-            target="_blank"
-          >
-            GitHub APIs
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>
-        .
-      </>
-    ),
-    techStack: ["ReactJS", "CSS"],
-  },
-  {
-    name: "Next.js calendar page UI",
-    img: "/image/proj-calui.png",
-    projectUrl: "https://dwarvesf-boilerplate.netlify.app/calendar",
-    repoUrl: "https://github.com/nguyend-nam/nextjs-calendar",
-    description: (
-      <>
-        Calendar section for dashboard UI built with{" "}
-        <HighLight>
-          <a
-            href="https://github.com/dwarvesf/nextjs-boilerplate"
-            rel="noreferrer"
-            target="_blank"
-          >
-            dwarvesf&rsquo;s Next.js boilerplate
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>
-        .
-      </>
-    ),
-    techStack: ["Next.js", "TypeScript", "TailwindCSS"],
-  },
-  {
-    name: "CSES Downloader",
-    img: "/image/proj-cses.png",
-    projectUrl: "https://csessolutions.netlify.app",
-    repoUrl: "https://github.com/DecSP/cses-downloader",
-    description: (
-      <>
-        <HighLight>
-          <a href="https://cses.fi/" rel="noreferrer" target="_blank">
-            CSES
-            <Icon
-              icon="mdi:link"
-              style={{
-                fontSize: 20,
-                verticalAlign: "sub",
-                marginLeft: 2,
-              }}
-            />
-          </a>
-        </HighLight>{" "}
-        problemset solutions downloader + packager with user-friendly web
-        interface.
-      </>
-    ),
-    techStack: ["JavaScript", "HTML", "CSS", "Python"],
-  },
-];
-
 export default function Projects() {
   const [isSSR, setIsSSR] = useState(true);
 
@@ -440,82 +231,80 @@ export default function Projects() {
       <div>
         <Head>
           <title>Projects | Nam Nguyen</title>
-          <meta name="description" content="My projects" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta content="My projects" name="description" />
+          <link href="/favicon.ico" rel="icon" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
           <MainContent>
             <SwipeWrapper>
               <Header />
-              <>
-                <Content className="site-ani-group">
-                  <div className="site-ani-auto site-ani__fade-in">
-                    <Title className="site-ani-auto site-ani__fade-in">
-                      <span>Projects</span>
-                    </Title>
-                    <Description className="site-ani-auto site-ani__fade-in">
-                      <p>Some of my open sources and personal projects.</p>
-                    </Description>
-                    <ViewMore className="site-ani-auto site-ani__fade-in">
+              <Content className="site-ani-group">
+                <div className="site-ani-auto site-ani__fade-in">
+                  <Title className="site-ani-auto site-ani__fade-in">
+                    <span>Projects</span>
+                  </Title>
+                  <Description className="site-ani-auto site-ani__fade-in">
+                    <p>Some of my open sources and personal projects.</p>
+                  </Description>
+                  <ViewMore className="site-ani-auto site-ani__fade-in">
+                    <a
+                      href="https://github.com/nguyend-nam/?tab=repositories"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      View more on GitHub{" "}
+                      <Icon icon="ant-design:swap-right-outlined" />
+                    </a>
+                  </ViewMore>
+                </div>
+                <ProjectsContainer className="site-ani-auto site-ani__fade-in">
+                  {projects.map((project) => (
+                    <ProjectCard
+                      key={project.name}
+                      className="site-ani-auto site-ani__slide-up"
+                    >
                       <a
-                        href="https://github.com/nguyend-nam/?tab=repositories"
+                        href={project.projectUrl}
                         rel="noreferrer"
+                        style={{
+                          display: "block",
+                          height: isMD ? 200 : 300,
+                        }}
                         target="_blank"
                       >
-                        View more on GitHub{" "}
-                        <Icon icon="ant-design:swap-right-outlined" />
-                      </a>
-                    </ViewMore>
-                  </div>
-                  <ProjectsContainer className="site-ani-auto site-ani__fade-in">
-                    {projects.map((project) => (
-                      <ProjectCard
-                        key={project.name}
-                        className="site-ani-auto site-ani__slide-up"
-                      >
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href={project.projectUrl}
+                        <Image
+                          alt={project.img}
+                          preview={false}
+                          src={project.img}
                           style={{
-                            display: "block",
-                            height: isMD ? 200 : 300,
+                            objectFit: "cover",
                           }}
-                        >
-                          <Image
-                            src={project.img}
-                            alt={project.img}
-                            preview={false}
-                            style={{
-                              objectFit: "cover",
-                            }}
-                          />
-                        </a>
-                        <div>
-                          <ProjectTitle>
-                            <a
-                              href={project.repoUrl}
-                              rel="noreferrer"
-                              target="_blank"
-                            >
-                              {project.name}
-                            </a>
-                          </ProjectTitle>
-                        </div>
-                        <ProjectDescription>
-                          {project.description}
-                        </ProjectDescription>
-                        <div>
-                          {project.techStack.map((tech, i) => (
-                            <ProjectTags key={i}>{tech}</ProjectTags>
-                          ))}
-                        </div>
-                      </ProjectCard>
-                    ))}
-                  </ProjectsContainer>
-                </Content>
-              </>
+                        />
+                      </a>
+                      <div>
+                        <ProjectTitle>
+                          <a
+                            href={project.repoUrl}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            {project.name}
+                          </a>
+                        </ProjectTitle>
+                      </div>
+                      <ProjectDescription>
+                        {project.description}
+                      </ProjectDescription>
+                      <div>
+                        {project.techStack.map((tech, i) => (
+                          <ProjectTags key={i}>{tech}</ProjectTags>
+                        ))}
+                      </div>
+                    </ProjectCard>
+                  ))}
+                </ProjectsContainer>
+              </Content>
             </SwipeWrapper>
             <Footer />
           </MainContent>

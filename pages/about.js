@@ -317,8 +317,8 @@ export default function About() {
       <div>
         <Head>
           <title>About | Nam Nguyen</title>
-          <meta name="description" content="About me" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta content="About me" name="description" />
+          <link href="/favicon.ico" rel="icon" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -328,9 +328,9 @@ export default function About() {
               <>
                 <Content>
                   <Image
-                    src="/image/me-dalat.jpg"
                     alt="Me"
                     preview={false}
+                    src="/image/me-dalat.jpg"
                     style={{
                       objectFit: "cover",
                       objectPosition: "30%",
@@ -365,11 +365,11 @@ export default function About() {
                         I&rsquo;m also focusing on my personal project,{" "}
                         <HighLight>
                           <a
-                            href="https://scrollery.js.org"
+                            href="https://code-tour.js.org"
                             rel="noreferrer"
                             target="_blank"
                           >
-                            Scrollery
+                            Code Tour
                             <Icon
                               icon="mdi:link"
                               style={{
@@ -380,8 +380,7 @@ export default function About() {
                             />
                           </a>
                         </HighLight>
-                        , which is a React TypeScript library that empowers
-                        developers to effortlessly animate contents on scroll.
+                        , which is a React TypeScript library offering interactive code walkthroughs for the web.
                       </p>
                     </Description>
                   </div>
@@ -404,12 +403,12 @@ export default function About() {
                       <Icon icon="mdi:language-css3" style={{ fontSize: 48 }} />
                     </Links>
                     <p
+                      className="site-ani-auto site-ani__fade-in"
                       style={{
                         textAlign: "left",
                         color: theme.colors.darkGrey,
                         margin: "20px 0",
                       }}
-                      className="site-ani-auto site-ani__fade-in"
                     >
                       With some additional technologies for developing including{" "}
                       <HighLight>
@@ -468,8 +467,8 @@ export default function About() {
                       .
                     </p>
                     <ViewMore
-                      style={{ textAlign: "left" }}
                       className="site-ani-auto site-ani__fade-in"
+                      style={{ textAlign: "left" }}
                     >
                       <a onClick={() => push("/projects")}>
                         Checkout my projects{" "}
@@ -486,13 +485,13 @@ export default function About() {
                     {journeyItems.map((i, index) => (
                       <StyledRow
                         key={i.title}
+                        className="site-ani-auto site-ani__slide-up"
                         index={index}
                         isLastRow={index === journeyItems.length - 1}
-                        className="site-ani-auto site-ani__slide-up"
                       >
                         <Col
-                          span={19}
                           lg={{ span: 8 }}
+                          span={19}
                           style={{
                             display: "flex",
                             justifyContent: "center",
@@ -548,16 +547,16 @@ export default function About() {
                           </JourneyItemDescription>
                         </Col>
                         <Col
-                          span={5}
                           lg={{ span: 16 }}
+                          span={5}
                           style={{
                             alignSelf: "stretch",
                           }}
                         >
                           <LogoRow index={index}>
                             <Col
-                              span={24}
                               sm={{ span: 12 }}
+                              span={24}
                               style={{
                                 display: "flex",
                                 flexDirection: "column",
@@ -565,8 +564,7 @@ export default function About() {
                                 alignItems: "center",
                               }}
                             >
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <StyledImg src={i.logo} alt={i.title} />
+                              <StyledImg alt={i.title} src={i.logo} />
                               {index < journeyItems.length - 1 ? (
                                 <ProgressLine />
                               ) : null}

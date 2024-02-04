@@ -4,9 +4,7 @@ import { theme } from "../constants";
 
 export const SideBarContext = createContext({
   sideBar: false,
-  toggleSideBar: (sideBar) => {
-    sideBar = sideBar;
-  },
+  toggleSideBar: undefined
 });
 
 function MyApp({ Component, pageProps }) {
@@ -17,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <SideBarContext.Provider value={{ sideBar, toggleSideBar }}>
-      <style jsx global>{`
+      <style global jsx>{`
         body {
           background: ${theme.colors.lightGrey};
         }

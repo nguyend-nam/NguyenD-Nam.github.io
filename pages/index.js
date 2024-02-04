@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { theme } from "../constants";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
@@ -236,8 +236,8 @@ export default function Home() {
       <div>
         <Head>
           <title>Nam Nguyen</title>
-          <meta name="description" content="Welcome to my personal website" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta content="Welcome to my personal website" name="description" />
+          <link href="/favicon.ico" rel="icon" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -278,7 +278,7 @@ export default function Home() {
                     </ViewMore>
                   </div>
                   <div>
-                    <Image src="/image/namnd.jpg" alt="Namnd" preview={false} />
+                    <Image alt="Namnd" preview={false} src="/image/namnd.jpg" />
                   </div>
                 </Content>
                 <ContactSection className="site-ani-group">
@@ -291,18 +291,18 @@ export default function Home() {
                     </MailButton>
                     <Links className="site-ani-group site-ani-auto site-ani__fade-in">
                       <a
+                        className="site-ani-auto site-ani__fade-in"
                         href="https://github.com/nguyend-nam"
                         rel="noreferrer"
                         target="_blank"
-                        className="site-ani-auto site-ani__fade-in"
                       >
                         <Icon icon="mdi:github" style={{ fontSize: 36 }} />
                       </a>
                       <a
+                        className="site-ani-auto site-ani__fade-in"
                         href="https://www.linkedin.com/in/nguyendinhnam0320/"
                         rel="noreferrer"
                         target="_blank"
-                        className="site-ani-auto site-ani__fade-in"
                       >
                         <Icon icon="mdi:linkedin" style={{ fontSize: 36 }} />
                       </a>

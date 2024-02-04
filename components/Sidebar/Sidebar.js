@@ -91,28 +91,28 @@ export function Sidebar() {
   const currPathname = window.location.pathname;
   return (
     <SidebarContainer>
-      <ToggleButton onClick={() => setSideBar(!sideBar)} hasWidth={sideBar}>
+      <ToggleButton hasWidth={sideBar} onClick={() => setSideBar(!sideBar)}>
         {sideBar ? <Icon icon="cil:x" /> : <Icon icon="cil:menu" />}
       </ToggleButton>
       <SidebarRoutesContainer isDisplayed={sideBar}>
-        <SidebarRoutes onClick={() => push(`/`)} active={currPathname === "/"}>
+        <SidebarRoutes active={currPathname === "/"} onClick={() => push(`/`)}>
           Home
         </SidebarRoutes>
         <SidebarRoutes
-          onClick={() => push(`/about`)}
           active={currPathname === "/about"}
+          onClick={() => push(`/about`)}
         >
           About
         </SidebarRoutes>
         <SidebarRoutes
-          onClick={() => push(`/projects`)}
           active={currPathname === "/projects"}
+          onClick={() => push(`/projects`)}
         >
           Projects
         </SidebarRoutes>
         <SidebarRoutes
-          onClick={() => push(`/contact`)}
           active={currPathname === "/contact"}
+          onClick={() => push(`/contact`)}
         >
           Contact
         </SidebarRoutes>

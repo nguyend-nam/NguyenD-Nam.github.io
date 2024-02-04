@@ -1,3 +1,59 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)", "**/*.js?(x)"],
+      "rules": {
+        "react/jsx-no-useless-fragment": [
+          "error",
+          { "allowExpressions": true }
+        ],
+        "no-nested-ternary": "error",
+        "no-unused-vars": "warn",
+        "react/self-closing-comp": [
+          "error",
+          {
+            "component": true,
+            "html": true
+          }
+        ],
+        "semi": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "unicode-bom": 0,
+        "react/jsx-curly-brace-presence": [
+          "warn",
+          { "props": "never", "children": "never" }
+        ],
+        "no-debugger": "off",
+        "react/jsx-sort-props": [
+          "warn",
+          {
+            "shorthandLast": true,
+            "callbacksLast": true,
+            "multiline": "ignore",
+            "ignoreCase": true,
+            "noSortAlphabetically": false,
+            "reservedFirst": true,
+            "locale": "auto"
+          }
+        ]
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
