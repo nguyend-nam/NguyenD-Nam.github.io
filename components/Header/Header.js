@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeaderContainer = styled.div`
   border-bottom: 1px solid ${theme.colors.grey};
-  padding: 25px 64px;
+  padding: 20px 64px;
   position: sticky;
   top: 0;
   width: 100%;
@@ -15,7 +15,7 @@ const HeaderContainer = styled.div`
   background-color: ${theme.colors.lightGrey};
   display: flex;
   @media (max-width: 800px) {
-    padding: 25px;
+    padding: 16px 25px;
   }
 `;
 

@@ -40,7 +40,6 @@ const ToggleButton = styled.button`
     transform: scale(1.1);
   }
   @media (max-width: 800px) {
-    margin-right: ${(props) => (props.hasWidth ? "175px" : "0")};
     width: 0;
   }
 `;
@@ -60,9 +59,9 @@ const SidebarRoutesContainer = styled.ul`
 
 const SidebarRoutes = styled.li`
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   color: ${(props) => (props.active ? theme.colors.grey : theme.colors.white)};
-  margin: 30px 0;
+  margin: 28px 0;
   display: flex;
   align-items: center;
   width: max-content;
@@ -73,13 +72,13 @@ const SidebarRoutes = styled.li`
     content: "";
     height: 1px;
     transition: 0.3s;
-    width: ${(props) => (props.active ? "20px" : "0px")};
+    width: ${(props) => (props.active ? "16px" : "0px")};
     background-color: ${theme.colors.grey};
     position: relative;
   }
   &:hover:before {
     margin-right: 10px;
-    width: 20px;
+    width: 16px;
   }
 `;
 

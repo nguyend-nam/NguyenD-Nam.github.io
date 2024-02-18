@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "suisse";
   src: url("/fonts/suisse/SuisseIntl-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -24,7 +24,7 @@
   src: url("/fonts/suisse/SuisseIntl-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 html,
 body {
@@ -39,7 +39,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: "suisse";
+  font-family: Poppins;
 }
 
 .site-ani__fade-in {

@@ -7,8 +7,9 @@ const FooterContainer = styled.div`
   width: 100%;
   background-color: ${theme.colors.white};
   color: ${theme.colors.darkGrey};
+  font-size: 16px;
   @media (max-width: 800px) {
-    font-size: 15px;
+    font-size: 14px;
   }
 `;
 
