@@ -110,7 +110,7 @@ const Title = styled.h2`
     max-width: max-content;
     text-transform: uppercase;
     word-break: break-word;
-    background-image: linear-gradient(to right, #3b82f6, #1e40af, #7c3aed);
+    background-image: linear-gradient(to right, #3b82f6, #1e40af, ${theme.colors.purple});
     @media (max-width: 800px) {
       font-size: 48px;
       line-height: 48px;
@@ -207,7 +207,7 @@ const MailButton = styled.button`
   }
 
   :hover {
-    border: 1px solid ${theme.colors.darkGrey};
+    border: 1px solid ${theme.colors.purple};
   }
 `;
 
@@ -266,7 +266,7 @@ export default function Home() {
                     <Description className="site-ani-auto site-ani__fade-in">
                       <p>
                         I&rsquo;m a passionate Frontend Engineer dedicated to develop
-                        gorgeous UI & UX for websites & web applications.
+                        gorgeous UI/UX for websites & web applications.
                         <br />
                         <br />I frequently utilize <HighLight>ReactJS</HighLight> with{" "}
                         <HighLight>Next.js</HighLight> framework,{" "}

@@ -111,7 +111,7 @@ const MailButton = styled.button`
   }
 
   :hover {
-    border: 1px solid ${theme.colors.darkGrey};
+    border: 1px solid ${theme.colors.purple};
   }
 `;
 

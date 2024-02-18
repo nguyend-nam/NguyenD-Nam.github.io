@@ -295,13 +295,13 @@ const journeyItems = [
     title: "Dwarves Foundation LLC.",
     time: "2022 - now",
     description:
-      "Title: Frontend Engineer;I work on Frontend side of several projects using Next.js, TypeScript and other libraries for writing CSS-in-JS, data fetching etc. I'm responsible for developing reusable components and responsive, pixel-perfect UI-UX for web applications.",
+      "Title: Frontend Engineer;I specialize in Frontend Development across multiple projects, using Next.js, TypeScript and various other libraries for writing CSS-in-JS, data fetching, UI library, etc. My responsibilities include researching and constructing reusable components, crafting responsive, pixel-perfect UI/UX, and writing requests to interact with APIs from the Backend side.",
   },
   {
     type: "Education",
     logo: "/image/hcmut_logo.png",
     title: "Ho Chi Minh City University of Technology",
-    time: "2019 - now",
+    time: "2019 - 2023",
     description:
       "Major: Computer Engineering;GPA: 7.6 / 10;Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Software Engineering, Internet of Things Application Development etc.",
   },
@@ -357,25 +357,21 @@ export default function About() {
                     </Title>
                     <Description className="site-ani-auto site-ani__fade-in">
                       <p>
-                        Nice to meet you. My name is Nam Nguyen Dinh and
-                        I&rsquo;m living in Ho Chi Minh city. I&rsquo;m
-                        currently a final-year student at{" "}
+                        Nice to meet you. I&rsquo;m Nam Nguyen Dinh, currently based in vibrant Ho Chi Minh City. I hold a degree from{" "}
                         <HighLight>
                           Ho Chi Minh City University of Technology - HCMUT
                         </HighLight>{" "}
-                        and also a <HighLight>Frontend Development</HighLight>{" "}
-                        enthusiast who loves to learn new technologies and
-                        develop gorgeous websites & web applications.
+                        and am deeply passionate about <HighLight>Frontend Development</HighLight>. I thoroughly enjoy learning new technologies and crafting stunning websites and web applications.
                         <br />
                         <br />
-                        I&rsquo;m working as a Frontend Engineer using mainly{" "}
+                        In my role as a Frontend Engineer, I specialize in using{" "}
                         <HighLight>ReactJS</HighLight> with{" "}
                         <HighLight>Next.js</HighLight> framework,{" "}
                         <HighLight>TypeScript</HighLight>,{" "}
-                        <HighLight>SCSS</HighLight> and other web development tools.
+                        <HighLight>SCSS</HighLight> and various other web development tools.
                         <br />
                         <br />
-                        I&rsquo;m also engaged in a collaborative project with friends called{" "}
+                        Additionally, I&rsquo;m also engaged in a collaborative project with friends called{" "}
                         <HighLight>
                           <a
                             href="https://problem-randomizer.vercel.app/randomizer"
@@ -394,7 +390,7 @@ export default function About() {
                             />
                           </a>
                         </HighLight>
-                        , which is an open platform where you can create and publish problem sets and test your programming skills with various coding problems from Codeforces, AtCoder, etc..
+                        . This platform provides an open space where you can create and publish problem sets, and test your programming skills with various coding problems from Codeforces, AtCoder, etc.
                       </p>
                     </Description>
                   </div>
@@ -422,7 +418,7 @@ export default function About() {
                         color: theme.colors.darkGrey,
                       }}
                     >
-                      With some additional technologies for developing including{" "}
+                      Additionally, I utilize a range of supplementary technologies for development, such as{" "}
                       <HighLight>
                         <a
                           href="https://nextjs.org"
