@@ -68,11 +68,11 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${theme.colors.darkGrey};
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   max-width: 500px;
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 

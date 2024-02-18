@@ -19,11 +19,12 @@ export const projects = [
                     >
                         NPM
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -49,11 +50,12 @@ export const projects = [
                     >
                         NPM
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -73,11 +75,12 @@ export const projects = [
                     <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
                         Google Fonts app
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -103,11 +106,12 @@ export const projects = [
                     >
                         React three fiber
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -117,11 +121,12 @@ export const projects = [
                     <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
                         Next.js
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -155,11 +160,12 @@ export const projects = [
                     >
                         GitHub APIs
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -185,11 +191,12 @@ export const projects = [
                     >
                         dwarvesf&rsquo;s Next.js boilerplate
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>
@@ -210,11 +217,12 @@ export const projects = [
                     <a href="https://cses.fi/" rel="noreferrer" target="_blank">
                         CSES
                         <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                             }}
                         />
                     </a>

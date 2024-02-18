@@ -94,12 +94,12 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${theme.colors.darkGrey};
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   max-width: 560px;
 
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   & p {
@@ -112,7 +112,7 @@ const JourneySection = styled.div`
   padding: 64px;
   border-bottom: 1px solid ${theme.colors.grey};
   @media (max-width: 800px) {
-    padding: 25px 25px 40px 25px;
+    padding: 40px 25px;
   }
 `;
 
@@ -120,6 +120,9 @@ const JourneyItemType = styled.span`
   color: ${theme.colors.darkGrey};
   font-size: 14px;
   opacity: 0.6;
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
 `;
 
 const JourneyItemTitle = styled.span`
@@ -128,12 +131,18 @@ const JourneyItemTitle = styled.span`
   font-size: 18px;
   font-weight: 500;
   text-align: center;
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
 `;
 
 const JourneyItemTime = styled.span`
   color: ${theme.colors.darkGrey};
   font-size: 15px;
   opacity: 0.6;
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
 `;
 
 const JourneyItemDescription = styled.ul`
@@ -147,7 +156,7 @@ const JourneyItemDescription = styled.ul`
   list-style-type: circle;
 
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 14px;
     & > p {
       margin: 0;
     }
@@ -201,20 +210,23 @@ const TechStackSection = styled.div`
   & > div {
     width: 850px;
     background-color: ${theme.colors.lightGrey};
-    padding: 30px 64px;
+    padding: 60px 64px;
     border-left: 1px solid ${theme.colors.grey};
     border-right: 1px solid ${theme.colors.grey};
 
     @media (max-width: 800px) {
-      padding: 25px 25px 40px 25px;
+      padding: 40px 25px;
       border-left: 0px solid ${theme.colors.grey};
       border-right: 0px solid ${theme.colors.grey};
     }
   }
   & p {
-    font-size: 17px;
+    font-size: 16px;
+    max-width: 400px;
+    text-align: center !important;
+    margin: 20px auto;
     @media (max-width: 800px) {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   text-align: center;
@@ -255,12 +267,13 @@ const Links = styled.div`
 `;
 
 const ViewMore = styled.div`
-  margin: 28px 0 12px;
+  margin: 40px 0 12px;
 
   & a {
     background-color: ${theme.colors.lightGrey};
     color: ${theme.colors.darkGrey};
     font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
     border-bottom: 1px solid ${theme.colors.darkGrey};
     padding-bottom: 8px;
@@ -355,32 +368,33 @@ export default function About() {
                         develop gorgeous websites & web applications.
                         <br />
                         <br />
-                        I&rsquo;m working in a Frontend Engineer position using{" "}
+                        I&rsquo;m working as a Frontend Engineer using mainly{" "}
                         <HighLight>ReactJS</HighLight> with{" "}
-                        <HighLight>Next.js</HighLight>,{" "}
-                        <HighLight>TypeScript</HighLight> and{" "}
-                        <HighLight>SCSS</HighLight>.
+                        <HighLight>Next.js</HighLight> framework,{" "}
+                        <HighLight>TypeScript</HighLight>,{" "}
+                        <HighLight>SCSS</HighLight> and other web development tools.
                         <br />
                         <br />
-                        I&rsquo;m also focusing on my personal project,{" "}
+                        I&rsquo;m also engaged in a collaborative project with friends called{" "}
                         <HighLight>
                           <a
-                            href="https://code-tour.js.org"
+                            href="https://problem-randomizer.vercel.app/randomizer"
                             rel="noreferrer"
                             target="_blank"
                           >
-                            Code Tour
+                            Problem Randomizer
                             <Icon
-                              icon="mdi:link"
+                              icon="la:external-link-alt"
                               style={{
-                                fontSize: 20,
+                                fontSize: 14,
                                 verticalAlign: "sub",
                                 marginLeft: 2,
+                                marginBottom: 2,
                               }}
                             />
                           </a>
                         </HighLight>
-                        , which is a React TypeScript library offering interactive code walkthroughs for the web.
+                        , which is an open platform where you can create and publish problem sets and test your programming skills with various coding problems from Codeforces, AtCoder, etc..
                       </p>
                     </Description>
                   </div>
@@ -388,7 +402,7 @@ export default function About() {
                 <TechStackSection>
                   <div className="site-ani-group">
                     <SectionTitle className="site-ani-auto site-ani__fade-in">
-                      <span>Tech stack that I mostly use</span>
+                      <span>Languages and Frameworks I mostly use</span>
                     </SectionTitle>
                     <Links className="site-ani-auto site-ani__fade-in">
                       <Icon icon="mdi:react" style={{ fontSize: 48 }} />
@@ -405,9 +419,7 @@ export default function About() {
                     <p
                       className="site-ani-auto site-ani__fade-in"
                       style={{
-                        textAlign: "left",
                         color: theme.colors.darkGrey,
-                        margin: "20px 0",
                       }}
                     >
                       With some additional technologies for developing including{" "}
@@ -419,11 +431,12 @@ export default function About() {
                         >
                           Next.js
                           <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                              fontSize: 20,
+                              fontSize: 14,
                               verticalAlign: "sub",
                               marginLeft: 2,
+                              marginBottom: 2,
                             }}
                           />
                         </a>
@@ -437,11 +450,12 @@ export default function About() {
                         >
                           ESLint
                           <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                              fontSize: 20,
+                              fontSize: 14,
                               verticalAlign: "sub",
                               marginLeft: 2,
+                              marginBottom: 2,
                             }}
                           />
                         </a>
@@ -455,11 +469,12 @@ export default function About() {
                         >
                           MUI
                           <Icon
-                            icon="mdi:link"
+                            icon="la:external-link-alt"
                             style={{
-                              fontSize: 20,
+                              fontSize: 14,
                               verticalAlign: "sub",
                               marginLeft: 2,
+                              marginBottom: 2,
                             }}
                           />
                         </a>
@@ -520,11 +535,11 @@ export default function About() {
                                     <span
                                       style={{
                                         color: theme.colors.darkGrey,
-                                        fontWeight: 700,
+                                        fontWeight: 600,
                                         fontSize: 13,
                                         // textTransform: "uppercase",
                                         borderBottom: `1px solid ${theme.colors.grey}`,
-                                        marginRight: 4,
+                                        marginRight: 5,
                                       }}
                                     >
                                       {key}

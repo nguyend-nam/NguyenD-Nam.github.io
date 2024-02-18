@@ -101,12 +101,16 @@ const Title = styled.h2`
     }
   }
   & > span:nth-child(3) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     font-size: 72px;
     line-height: 72px;
     font-weight: 700;
-    border-radius: 100px;
+    max-width: max-content;
     text-transform: uppercase;
-    color: ${theme.colors.darkGrey};
+    word-break: break-word;
+    background-image: linear-gradient(to right, #3b82f6, #1e40af, #7c3aed);
     @media (max-width: 800px) {
       font-size: 48px;
       line-height: 48px;
@@ -119,20 +123,21 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${theme.colors.darkGrey};
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   max-width: 500px;
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
 const ViewMore = styled.div`
-  margin-top: 40px;
+  margin-top: 36px;
 
   & a {
     color: ${theme.colors.darkGrey};
     font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
     border-bottom: 1px solid ${theme.colors.darkGrey};
     padding-bottom: 8px;
@@ -260,14 +265,13 @@ export default function Home() {
                     </Title>
                     <Description className="site-ani-auto site-ani__fade-in">
                       <p>
-                        I&rsquo;m a Frontend engineer who loves to develop
+                        I&rsquo;m a passionate Frontend Engineer dedicated to develop
                         gorgeous UI & UX for websites & web applications.
                         <br />
-                        <br />I usually develop websites or web applications
-                        using <HighLight>ReactJS</HighLight> with{" "}
-                        <HighLight>Next.js</HighLight>,{" "}
+                        <br />I frequently utilize <HighLight>ReactJS</HighLight> with{" "}
+                        <HighLight>Next.js</HighLight> framework,{" "}
                         <HighLight>TypeScript</HighLight> and{" "}
-                        <HighLight>SCSS</HighLight>.
+                        <HighLight>SCSS</HighLight> in my projects.
                       </p>
                     </Description>
                     <ViewMore className="site-ani-auto site-ani__fade-in">

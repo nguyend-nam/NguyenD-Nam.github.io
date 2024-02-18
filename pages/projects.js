@@ -77,20 +77,21 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${theme.colors.darkGrey};
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   max-width: 500px;
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
 const ViewMore = styled.div`
-  margin-top: 30px;
+  margin-top: 28px;
 
   & a {
     color: ${theme.colors.darkGrey};
     font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
     border-bottom: 1px solid ${theme.colors.darkGrey};
     padding-bottom: 8px;
@@ -109,9 +110,9 @@ const ProjectsContainer = styled.div`
   padding: 30px 100px 60px !important;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
   & > div {
-    width: calc(50% - 25px) !important;
+    width: calc((100% - 80px) / 3) !important;
     & > a > div {
       height: 100%;
       width: 100%;
@@ -127,9 +128,16 @@ const ProjectsContainer = styled.div`
       }
     }
   }
+  @media (max-width: 1280px) {
+    padding: 20px 64px 50px !important;
+    gap: 36px;
+    & > div {
+      width: calc((100% - 36px) / 2) !important;
+    }
+  }
   @media (max-width: 991px) {
     padding: 20px 64px 50px !important;
-    gap: 40px;
+    gap: 36px;
     & > div {
       width: 100% !important;
     }
@@ -144,34 +152,27 @@ const ProjectCard = styled.div`
   background-color: ${theme.colors.lightGrey};
   overflow: hidden;
   & > div {
-    padding: 30px;
+    padding: 20px;
   }
   & > div:nth-child(2) {
     border-top: 1px solid ${theme.colors.grey} !important;
+    padding-top: 20px !important;
     padding-bottom: 0;
   }
   & > div:nth-child(n + 2) {
-    padding-bottom: 0px;
+    padding-top: 16px;
+    padding-bottom: 0;
   }
   & > div:nth-child(4) {
-    padding-bottom: 30px;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
-  }
-  @media (max-width: 800px) {
-    & > div {
-      padding: 20px;
-    }
-    & > div:nth-child(4) {
-      padding-bottom: 20px;
-      padding-top: 10px;
-    }
   }
 `;
 
 const ProjectTitle = styled.div`
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 600;
   color: ${theme.colors.darkGrey};
 
@@ -183,36 +184,25 @@ const ProjectTitle = styled.div`
     opacity: 0.6;
   }
   @media (max-width: 800px) {
-    font-size: 19px;
+    font-size: 18px;
   }
 `;
 
 const ProjectDescription = styled.div`
   color: ${theme.colors.darkGrey};
-  font-size: 16px;
-  @media (max-width: 800px) {
-    font-size: 15px;
-  }
+  font-size: 14px;
 `;
 
 const ProjectTags = styled.div`
   background-color: ${theme.colors.white};
   color: ${theme.colors.darkGrey};
   border-radius: 100px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   border: 1px solid ${theme.colors.grey};
   padding: 6px 8px;
-  margin-right: 10px;
-  margin-top: 10px;
-  @media (max-width: 800px) {
-    font-size: 16px;
-  }
-  @media (max-width: 800px) {
-    font-size: 13px;
-    margin-right: 7px;
-    margin-top: 7px;
-  }
+  margin-right: 6px;
+  margin-top: 6px;
 `;
 
 export default function Projects() {
