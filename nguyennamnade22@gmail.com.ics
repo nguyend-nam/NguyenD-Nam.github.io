@@ -1,0 +1,653 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:nguyennamnade22@gmail.com
+X-WR-TIMEZONE:Asia/Ho_Chi_Minh
+BEGIN:VTIMEZONE
+TZID:Asia/Ho_Chi_Minh
+X-LIC-LOCATION:Asia/Ho_Chi_Minh
+BEGIN:STANDARD
+TZOFFSETFROM:+0700
+TZOFFSETTO:+0700
+TZNAME:+07
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190220
+DTEND;VALUE=DATE:20190221
+DTSTAMP:20240227T022502Z
+UID:cph66dj1c8p3abb66pj66b9k69ij8bb1ccrm8b9o71h30chh69hj0ohnc4@google.com
+CREATED:20190731T024839Z
+LAST-MODIFIED:20190731T024950Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:🎉🎂❤️
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220408T093000Z
+DTEND:20220408T110000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=nhuancam.ha@shopee.com:mailto:nhuancam.ha@shopee.com
+UID:4tdtlclp0lc11k7m72pq2l0abc@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ng
+ uyennamnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=nhuanc
+ am.ha@shopee.com;X-NUM-GUESTS=0:mailto:nhuancam.ha@shopee.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=mi
+ nhluan.la@shopee.com;X-NUM-GUESTS=0:mailto:minhluan.la@shopee.com
+CREATED:20220405T094722Z
+DESCRIPTION:<h2>Dear&nbsp\;Nam Nguyen Dinh\,</h2><p>You're confirmed Interv
+ iew with us on:</p><p><b>Date/Time: 8 Apr\, 2022 04:30 - 06:00 m WIB</b></p
+ ><p>Interviewer: Luu Le</p><p><br>Join Zoom Meeting<br><a href="https://sea
+ .zoom.us/j/5093446411?pwd=bVVkTUh6UENFajJKQy9YZ2x4U1BKQT09"><u>https://sea.
+ zoom.us/j/5093446411?pwd=bVVkTUh6UENFajJKQy9YZ2x4U1BKQT09</u></a><br><br>Me
+ eting ID: 509 344 6411<br>Passcode: 752862<br><br><br>Codebunk link: <a hre
+ f="https://codebunk.com/b/7211100447666/" id="ow1846" __is_owner="true"><u>
+ https://codebunk.com/b/7211100447666/</u></a><br></p><p>(Please do not modi
+ fy this link before the interview)</p><p>Please accept calendar to confirm 
+ your attendance.</p><p>We are looking forward to meeting you at the intervi
+ ew.</p><p>Best Regards\,</p>
+LAST-MODIFIED:20220405T094741Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Shopee Interview Invitation - Nam Nguyen Dinh
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220506T030000Z
+DTEND:20220506T040000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=spawn@dwarvesv.com:mailto:spawn@d.foundation
+UID:6dif4kb2o7pjc285mjo5597p0r@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=nguyen
+ namnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=spawn@
+ dwarvesv.com;X-NUM-GUESTS=0:mailto:spawn@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=vi
+ ncent@dwarvesv.com;X-NUM-GUESTS=0:mailto:vincent@dwarvesv.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=th
+ anhpd@d.foundation;X-NUM-GUESTS=0:mailto:thanhpd@dwarvesv.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/iem-hvjw-urc
+CREATED:20220505T041227Z
+DESCRIPTION:Dear Nam\,<br><br>This email is to confirm your interview sched
+ ule with Dwarves Foundation for Frontend Intern position in Internship Prog
+ ram 2022.&nbsp\;<br><br>Please help find the meeting info as below<ul><li>F
+ riday\, May 6 10:00 - 11:00AM</li><li>Meeting link:&nbsp\;<a href="https://
+ meet.google.com/iem-hvjw-urc?hs=122&amp\;authuser=0" id="ow662" __is_owner=
+ "true">meet.google.com/iem-hvjw-urc</a>&nbsp\;</li><li>Please help to click
+  '<b>Yes</b>' on the invitation and gain full access to the link</li></ul>I
+ n case you have trouble logging to the link\, please contact Thuong - 08687
+ 01175 for further support.\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://
+ meet.google.com/iem-hvjw-urc\nOr dial: (US) +1 402-364-0336 PIN: 954530343#
+ \n\nLearn more about Meet at: https://support.google.com/a/users/answer/928
+ 2720\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220505T045549Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nam Nguyen l FE l Internship
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220510T030000Z
+DTEND:20220510T040000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=nhu.vo-huynh@banvien.com.vn:mailto:nhu.vo-huynh@banvien.com.vn
+UID:040000008200E00074C5B7101A82E00800000000D51FA4E81361D801000000000000000
+ 010000000AB2E9BAF29ACA940A1C1112DDFC149FD
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;X-NUM
+ -GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Ng
+ uyen Thanh Son;X-NUM-GUESTS=0:mailto:son.nguyen@banvien.com.vn
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Vi
+ ncent Nguyen;X-NUM-GUESTS=0:mailto:vien.nguyen@banvien.com.vn
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Tr
+ an Thi Ngoc Anh;X-NUM-GUESTS=0:mailto:anh.tran-ngoc@banvien.com.vn
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Tr
+ an Thi Hoang Vy;X-NUM-GUESTS=0:mailto:vy.tran-hoang@banvien.com.vn
+CREATED:20220506T063835Z
+DESCRIPTION:Dear Mr. Nam\,<https://www.smartrecruiters.com/app/people/appli
+ cations/9aaff294-3f37-43ba-b70c-885af172f01e>\n\n\n\nThank you for your int
+ erest in Ban Vien Company. We would like to invite you to join an online me
+ eting on:\n\n\n\n  *   Time & date: 10:00 AM - 10 May\, 2022\n  *   Positio
+ n: Internship Front-end Developer\n  *   Schedule the interview: Online int
+ erview meeting within 50 mins\n  *   Contact person: Ms. Nhu - Talent Acqui
+ sition Executive\n  *   Interviewer: Mr. Son - Senior Engineering Manager\n
+ \nPlease read "Using Microsoft Team Guideline"<https://docs.google.com/pres
+ entation/d/10aZeSGGU2R9R9ZqaZeznRV36cHrbIEZN/edit#slide=id.p1> before join 
+ the interview.\n\n\nIf you need any further information or need to reschedu
+ le\, please do not hesitate to contact me via nhu.vo-huynh@banvien.com.vn\n
+ \n\n\nWe are looking forward to seeing you and hope that we will have an op
+ portunity to work together.\n\n\n\nPlease confirm the email to make sure yo
+ u could follow up the schedule.\n\n\n\nThanks & Best Regards\,\n\n\n\nHuynh
+  Nhu.\n\n\n\n______________________________________________________________
+ __________________\nMicrosoft Teams meeting\nJoin on your computer or mobil
+ e app\nClick here to join the meeting<https://teams.microsoft.com/l/meetup-
+ join/19%3ameeting_MGMwNWNhNTctZTA5OC00ODg2LWE2ZTMtYmZiZTFhYWZkYjg5%40thread
+ .v2/0?context=%7b%22Tid%22%3a%2255c0c46d-f4aa-47c2-a63d-10e7015941db%22%2c%
+ 22Oid%22%3a%2254961f5e-9bf4-4be3-8833-7b4e83d78870%22%7d>\nLearn More<https
+ ://aka.ms/JoinTeamsMeeting> | Meeting options<https://teams.microsoft.com/m
+ eetingOptions/?organizerId=54961f5e-9bf4-4be3-8833-7b4e83d78870&tenantId=55
+ c0c46d-f4aa-47c2-a63d-10e7015941db&threadId=19_meeting_MGMwNWNhNTctZTA5OC00
+ ODg2LWE2ZTMtYmZiZTFhYWZkYjg5@thread.v2&messageId=0&language=en-US>\n_______
+ _________________________________________________________________________\n
+LAST-MODIFIED:20220506T063843Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Interview with Ban Vien Company for the Internship Front-end Develo
+ per position
+TRANSP:OPAQUE
+X-MICROSOFT-ONLINEMEETINGINFORMATION:{"OnlineMeetingChannelId":null\,"Onlin
+ eMeetingProvider":3}
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_MGMwNWNhNTctZTA5OC00ODg
+ 2LWE2ZTMtYmZiZTFhYWZkYjg5@thread.v2"\,"rid":0\,"mid":0\,"uid":null\,"privat
+ e":true\,"type":0}
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-OWNERAPPTID:2120561877
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/55c0c46d-f4aa-47c2-a63d-10e7015941db/54961f5e-9bf4-4be3-8833-7b
+ 4e83d78870/19_meeting_MGMwNWNhNTctZTA5OC00ODg2LWE2ZTMtYmZiZTFhYWZkYjg5@thre
+ ad.v2/0
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGCONFLINK:conf:sip:nhu.vo-huynh@banvien.com.vn\;gru
+ u\;opaque=app:conf:focus:id:teams:2:0!19:meeting_MGMwNWNhNTctZTA5OC00ODg2LW
+ E2ZTMtYmZiZTFhYWZkYjg5-thread.v2!54961f5e9bf44be388337b4e83d78870!55c0c46df
+ 4aa47c2a63d10e7015941db
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-EVENTPROPERTIESTODELETE:0
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_MGMwNWNhNTctZTA5OC00ODg2LWE2ZTMtYmZiZTFhYWZkYjg5%40thread.v2/0
+ ?context=%7b%22Tid%22%3a%2255c0c46d-f4aa-47c2-a63d-10e7015941db%22%2c%22Oid
+ %22%3a%2254961f5e-9bf4-4be3-8833-7b4e83d78870%22%7d
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221025T173000Z
+DTEND:20221025T213000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=rauch.gf@vercel.com:mailto:rauch.gf@vercel.com
+UID:rg2oqto459p110cscacpeto6og@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=nguyen
+ namnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+CREATED:20221024T012308Z
+DESCRIPTION:Clear your schedule for Next.js Conf 2022!\n\nThis is an online
+  event developers love. Join to learn the latest in Next.js\, get demos of 
+ new and favorite features\, and interact with presenters and the Next.js co
+ mmunity in our Discord.\n\nStart chatting with attendees today: <a href="ht
+ tps://nextjs.org/discord">nextjs.org/discord</a>
+LAST-MODIFIED:20221024T012310Z
+LOCATION:https://nextjs.org/conf
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Next.js Conf 2022
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230314T130000Z
+DTEND:20230314T133000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=toanhq@d.foundation:mailto:toanhq@d.foundation
+UID:0ub188gidj5ettej1q7tk1i994@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=al
+ an@d.foundation;X-NUM-GUESTS=0:mailto:alan@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=toanhq
+ @d.foundation;X-NUM-GUESTS=0:mailto:toanhq@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=th
+ anhpd@d.foundation;X-NUM-GUESTS=0:mailto:thanhpd@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=vi
+ ncenzo@d.foundation;X-NUM-GUESTS=0:mailto:vincenzo@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ng
+ uyennamnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/pfd-icit-rqi
+CREATED:20230314T030313Z
+DESCRIPTION:Meet at #mango\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://
+ meet.google.com/pfd-icit-rqi\nOr dial: (US) +1 515-518-4260 PIN: 744089697#
+ \nMore phone numbers: https://tel.meet/pfd-icit-rqi?pin=8830477877150&hs=7\
+ n\nLearn more about Meet at: https://support.google.com/a/users/answer/9282
+ 720\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20230314T031059Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Monorepo interview (Dropii)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221128T100000Z
+DTEND:20221128T110000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=unknownorganizer@calendar.google.com:mailto:unknownorganizer@c
+ alendar.google.com
+UID:7kukuqrfedlm2f9trvdla2h8lfjqe05i2c87h9cvrlhsadgdrdhdo19m8akl7ftc6nrg
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+CLASS:PRIVATE
+CREATED:20221128T061011Z
+DESCRIPTION:Radio Talk #48: Next.js as a Full-stack Framework\nhttps://www.
+ linkedin.com/events/radiotalk-48-next-jsasafull-sta7002852486579445760\n\nC
+ onfirmation number: NA
+LAST-MODIFIED:20230418T060019Z
+LOCATION:https://www.linkedin.com/events/radiotalk-48-next-jsasafull-sta700
+ 2852486579445760
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Radio Talk #48: Next.js as a Full-stack Framework
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230817T063000Z
+DTEND:20230817T071500Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=trinh.truong@ikonnectvn.com:mailto:trinh.truong@ikonnectvn.com
+UID:59b7a8ed-4a00-49fc-a576-95957cfdb234
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;X-NUM
+ -GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=trinh.
+ truong@ikonnectvn.com;X-NUM-GUESTS=0:mailto:trinh.truong@ikonnectvn.com
+CREATED:20230817T024651Z
+DESCRIPTION:Video: https://vc-sg.larksuite.com/j/353590141\n<b>Event name</
+ b>: <br>[Ikonnect] Online meeting<br><b>Event detail</b>: <br>Sharing:<br>-
+  Your experience and expectations.<br>- Job description and the company you
+  are applying to.<br><b>Vị trí ứng tuyển</b>: <br>Frontend Engineer<br><br>
+ Need to make changes to this event?<br><a href='https://ikonnectvn.larksuit
+ e.com/scheduler/cancellations/8ad8444a26744317b3953c09c5b173ce4f35cc2e44828
+ 49e49c9'>Cancel</a><br><a href='https://ikonnectvn.larksuite.com/scheduler/
+ reschedulings/8ad8444a26744317b3953c09c5b173ce4f35cc2e4482849e49c9'>Resched
+ ule</a><br>
+LAST-MODIFIED:20230817T063238Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nam Nguyen and Trương Kiều Trinh: [Ikonnect] Online meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230822T080000Z
+DTEND:20230822T084500Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=tran@ikonnectvn.com:mailto:tran@ikonnectvn.com
+UID:fe449341-313a-4db2-bc0a-4987df84fa96
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=du
+ y.vo@pi.exchange;X-NUM-GUESTS=0:mailto:duy.vo@pi.exchange
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;X-NUM
+ -GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=tran@i
+ konnectvn.com;X-NUM-GUESTS=0:mailto:tran@ikonnectvn.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=tu
+ an.phan@pi.exchange;X-NUM-GUESTS=0:mailto:tuan.phan@pi.exchange
+CREATED:20230817T082106Z
+DESCRIPTION:Video: https://meet.google.com/asx-mpte-uks\nDear Nam\,\n\nAs d
+ iscussed\, you are invited to go to a discussion with our client – PI.Excha
+ nge Company. Please view your scheduled interview and other helpful informa
+ tion as follows:\n\n📌 Date: Tue\, 22 Aug 2023\n📌 Time: 03:00 PM VNT (GMT 
+ +7)\n📌 Venue: Google Meet (https://meet.google.com/asx-mpte-uks)\n📌 Inter
+ viewer: Mr. Tuan Frontend Lead & Mr. Duy Technical Lead\n\nThere are some i
+ mportant notes for you below:\n📌 Read and do research about the client and
+  the jọb one more time before joining the interview: https://pi.exchange/\n
+ 📌 Please online 5-10 minutes earlier than the start time of the interview 
+ for good preparation\n📌 Update us back immediately if you got an urgent is
+ sue that you have to change the schedule\n📌 Call me at +8490 109 1161 if y
+ ou need any support\n\nPlease confirm your attendance by replying to this e
+ mail\, and thank you very much for your cooperation.\n\nBest regards\,\nMan
+ dy\n
+LAST-MODIFIED:20230817T082740Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:iKonnect/PI.Exchange - 1st Interview - Nguyễn Đình Nam
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230822T030000Z
+DTEND:20230822T040000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=thanhpd@d.foundation:mailto:thanhpd@d.foundation
+UID:58s78sdbfjlu9ln8hulsksoust@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=thanhp
+ d@d.foundation;X-NUM-GUESTS=0:mailto:thanhpd@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ng
+ uyennamnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/zxk-xbpq-gco
+CREATED:20230821T092632Z
+DESCRIPTION:<p>Hi Nam\,</p><p>I’m writing this email to invite you to our m
+ id-year Performance Review.</p><p>This meeting is an opportunity for us to 
+ reflect on your achievements over the past six months and collaboratively s
+ et goals for the next half of the year. Additionally\, please feel free to 
+ bring any questions or topics you'd like to discuss.</p><p>Looking forward 
+ to our conversation.</p><p>Thanh</p>\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet
+ : https://meet.google.com/zxk-xbpq-gco\nOr dial: (US) +1 413-327-2296 PIN: 
+ 685279590#\nMore phone numbers: https://tel.meet/zxk-xbpq-gco?pin=512904269
+ 6926&hs=7\n\nLearn more about Meet at: https://support.google.com/a/users/a
+ nswer/9282720\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20230822T025651Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nam Nguyen - Performance Review
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230905T063000Z
+DTEND:20230905T071500Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=c4f0alfvrlwgd@events.workablemail.com:mailto:c4f0alfvrlwgd@eve
+ nts.workablemail.com
+UID:rauxg9vceckapihhtqgfs_dvmhxhjlsi
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Tuong 
+ Anh Nguyen ;X-NUM-GUESTS=0:mailto:anh.pnguyen@katalon.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+URL:http://www.workable.com/events/rauxg9vceckapihhtqgfs_dvmhxhjlsi
+CREATED:20230829T114024Z
+DESCRIPTION:\nThis event has a video call.\nJoin: https://meet.google.com/q
+ ea-gtmj-ifc\n
+LAST-MODIFIED:20230829T114028Z
+LOCATION:https://meet.google.com/qea-gtmj-ifc
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Call for Junior Web Developer job at Katalon\, Inc.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230914T080000Z
+DTEND:20230914T090000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=c4f0alfvrlwgd@events.workablemail.com:mailto:c4f0alfvrlwgd@eve
+ nts.workablemail.com
+UID:qtwpyyltm2fq-qrdjkpdjgxsglyddwfk
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Tuong 
+ Anh Nguyen ;X-NUM-GUESTS=0:mailto:anh.pnguyen@katalon.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Tran S
+ anh;X-NUM-GUESTS=0:mailto:sanh.tran@katalon.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Thong 
+ Tran;X-NUM-GUESTS=0:mailto:thong.tran@katalon.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Katalo
+ n Receptionist;X-NUM-GUESTS=0:mailto:recp@katalon.com
+URL:http://www.workable.com/events/qtwpyyltm2fq-qrdjkpdjgxsglyddwfk
+CREATED:20230911T075533Z
+DESCRIPTION:<p><strong>Dear </strong><strong>Nam</strong><strong>\,</strong
+ > </p><p>Thank you for your confirmation. We are excited to see you at Kata
+ lon. Please find the detail for the on-site interview as follow: </p><p>▶️ 
+  <strong>Time &amp\; Date: 03:00 pm\, Thursday 14 September 2023.</strong><
+ /p><p>▶️  <strong>Venue:</strong> <strong>Tower B\, F21</strong>\, <a href=
+ "https://www.google.com/url?q=https://goo.gl/maps/NBLNqsaiKksqgVmj6&amp\;sa
+ =D&amp\;source=calendar&amp\;usd=2&amp\;usg=AOvVaw0e5i1AttiIZDGtk56JXmBF" r
+ el="nofollow noreferrer noopener" class="external">Viettel Complex Building
+ \, 285 CMT8 Str\, W.12\, D.10\, HCMC</a>. </p><p>▶️  <strong>Interviewers:<
+ /strong> Mr. Sanh Tran - Web Developer &amp\; Mr. Thong Tran - Senior Softw
+ are Engineer </p><p><strong>▶️ ​ Importance:</strong> </p><p><strong>- Park
+ ing:</strong> Take a turn next to Thien Nam Hoa Electronics\, then down to 
+ the basement on your left </p><p><strong>- Head to floor 21 - Tower B</stro
+ ng>\; bring your ID card for Express Check-in at our front desk\; a dedicat
+ ed staff will be there to greet you. </p><p>Please do not hesitate to let u
+ s know if you have questions or need any support. We cannot wait to meet yo
+ u at Katalon's space. </p><p><strong>Thanks &amp\; Best regards\,​</strong>
+  </p>
+LAST-MODIFIED:20230911T075536Z
+LOCATION:Google Meets (link attached)
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Interview for Junior Web Developer (Front-end) job at Katalon\, Inc
+ .
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20231030T030000Z
+DTEND:20231030T040000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=clement@techxcorp.com:mailto:clement@techxcorp.com
+UID:040000008200E00074C5B7101A82E0080000000080294ABC2508DA01000000000000000
+ 010000000E440875CC1F36A4683894214890DFBB6
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Th
+ anh Tran Minh;X-NUM-GUESTS=0:mailto:thanh.tran@techxcorp.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Clemen
+ t Chretien;X-NUM-GUESTS=0:mailto:clement@techxcorp.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Vi
+  Diep;X-NUM-GUESTS=0:mailto:vi.diep@techxcorp.com
+CREATED:20231026T090845Z
+DESCRIPTION:Hi Nam\,\n\nWe confirm your interview booked for Monday next we
+ ek at 10 AM in our office.\n\nPlease come to the location attached and find
+  the map here.<https://maps.app.goo.gl/y5xQL8NDTEStA6Ez9> We are located at
+  the level 9 of the VietCapital Bank Building.\n\nAgenda:\n30 minutes: Assi
+ gnment review with the team\n30 minutes: Culture & Values\n\nLet us know if
+  you have any questions\, we look forward to welcoming you on Monday.\n\nBe
+ st regards\,\nClement\n____________________________________________________
+ ____________________________\n\n
+LAST-MODIFIED:20231027T035715Z
+LOCATION:TechX Corp. (412 Nguyễn Thị Minh Khai\, Phường 5\, District 1  Ho 
+ Chi Minh City  70000\, Vietnam)
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:[techX] Invitation to an interview - Nam
+TRANSP:OPAQUE
+ATTACH;FILENAME=NGUYEN DINH NAM _CV.pdf:https://mail.google.com/?view=att&t
+ h=18b6b3e704e6e2ee&attid=0.1&disp=attd&zw
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-CDO-APPT-SEQUENCE:1
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-LOCATIONS:[ { "DisplayName" : "TechX Corp."\, "LocationAnnotati
+ on" : ""\, "LocationSource" : 1\, "Unresolved" : false\, "LocationUri" : "h
+ ttps://www.bingapis.com/api/v6/localbusinesses/YN8196x12276710617010859762"
+ \, "Latitude" : 10.7709\, "Longitude" : 106.687\, "LocationStreet" : "412 N
+ guyễn Thị Minh Khai\, Phường 5"\, "LocationCity" : "District 1"\, "Location
+ State" : "Ho Chi Minh City"\, "LocationCountry" : "Vietnam"\, "LocationPost
+ alCode" : "70000"\, "LocationFullAddress" : "412 Nguyễn Thị Minh Khai\, Phư
+ ờng 5\, District 1  Ho Chi Minh City  70000\, Vietnam" } ]
+X-MICROSOFT-CDO-OWNERAPPTID:284862439
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20231204T080000Z
+DTEND:20231204T083000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=olivia.schedule@paradox.ai:mailto:olivia.schedule@paradox.ai
+UID:1dfef8ed-5b38-474b-9465-569f6d672438
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;X-NUM
+ -GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ol
+ ivia.schedule@paradox.ai;X-NUM-GUESTS=0:mailto:olivia.schedule@paradox.ai
+CREATED:20231130T102125Z
+DESCRIPTION:Interview Details \n \nNhu Le \nContact: nhu.le@paradox.ai \n \
+ nNhan Nguyen 1 \nContact: nhan1@paradox.ai \n \nNhi Tran \nContact: nhi.tra
+ n@paradox.ai \n \nJob Title: Front-end Web Developer \n \n \nIn case you ne
+ ed any assistance\, please feel free to call: 079.6886.491 (Nhu Le). Thank 
+ you! \n \nClick here to join the interview: https://paradox-ai.zoom.us/j/93
+ 278183715 \n
+LAST-MODIFIED:20231130T161117Z
+LOCATION:https://paradox-ai.zoom.us/j/93278183715
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Your virtual interview at Paradox
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20231213T080000Z
+DTEND:20231213T090000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=olivia.schedule@paradox.ai:mailto:olivia.schedule@paradox.ai
+UID:cca2e5a9-d532-4ce6-9985-df4c38a9361a
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;X-NUM
+ -GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ol
+ ivia.schedule@paradox.ai;X-NUM-GUESTS=0:mailto:olivia.schedule@paradox.ai
+CREATED:20231212T072615Z
+DESCRIPTION:Interview Details \n \nNhi Tran 1 \nContact: nhi.tran+1@paradox
+ .ai \n \nNghia Nguyen \nContact: nghia.nguyen@paradox.ai \n \nNhu Le \nCont
+ act: nhu.le@paradox.ai \n \nHo Chi Minh City\, Ho Chi Minh City\, 72418 \n 
+ \nJob Title: Front-end Web Developer \n \n \nIn case you need any assistanc
+ e\, please feel free to call: 079.6886.491 (Nhu Le). Thank you! \n
+LAST-MODIFIED:20231212T072620Z
+LOCATION:Ho Chi Minh City\, Ho Chi Minh City\, 72418
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Your in-person interview at Paradox
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20231220T081500Z
+DTEND:20231220T090000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=olivia.schedule@paradox.ai:mailto:olivia.schedule@paradox.ai
+UID:398028b1-03c0-45e2-a3f5-44cdf1340243
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;X-NUM
+ -GUESTS=0:mailto:nguyennamnade22@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ol
+ ivia.schedule@paradox.ai;X-NUM-GUESTS=0:mailto:olivia.schedule@paradox.ai
+CREATED:20231218T084605Z
+DESCRIPTION:Interview Details \n \nNhu Le \nContact: nhu.le@paradox.ai \n \
+ nTri Le \nContact: tri.le@paradox.ai \n \nTuong Pham \nContact: tuong.pham@
+ paradox.ai \n \nNhan Nguyen 1 \nContact: nhan1@paradox.ai \n \nNhi Tran 1 \
+ nContact: nhi.tran+1@paradox.ai \n \nJob Title: Front-end Web Developer \n 
+ \n \nYour interview will be held on: the 6th floor\, The An Gia building\, 
+ No. 60 Nguyen Dinh Chieu\, Da Kao Ward\, District 1\, Ho Chi Minh City. Sho
+ uld you need any assistance\, please feel free to call: 079.6886.491 (Nhu).
+  Thank you! \n \nClick here to join the interview: https://paradox-ai.zoom.
+ us/j/92826785012 \n
+LAST-MODIFIED:20231218T084610Z
+LOCATION:https://paradox-ai.zoom.us/j/92826785012
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Your virtual interview at Paradox
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240123T070000Z
+DTEND:20240123T074500Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=thanhpd@d.foundation:mailto:thanhpd@d.foundation
+UID:4p4dl0pelp7voul91h3a67hm69@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=thanhp
+ d@d.foundation;X-NUM-GUESTS=0:mailto:thanhpd@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ng
+ uyennamnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/krc-giim-dyi
+CREATED:20240119T071500Z
+DESCRIPTION:Hi Nam\,\n\nI am writing this email to invite you to our Januar
+ y 2024 Performance Review.\n\nThis meeting is an opportunity for us to refl
+ ect on your achievements over the past six months and collaboratively set g
+ oals for the next half of the year.\n\nAdditionally\, please feel free to b
+ ring any questions or topics you would like to discuss. \n\nLooking forward
+  to our conversation.\n\nCheers\nThanh\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Me
+ et: https://meet.google.com/krc-giim-dyi\nOr dial: (US) +1 260-786-0550 PIN
+ : 419663372#\nMore phone numbers: https://tel.meet/krc-giim-dyi?pin=7099746
+ 671094&hs=7\n\nLearn more about Meet at: https://support.google.com/a/users
+ /answer/9282720\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20240122T033851Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nam Nguyen Dinh - Performance Review
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Ho_Chi_Minh:20231031T143000
+DTEND;TZID=Asia/Ho_Chi_Minh:20231031T150000
+RRULE:FREQ=WEEKLY;WKST=SU;INTERVAL=2;BYDAY=TU
+EXDATE;TZID=Asia/Ho_Chi_Minh:20240123T143000
+EXDATE;TZID=Asia/Ho_Chi_Minh:20240206T143000
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=alan@d.foundation:mailto:alan@d.foundation
+UID:r0mm7uk99r936mndbfu24rti8j@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=alan@d
+ .foundation;X-NUM-GUESTS=0:mailto:alan@d.foundation
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=ng
+ uyennamnade22@gmail.com;X-NUM-GUESTS=0:mailto:nguyennamnade22@gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/gww-ayua-gtf
+CREATED:20220808T031911Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://meet.google.com/gw
+ w-ayua-gtf\nOr dial: (US) +1 929-260-4779 PIN: 895898978#\nMore phone numbe
+ rs: https://tel.meet/gww-ayua-gtf?pin=1915296525997&hs=7\n\nLearn more abou
+ t Meet at: https://support.google.com/a/users/answer/9282720\n\nPlease do n
+ ot edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20240124T084354Z
+SEQUENCE:5
+STATUS:CONFIRMED
+SUMMARY:1:1 meeting Nam Nguyen
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220803T130000Z
+DTEND:20220803T140000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=unknownorganizer@calendar.google.com:mailto:unknownorganizer@c
+ alendar.google.com
+UID:7kukuqrfedlm2f9tk8dabvlgc1a3l3b32t6v0dd95hmdsd3acob16ipaccsnibo7fjgg
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+CLASS:PRIVATE
+CREATED:20220802T084122Z
+DESCRIPTION:Dwarves Tech Event | AMA with ktool.io creator: Build in Public
+ \nhttps://www.linkedin.com/events/dwarvestechevent-amawithktool-i6960146319
+ 659212800\n\nConfirmation number: NA
+LAST-MODIFIED:20240222T105220Z
+LOCATION:https://www.linkedin.com/events/dwarvestechevent-amawithktool-i696
+ 0146319659212800
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dwarves Tech Event | AMA with ktool.io creator: Build in Public
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230516T050000Z
+DTEND:20230516T060000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=unknownorganizer@calendar.google.com:mailto:unknownorganizer@c
+ alendar.google.com
+UID:7kukuqrfedlm2f9t70dlq97k5s3dh2ee0ibbch3jk1nkbl53kjmm7emca1qpdur5q4bg
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+CLASS:PRIVATE
+CREATED:20230516T045816Z
+DESCRIPTION:Tech Trends 2023\nhttps://www.linkedin.com/events/techtrends202
+ 37059841331145170945\n\nConfirmation number: NA
+LAST-MODIFIED:20240222T112230Z
+LOCATION:https://www.linkedin.com/events/techtrends20237059841331145170945
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tech Trends 2023
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220720T130000Z
+DTEND:20220720T140000Z
+DTSTAMP:20240227T022502Z
+ORGANIZER;CN=unknownorganizer@calendar.google.com:mailto:unknownorganizer@c
+ alendar.google.com
+UID:7kukuqrfedlm2f9tagq9963lrtljt2nrq7vejgu6cvhrs6ue1aaddvo4t1k4fcdu6bj0
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;X-NUM-GUE
+ STS=0:mailto:nguyennamnade22@gmail.com
+CLASS:PRIVATE
+CREATED:20220719T094029Z
+DESCRIPTION:Dwarves Tech Event: AMA with Michael Le\, Solutions Architect a
+ t Google\nhttps://www.linkedin.com/events/techevent016953711408714825730\n\
+ nConfirmation number: NA
+LAST-MODIFIED:20240222T174653Z
+LOCATION:https://www.linkedin.com/events/techevent016953711408714825730
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dwarves Tech Event: AMA with Michael Le\, Solutions Architect at Go
+ ogle
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
