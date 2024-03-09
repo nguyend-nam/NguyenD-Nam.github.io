@@ -114,6 +114,8 @@ const Title = styled.h2`
     @media (max-width: 800px) {
       font-size: 48px;
       line-height: 48px;
+      max-width: min-content;
+      word-break: normal;
     }
   }
   @media (max-width: 800px) {
