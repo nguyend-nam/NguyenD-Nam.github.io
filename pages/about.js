@@ -176,8 +176,20 @@ const ProgressLine = styled.div`
 `;
 
 const StyledImg = styled.img`
+  border-radius: 5%;
+  display: block;
   object-fit: contain;
-  max-idth: 100%;
+  max-width: 100%;
+  width: 70px;
+  @media (max-width: 991px) {
+    width: 45px;
+    align-self: flex-start;
+  }
+`;
+
+const StyledImgAnchor = styled.a`
+  display: block;
+  max-width: 100%;
   width: 70px;
   @media (max-width: 991px) {
     width: 45px;
@@ -187,11 +199,11 @@ const StyledImg = styled.img`
 
 const StyledRow = styled(Row)`
   align-items: flex-start;
-  flex-direction: ${(props) => (props.index % 2 === 1 ? "row-reverse" : "row")};
+  flex-direction: ${(props) => (props.index % 2 === 1 ? "row" : "row-reverse")};
   margin-bottom: 0px;
   @media (max-width: 991px) {
     margin-bottom: ${(props) => (props?.isLastRow ? "0px" : "16px")};
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 `;
 
@@ -291,17 +303,28 @@ const ViewMore = styled.div`
 const journeyItems = [
   {
     type: "Work experience",
-    logo: "/image/df_logo.png",
-    title: "Dwarves Foundation LLC.",
-    time: "2022 - now",
+    logo: "/image/paradox_logo.jpeg",
+    title: "Paradox",
+    url: 'https://www.paradox.ai/',
+    time: "Mar 2024 - now",
     description:
-      "Title: Frontend Engineer;I specialize in Frontend Development across multiple projects, using Next.js, TypeScript and various other libraries for writing CSS-in-JS, data fetching, UI library, etc. My responsibilities include researching and constructing reusable components, crafting responsive, pixel-perfect UI/UX, and writing requests to interact with APIs from the Backend side.",
+      "Title: Associate Software Engineer; My primary role revolves around executing various Frontend tasks. This includes the creation of career-focused websites tailored to the clients' specific needs, ensuring seamless integration with the company's AI-driven products.",
+  },
+  {
+    type: "Work experience",
+    logo: "/image/df_logo.png",
+    title: "Dwarves Foundation",
+    url: 'https://dwarves.foundation/',
+    time: "Jun 2022 - Mar 2024",
+    description:
+      "Title: Junior Frontend Engineer;I specialize in Frontend Development across multiple projects, using Next.js, TypeScript and various other libraries for writing CSS-in-JS, data fetching, UI library, etc. My responsibilities include researching and constructing reusable components, crafting responsive, pixel-perfect UI/UX, and writing requests to interact with APIs from the Backend side.",
   },
   {
     type: "Education",
     logo: "/image/hcmut_logo.png",
     title: "Ho Chi Minh City University of Technology",
-    time: "2019 - 2023",
+    url: 'https://hcmut.edu.vn/',
+    time: "Sep 2019 - May 2023",
     description:
       "Major: Computer Engineering;GPA: 7.6 / 10;Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Software Engineering, Internet of Things Application Development etc.",
   },
@@ -309,7 +332,8 @@ const journeyItems = [
     type: "Education",
     logo: "/image/lhpvietnam_logo.png",
     title: "Le Hong Phong high school for the gifted",
-    time: "2016 - 2019",
+    url: 'https://www.linkedin.com/school/lhpvietnam/',
+    time: "Sep 2016 - May 2019",
     description: "Major: Mathematics;GPA: 8.6 / 10",
   },
 ];
@@ -496,11 +520,41 @@ export default function About() {
                     {journeyItems.map((i, index) => (
                       <StyledRow
                         key={i.title}
-                        className="site-ani-auto site-ani__slide-up"
+                        className="site-ani-group site-ani-auto site-ani__slide-up"
                         index={index}
                         isLastRow={index === journeyItems.length - 1}
                       >
                         <Col
+                          className="site-ani-auto site-ani__slide-up"
+                          lg={{ span: 16 }}
+                          span={5}
+                          style={{
+                            alignSelf: "stretch",
+                          }}
+                        >
+                          <LogoRow index={index}>
+                            <Col
+                              sm={{ span: 12 }}
+                              span={24}
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                              }}
+                            >
+                              {i.url ? <StyledImgAnchor href={i.url} rel='noreferrer' target="_blank">
+                                <StyledImg alt={i.title} src={i.logo} />
+                              </StyledImgAnchor>
+                                : <StyledImg alt={i.title} src={i.logo} />}
+                              {index < journeyItems.length - 1 ? (
+                                <ProgressLine />
+                              ) : null}
+                            </Col>
+                          </LogoRow>
+                        </Col>
+                        <Col
+                          className="site-ani-auto site-ani__slide-up"
                           lg={{ span: 8 }}
                           span={19}
                           style={{
@@ -533,7 +587,6 @@ export default function About() {
                                         color: theme.colors.darkGrey,
                                         fontWeight: 600,
                                         fontSize: 13,
-                                        // textTransform: "uppercase",
                                         borderBottom: `1px solid ${theme.colors.grey}`,
                                         marginRight: 5,
                                       }}
@@ -556,31 +609,6 @@ export default function About() {
                               );
                             })}
                           </JourneyItemDescription>
-                        </Col>
-                        <Col
-                          lg={{ span: 16 }}
-                          span={5}
-                          style={{
-                            alignSelf: "stretch",
-                          }}
-                        >
-                          <LogoRow index={index}>
-                            <Col
-                              sm={{ span: 12 }}
-                              span={24}
-                              style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "flex-start",
-                                alignItems: "center",
-                              }}
-                            >
-                              <StyledImg alt={i.title} src={i.logo} />
-                              {index < journeyItems.length - 1 ? (
-                                <ProgressLine />
-                              ) : null}
-                            </Col>
-                          </LogoRow>
                         </Col>
                       </StyledRow>
                     ))}
