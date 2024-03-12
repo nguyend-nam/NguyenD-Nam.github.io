@@ -308,7 +308,7 @@ const journeyItems = [
     url: 'https://www.paradox.ai/',
     time: "Mar 2024 - now",
     description:
-      "Title: Associate Software Engineer; My primary role revolves around executing various Frontend tasks. This includes the creation of career-focused websites tailored to the clients' specific needs, ensuring seamless integration with the company's AI-driven products.",
+      "Title: Associate Software Engineer; My primary role revolves around executing various Frontend tasks and ensuring seamless integration with the company's AI-driven products.",
   },
   {
     type: "Work experience",
