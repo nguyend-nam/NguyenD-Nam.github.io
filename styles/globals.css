@@ -72,3 +72,66 @@ a {
   opacity: 1;
   transform: none;
 }
+
+.revealing-image {
+  view-timeline-name: --subjectReveal;
+  animation-timeline: --subjectReveal;
+
+  animation-name: appear;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-range: entry 25% cover 50%;
+}
+
+.parallax-image {
+  view-timeline-name: --subjectParallax;
+  animation-timeline: --subjectParallax;
+
+  animation-name: vertical-translate;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-range: entry 0% cover 100%;
+}
+
+.parallax-image--large {
+  view-timeline-name: --subjectParallaxLarge;
+  animation-timeline: --subjectParallaxLarge;
+
+  animation-name: vertical-translate--large;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-range: entry 90% cover 120%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(0% 50% 0% 50%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+@keyframes vertical-translate {
+  from {
+    transform: translateY(-90px);
+    clip-path: inset(90px 0% 0);
+  }
+  to {
+    transform: translateY(0px);
+    clip-path: inset(0 0% 90px);
+  }
+}
+
+@keyframes vertical-translate--large {
+  from {
+    transform: translateY(-110px);
+    clip-path: inset(110px 0% 0);
+  }
+  to {
+    transform: translateY(0px);
+    clip-path: inset(0 0% 110px);
+  }
+}

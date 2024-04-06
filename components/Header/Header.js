@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   border-bottom: 1px solid ${theme.colors.grey};
   padding: 20px 64px;
   position: sticky;
