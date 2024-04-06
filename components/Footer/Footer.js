@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../constants";
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.footer`
   padding: 40px;
   text-align: center;
   width: 100%;

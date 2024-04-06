@@ -30,7 +30,7 @@ const MainContent = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   background-color: ${theme.colors.white};
   width: calc(100vw - 70px);
   display: flex;
@@ -107,7 +107,25 @@ const Description = styled.div`
   }
 `;
 
-const JourneySection = styled.div`
+const FamilySection = styled.section`
+  background-color: ${theme.colors.white};
+  border-bottom: 1px solid ${theme.colors.grey};
+
+  div {
+    width: 100%;
+  }
+  
+  img {
+    max-height: 520px !important;
+    object-fit: cover;
+    
+    @media (max-width: 800px) {
+      max-height: 200px !important;
+    }
+  }
+`
+
+const JourneySection = styled.section`
   background-color: ${theme.colors.white};
   padding: 64px;
   border-bottom: 1px solid ${theme.colors.grey};
@@ -202,7 +220,7 @@ const StyledRow = styled(Row)`
   flex-direction: ${(props) => (props.index % 2 === 1 ? "row" : "row-reverse")};
   margin-bottom: 0px;
   @media (max-width: 991px) {
-    margin-bottom: ${(props) => (props?.isLastRow ? "0px" : "16px")};
+    margin-bottom: ${(props) => (props.index === props.length - 1 ? "0px" : "16px")};
     flex-direction: row;
   }
 `;
@@ -215,7 +233,7 @@ const LogoRow = styled(Row)`
   }
 `;
 
-const TechStackSection = styled.div`
+const TechStackSection = styled.section`
   display: flex;
   justify-content: space-around;
   background-color: ${theme.colors.white};
@@ -266,15 +284,21 @@ const SectionTitle = styled(Title)`
 `;
 
 const Links = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
   & > * {
-    font-size: 45px;
     color: ${theme.colors.darkGrey};
     background-clip: text;
-    margin: 0 15px;
     @media (max-width: 800px) {
       font-size: 40px;
-      margin: 0 10px;
     }
+  }
+
+  @media (max-width: 800px) {
+    gap: 20px;
   }
 `;
 
@@ -425,13 +449,10 @@ export default function About() {
                       <span>Languages and Frameworks I mostly use</span>
                     </SectionTitle>
                     <Links className="site-ani-auto site-ani__fade-in">
-                      <Icon icon="mdi:react" style={{ fontSize: 48 }} />
+                      <Icon icon="logos:nextjs" style={{ fontSize: 24 }} />
+                      <Icon icon="simple-icons:nuxtdotjs" style={{ fontSize: 48 }} />
                       <Icon
                         icon="mdi:language-typescript"
-                        style={{ fontSize: 48 }}
-                      />
-                      <Icon
-                        icon="mdi:language-html5"
                         style={{ fontSize: 48 }}
                       />
                       <Icon icon="mdi:language-css3" style={{ fontSize: 48 }} />
@@ -445,11 +466,11 @@ export default function About() {
                       Additionally, I utilize a range of supplementary technologies for development, such as{" "}
                       <HighLight>
                         <a
-                          href="https://nextjs.org"
+                          href="https://tailwindcss.com/"
                           rel="noreferrer"
                           target="_blank"
                         >
-                          Next.js
+                          Tailwind CSS
                           <Icon
                             icon="la:external-link-alt"
                             style={{
@@ -512,6 +533,16 @@ export default function About() {
                     </ViewMore>
                   </div>
                 </TechStackSection>
+
+                <FamilySection>
+                  <Image
+                    alt="Me"
+                    className="revealing-image"
+                    preview={false}
+                    src="/image/family.jpg"
+                  />
+                </FamilySection>
+
                 <JourneySection>
                   <SectionTitle className="site-ani-auto site-ani__fade-in">
                     <span>My journey until now</span>
@@ -522,7 +553,7 @@ export default function About() {
                         key={i.title}
                         className="site-ani-group site-ani-auto site-ani__slide-up"
                         index={index}
-                        isLastRow={index === journeyItems.length - 1}
+                        length={journeyItems.length}
                       >
                         <Col
                           className="site-ani-auto site-ani__slide-up"

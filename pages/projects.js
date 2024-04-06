@@ -30,7 +30,7 @@ const MainContent = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   background-color: ${theme.colors.white};
   width: calc(100vw - 70px);
   & > div {
@@ -113,17 +113,14 @@ const ProjectsContainer = styled.div`
   gap: 40px;
   & > div {
     width: calc((100% - 80px) / 3) !important;
-    & > a > div {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      & > img {
-        height: 100% !important;
-        width: 100% !important;
-        transition: transform 0.5s;
-        transform: scale(1.05);
-        &:hover{
-          transform: scale(1);
+    & > a {
+      > div {
+        height: 100%;
+        width: 100%;
+        & > img {
+          object-fit: cover;
+          height: calc(100% + 80px) !important;
+          width: 100% !important;
         }
       }
     }
@@ -150,7 +147,7 @@ const ProjectsContainer = styled.div`
 const ProjectCard = styled.div`
   border: 1px solid ${theme.colors.grey};
   background-color: ${theme.colors.lightGrey};
-  overflow: hidden;
+  // overflow: hidden;
   & > div {
     padding: 20px;
   }
@@ -265,6 +262,7 @@ export default function Projects() {
                       >
                         <Image
                           alt={project.img}
+                          className="parallax-image"
                           preview={false}
                           src={project.img}
                           style={{

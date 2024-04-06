@@ -27,7 +27,7 @@ const MainContent = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   background-color: ${theme.colors.white};
   width: calc(100vw - 70px);
   display: flex;
@@ -76,7 +76,7 @@ const Description = styled.div`
   }
 `;
 
-const ContactSection = styled.div`
+const ContactSection = styled.section`
   display: flex;
   justify-content: space-around;
   border: 1px ${theme.colors.grey};
