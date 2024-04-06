@@ -57,9 +57,11 @@ const Content = styled.section`
     flex-direction: column;
     & > div {
       border-left: 0px solid ${theme.colors.grey};
-    }
-    & > div img {
       border-bottom: 1px solid ${theme.colors.grey};
+      
+      &:nth-child(2) {
+        border-bottom: 0px solid ${theme.colors.grey};
+      }
     }
     & > div:first-of-type {
       border-left: 0px solid ${theme.colors.grey};
@@ -390,13 +392,14 @@ export default function About() {
                 <Content>
                   <Image
                     alt="Me"
+                    className="parallax-image--large"
                     preview={false}
                     src="/image/me-dalat.jpg"
                     style={{
                       objectFit: "cover",
                       objectPosition: "30%",
                       width: "100%",
-                      height: "100%",
+                      height: "calc(100% + 110px)",
                     }}
                   />
                   <div className="site-ani-group">
