@@ -80,7 +80,7 @@ a {
   animation-name: appear;
   animation-fill-mode: both;
   animation-duration: 1ms;
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 20% cover 50%;
 }
 
 .parallax-image {
@@ -116,22 +116,22 @@ a {
 
 @keyframes vertical-translate {
   from {
-    transform: translateY(-90px);
-    clip-path: inset(90px 0% 0);
+    transform: translateY(-100px);
+    clip-path: inset(100px 0% 0);
   }
   to {
     transform: translateY(0px);
-    clip-path: inset(0 0% 90px);
+    clip-path: inset(0 0% 100px);
   }
 }
 
 @keyframes vertical-translate--large {
   from {
-    transform: translateY(-110px);
-    clip-path: inset(110px 0% 0);
+    transform: translateY(-120px);
+    clip-path: inset(120px 0% 0);
   }
   to {
     transform: translateY(0px);
-    clip-path: inset(0 0% 110px);
+    clip-path: inset(0 0% 120px);
   }
 }

@@ -245,6 +245,7 @@ export default function Home() {
           <title>Nam Nguyen</title>
           <meta content="Welcome to my personal website" name="description" />
           <link href="/favicon.ico" rel="icon" />
+          <link as="image" href="/image/namnd.jpg" rel="preload" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />

@@ -119,7 +119,7 @@ const ProjectsContainer = styled.div`
         width: 100%;
         & > img {
           object-fit: cover;
-          height: calc(100% + 90px) !important;
+          height: calc(100% + 100px) !important;
           width: 100% !important;
         }
       }
@@ -218,8 +218,16 @@ export default function Projects() {
       <div>
         <Head>
           <title>Projects | Nam Nguyen</title>
-          <meta content="My projects" name="description" />
+          <meta content="My side projects" name="description" />
           <link href="/favicon.ico" rel="icon" />
+          <link as="image" href="/image/proj-codetour.png" rel="preload" />
+          <link as="image" href="/image/proj-scrollery.png" rel="preload" />
+          <link as="image" href="/image/proj-ggfonts.png" rel="preload" />
+          <link as="image" href="/image/proj-r3fimages.png" rel="preload" />
+          <link as="image" href="/image/proj-holiday.png" rel="preload" />
+          <link as="image" href="/image/proj-aggapp.png" rel="preload" />
+          <link as="image" href="/image/proj-calui.png" rel="preload" />
+          <link as="image" href="/image/proj-cses.png" rel="preload" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -232,7 +240,7 @@ export default function Projects() {
                     <span>Projects</span>
                   </Title>
                   <Description className="site-ani-auto site-ani__fade-in">
-                    <p>Some of my open sources and personal projects.</p>
+                    <p>Some of my open sources and side projects.</p>
                   </Description>
                   <ViewMore className="site-ani-auto site-ani__fade-in">
                     <a

@@ -118,11 +118,11 @@ const FamilySection = styled.section`
   }
   
   img {
-    max-height: 520px !important;
+    height: 520px !important;
     object-fit: cover;
     
     @media (max-width: 800px) {
-      max-height: 200px !important;
+      height: 280px !important;
     }
   }
 `
@@ -382,6 +382,8 @@ export default function About() {
           <title>About | Nam Nguyen</title>
           <meta content="About me" name="description" />
           <link href="/favicon.ico" rel="icon" />
+          <link as="image" href="/image/me-dalat.jpg" rel="preload" />
+          <link as="image" href="/image/family.jpg" rel="preload" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -399,7 +401,7 @@ export default function About() {
                       objectFit: "cover",
                       objectPosition: "30%",
                       width: "100%",
-                      height: "calc(100% + 110px)",
+                      height: "calc(100% + 120px)",
                     }}
                   />
                   <div className="site-ani-group">
@@ -458,7 +460,7 @@ export default function About() {
                         icon="mdi:language-typescript"
                         style={{ fontSize: 48 }}
                       />
-                      <Icon icon="mdi:language-css3" style={{ fontSize: 48 }} />
+                      <Icon icon="devicon-plain:css3" style={{ fontSize: 40 }} />
                     </Links>
                     <p
                       className="site-ani-auto site-ani__fade-in"
@@ -467,6 +469,7 @@ export default function About() {
                       }}
                     >
                       Additionally, I utilize a range of supplementary technologies for development, such as{" "}
+                      <HighLight>SCSS</HighLight>,{" "}
                       <HighLight>
                         <a
                           href="https://tailwindcss.com/"
@@ -484,27 +487,7 @@ export default function About() {
                             }}
                           />
                         </a>
-                      </HighLight>
-                      , <HighLight>SCSS</HighLight>,{" "}
-                      <HighLight>
-                        <a
-                          href="https://eslint.org/"
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          ESLint
-                          <Icon
-                            icon="la:external-link-alt"
-                            style={{
-                              fontSize: 14,
-                              verticalAlign: "sub",
-                              marginLeft: 2,
-                              marginBottom: 2,
-                            }}
-                          />
-                        </a>
-                      </HighLight>{" "}
-                      and{" "}
+                      </HighLight>,{" "}
                       <HighLight>
                         <a
                           href="https://mui.com/"
@@ -522,8 +505,25 @@ export default function About() {
                             }}
                           />
                         </a>
-                      </HighLight>
-                      .
+                      </HighLight>{" "}and{" "}
+                      <HighLight>
+                        <a
+                          href="https://swr.vercel.app/"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          SWR
+                          <Icon
+                            icon="la:external-link-alt"
+                            style={{
+                              fontSize: 14,
+                              verticalAlign: "sub",
+                              marginLeft: 2,
+                              marginBottom: 2,
+                            }}
+                          />
+                        </a>
+                      </HighLight>, etc.
                     </p>
                     <ViewMore
                       className="site-ani-auto site-ani__fade-in"
@@ -548,7 +548,7 @@ export default function About() {
 
                 <JourneySection>
                   <SectionTitle className="site-ani-auto site-ani__fade-in">
-                    <span>My journey until now</span>
+                    <span>My journey till now</span>
                   </SectionTitle>
                   <div className="site-ani-group">
                     {journeyItems.map((i, index) => (
