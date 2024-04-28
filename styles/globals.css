@@ -116,22 +116,22 @@ a {
 
 @keyframes vertical-translate {
   from {
-    transform: translateY(-100px);
-    clip-path: inset(100px 0% 0);
+    transform: translateY(-110px);
+    clip-path: inset(110px 0% 0);
   }
   to {
     transform: translateY(0px);
-    clip-path: inset(0 0% 100px);
+    clip-path: inset(0 0% 110px);
   }
 }
 
 @keyframes vertical-translate--large {
   from {
-    transform: translateY(-120px);
-    clip-path: inset(120px 0% 0);
+    transform: translateY(-140px);
+    clip-path: inset(140px 0% 0);
   }
   to {
     transform: translateY(0px);
-    clip-path: inset(0 0% 120px);
+    clip-path: inset(0 0% 140px);
   }
 }

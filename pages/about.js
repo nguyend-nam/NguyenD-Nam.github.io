@@ -65,7 +65,7 @@ const Content = styled.section`
     }
     & > div:first-of-type {
       border-left: 0px solid ${theme.colors.grey};
-      height: 280px;
+      height: 360px;
     }
   }
 `;
@@ -122,7 +122,7 @@ const FamilySection = styled.section`
     object-fit: cover;
     
     @media (max-width: 800px) {
-      height: 280px !important;
+      height: 320px !important;
     }
   }
 `
@@ -401,7 +401,7 @@ export default function About() {
                       objectFit: "cover",
                       objectPosition: "30%",
                       width: "100%",
-                      height: "calc(100% + 120px)",
+                      height: "calc(100% + 140px)",
                     }}
                   />
                   <div className="site-ani-group">

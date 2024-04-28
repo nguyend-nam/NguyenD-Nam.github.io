@@ -119,7 +119,7 @@ const ProjectsContainer = styled.div`
         width: 100%;
         & > img {
           object-fit: cover;
-          height: calc(100% + 100px) !important;
+          height: calc(100% + 110px) !important;
           width: 100% !important;
         }
       }
