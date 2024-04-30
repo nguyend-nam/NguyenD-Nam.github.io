@@ -47,8 +47,20 @@ const Content = styled.section`
     border-left: none;
     width: 380px;
     padding: 0px;
+    position: relative;
     @media (max-width: 991px) {
       width: 100%;
+    }
+
+    & > div:nth-child(1) {
+      z-index: 10;
+      background-color: ${theme.colors.grey};
+      position: absolute;
+      height: 100%;
+    }
+
+    & > div:nth-child(2) {
+      height: 100%;
     }
   }
   border-bottom: 1px solid ${theme.colors.grey};
@@ -392,18 +404,21 @@ export default function About() {
               <Header />
               <>
                 <Content>
-                  <Image
-                    alt="Me"
-                    className="parallax-image--large"
-                    preview={false}
-                    src="/image/me-dalat.jpg"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "30%",
-                      width: "100%",
-                      height: "calc(100% + 140px)",
-                    }}
-                  />
+                  <div>
+                    <div className="site-ani-auto site-ani__shrink-left" />
+                    <Image
+                      alt="Me"
+                      className="parallax-image--large"
+                      preview={false}
+                      src="/image/me-dalat.jpg"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "30%",
+                        width: "100%",
+                        height: "calc(100% + 140px)",
+                      }}
+                    />
+                  </div>
                   <div className="site-ani-group">
                     <Title className="site-ani-auto site-ani__fade-in">
                       <span>Few things about me</span>

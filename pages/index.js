@@ -45,7 +45,7 @@ const Content = styled.section`
   }
   & > div:nth-child(2) {
     flex-shrink: 0;
-    width: 330px;
+    width: 360px;
     height: auto;
     padding: 0px;
     border-left: 1px solid ${theme.colors.grey};
@@ -53,6 +53,7 @@ const Content = styled.section`
     align-items: flex-start;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 
     @media (max-width: 991px) {
       width: 100vw;
@@ -61,9 +62,18 @@ const Content = styled.section`
       border-top: 1px solid ${theme.colors.grey};
     }
 
-    & > div {
+    & > div:nth-child(1) {
+      background-color: ${theme.colors.grey};
       height: 100%;
-      width: 330px;
+      position: absolute !important;
+      z-index: 10;
+      left: 0;
+      top: 0;
+    }
+    
+    & > div:nth-child(2) {
+      height: 100%;
+      width: 360px;
 
       @media (max-width: 991px) {
         height: 500px;
@@ -253,8 +263,8 @@ export default function Home() {
             <SwipeWrapper>
               <Header />
               <>
-                <Content className="site-ani-group">
-                  <div ref={scrollRef}>
+                <Content>
+                  <div ref={scrollRef} className="site-ani-group">
                     <Title className="site-ani-auto site-ani__fade-in site-ani-group">
                       <span className="site-ani-auto site-ani__slide-up">
                         Hello,
@@ -285,6 +295,7 @@ export default function Home() {
                     </ViewMore>
                   </div>
                   <div>
+                    <div className="site-ani-auto site-ani__shrink-left" />
                     <Image alt="Namnd" preview={false} src="/image/namnd.jpg" />
                   </div>
                 </Content>

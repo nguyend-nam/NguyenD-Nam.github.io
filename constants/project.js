@@ -4,6 +4,60 @@ import { HighLight } from "../components/HighLight/HighLight";
 
 export const projects = [
     {
+        name: "Google Fonts app clone",
+        img: "/image/proj-ggfonts-nuxt.png",
+        projectUrl: "https://nuxt-google-fonts.vercel.app/",
+        repoUrl: "https://github.com/nguyend-nam/nuxt-google-fonts",
+        description: (
+            <>
+                <HighLight>
+                    <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
+                        Google Fonts app
+                        <Icon
+                            icon="la:external-link-alt"
+                            style={{
+                                fontSize: 14,
+                                verticalAlign: "sub",
+                                marginLeft: 2,
+                                marginBottom: 2,
+                            }}
+                        />
+                    </a>
+                </HighLight>{" "}
+                clone using{" "}
+                <HighLight>
+                    <a href="https://nuxt.com/" rel="noreferrer" target="_blank">
+                        Nuxt.js
+                        <Icon
+                            icon="la:external-link-alt"
+                            style={{
+                                fontSize: 14,
+                                verticalAlign: "sub",
+                                marginLeft: 2,
+                                marginBottom: 2,
+                            }}
+                        />
+                    </a>
+                </HighLight> and{" "}
+                <HighLight>
+                    <a href="https://antdv.com/docs/vue/introduce" rel="noreferrer" target="_blank">
+                        Ant Design Vue
+                        <Icon
+                            icon="la:external-link-alt"
+                            style={{
+                                fontSize: 14,
+                                verticalAlign: "sub",
+                                marginLeft: 2,
+                                marginBottom: 2,
+                            }}
+                        />
+                    </a>
+                </HighLight>.
+            </>
+        ),
+        techStack: ["Nuxt.js", "TypeScript", "TailwindCSS", "Ant Design Vue"],
+    },
+    {
         name: "Code Tour",
         img: "/image/proj-codetour.png",
         projectUrl: "https://code-tour.js.org",
@@ -63,32 +117,6 @@ export const projects = [
             </>
         ),
         techStack: ["Next.js", "TypeScript", "NPM", "TailwindCSS"],
-    },
-    {
-        name: "Google Fonts app clone",
-        img: "/image/proj-ggfonts.png",
-        projectUrl: "https://nextjs-google-fonts.netlify.app",
-        repoUrl: "https://github.com/nguyend-nam/google-fonts-clone",
-        description: (
-            <>
-                <HighLight>
-                    <a href="https://fonts.google.com" rel="noreferrer" target="_blank">
-                        Google Fonts app
-                        <Icon
-                            icon="la:external-link-alt"
-                            style={{
-                                fontSize: 14,
-                                verticalAlign: "sub",
-                                marginLeft: 2,
-                                marginBottom: 2,
-                            }}
-                        />
-                    </a>
-                </HighLight>{" "}
-                clone.
-            </>
-        ),
-        techStack: ["Next.js", "TypeScript", "TailwindCSS"],
     },
     {
         name: "React three fiber image gallery",
