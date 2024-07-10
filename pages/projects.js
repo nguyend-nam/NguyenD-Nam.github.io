@@ -169,17 +169,32 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectTitle = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${theme.colors.darkGrey};
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 
   & > a {
-    transition: opacity 0.25s;
+    transition: opacity 0.25s, border-color 0.25s;
+    font-size: 20px;
+    font-weight: 600;
+    color: ${theme.colors.darkGrey};
+    border-bottom: 1px solid transparent;
   }
 
   & > a:hover {
     opacity: 0.6;
+    border-color: ${theme.colors.darkGrey};
   }
+  
+  & > span {
+    background-color: ${theme.colors.grey};
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: ${theme.colors.red};
+    font-size: 12px;
+  }
+
   @media (max-width: 800px) {
     font-size: 18px;
   }
@@ -286,7 +301,8 @@ export default function Projects() {
                             target="_blank"
                           >
                             {project.name}
-                          </a>
+                          </a>{" "}
+                          {project.wip ? <span>In progress</span> : null}
                         </ProjectTitle>
                       </div>
                       <ProjectDescription>

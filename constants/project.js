@@ -4,6 +4,47 @@ import { HighLight } from "../components/HighLight/HighLight";
 
 export const projects = [
     {
+        name: "Problem Randomizer",
+        img: "/image/proj-probrand.png",
+        projectUrl: "https://problem-randomizer.vercel.app/randomizer",
+        repoUrl: "https://github.com/problem-randomizer",
+        wip: true,
+        description: (
+            <>
+                Personalized competitive programming platform with various coding problems from{" "}
+                <HighLight>
+                    <a href="https://codeforces.com/" rel="noreferrer" target="_blank">
+                        Codeforces
+                        <Icon
+                            icon="la:external-link-alt"
+                            style={{
+                                fontSize: 14,
+                                verticalAlign: "sub",
+                                marginLeft: 2,
+                                marginBottom: 2,
+                            }}
+                        />
+                    </a>
+                </HighLight>,{" "}
+                <HighLight>
+                    <a href="https://atcoder.jp/" rel="noreferrer" target="_blank">
+                        AtCoder
+                        <Icon
+                            icon="la:external-link-alt"
+                            style={{
+                                fontSize: 14,
+                                verticalAlign: "sub",
+                                marginLeft: 2,
+                                marginBottom: 2,
+                            }}
+                        />
+                    </a>
+                </HighLight> etc.
+            </>
+        ),
+        techStack: ["Next.js", "TypeScript", "SWR", "TailwindCSS", "Ant Design", "Storybook"],
+    },
+    {
         name: "Google Fonts app clone",
         img: "/image/proj-ggfonts-nuxt.png",
         projectUrl: "https://nuxt-google-fonts.vercel.app/",
