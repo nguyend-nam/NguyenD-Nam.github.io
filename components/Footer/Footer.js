@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
 export function Footer() {
   return (
     <FooterContainer>
-      <span>&copy; 2023 Nam Nguyen Dinh. All rights reserved.</span>
+      <span>Nam Nguyen Dinh &copy; {new Date().getFullYear()}</span>
     </FooterContainer>
   );
 }
