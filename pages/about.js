@@ -346,16 +346,24 @@ const journeyItems = [
     url: 'https://www.paradox.ai/',
     time: "Mar 2024 - now",
     description:
-      "Title: Associate Software Engineer; My primary role revolves around executing various Frontend tasks and ensuring seamless integration with the company's AI-driven products.",
+      "Title: Associate Software Engineer; My primary role revolves around executing various Frontend tasks, such as creating career websites and contributing to the company's dashboard products, ensuring seamless integration with the company's AI-driven products. The tech stack I use includes Nuxt.js, TypeScript, SCSS, Liquid, GSAP, and more.",
   },
   {
     type: "Work experience",
     logo: "/image/df_logo.png",
     title: "Dwarves Foundation",
     url: 'https://dwarves.foundation/',
-    time: "Jun 2022 - Mar 2024",
-    description:
-      "Title: Junior Frontend Engineer;I specialize in Frontend Development across multiple projects, using Next.js, TypeScript and various other libraries for writing CSS-in-JS, data fetching, UI library, etc. My responsibilities include researching and constructing reusable components, crafting responsive, pixel-perfect UI/UX, and writing requests to interact with APIs from the Backend side.",
+    child: [
+      {
+        time: "Sep 2022 - Mar 2024",
+        description:
+          "Title: Junior Frontend Engineer;I specialize in Frontend Development across multiple projects, serving clients whose businesses are in dropshipping, logistics, and employee management. My expertise spans Next.js, TypeScript, and various libraries for writing CSS-in-JS, data fetching, and UI components. I'm responsible for researching and constructing reusable components, building responsive and pixel-perfect UI/UX, and handling API interactions with Backend services.",
+      }, {
+        time: "Jun 2022 - Aug 2024",
+        description:
+          "Title: Frontend Engineer Intern;During my internship, I learned how the project development lifecycle works and became familiar with coding conventions. I also gained experience with the team's tech stack, including Next.js, TypeScript, SCSS, and Storybook, while writing requests to integrate with the Backend.",
+      }
+    ]
   },
   {
     type: "Education",
@@ -608,22 +616,51 @@ export default function About() {
                           span={19}
                           style={{
                             display: "flex",
-                            justifyContent: "center",
                             flexDirection: "column",
-                            alignItems: "center",
-                            padding: 16,
-                            border: `1px solid ${theme.colors.grey}`,
-                            backgroundColor: theme.colors.lightGrey,
+                            alignItems: "stretch",
+                            gap: 16,
                           }}
                         >
-                          <JourneyItemType>{i.type}</JourneyItemType>
-                          <JourneyItemTitle>{i.title}</JourneyItemTitle>
-                          <JourneyItemTime>{i.time}</JourneyItemTime>
-                          <JourneyItemDescription>
-                            {i.description.split(";").map((d) => {
-                              if (d.includes(":")) {
-                                const key = d.split(":")[0];
-                                const value = d.split(":")[1];
+                          {typeof i.description === 'string' ? <Row
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              padding: 16,
+                              border: `1px solid ${theme.colors.grey}`,
+                              backgroundColor: theme.colors.lightGrey,
+                            }}>
+                            <JourneyItemType>{i.type}</JourneyItemType>
+                            <JourneyItemTitle>{i.title}</JourneyItemTitle>
+                            <JourneyItemTime>{i.time}</JourneyItemTime>
+                            <JourneyItemDescription>
+                              {i.description.split(";").map((d) => {
+                                if (d.includes(":")) {
+                                  const key = d.split(":")[0];
+                                  const value = d.split(":")[1];
+                                  return (
+                                    <li
+                                      key={d}
+                                      style={{
+                                        marginTop: 4,
+                                      }}
+                                    >
+                                      <span
+                                        style={{
+                                          color: theme.colors.darkGrey,
+                                          fontWeight: 600,
+                                          fontSize: 13,
+                                          borderBottom: `1px solid ${theme.colors.grey}`,
+                                          marginRight: 5,
+                                        }}
+                                      >
+                                        {key}
+                                      </span>
+                                      {value}
+                                    </li>
+                                  );
+                                }
                                 return (
                                   <li
                                     key={d}
@@ -631,33 +668,67 @@ export default function About() {
                                       marginTop: 4,
                                     }}
                                   >
-                                    <span
-                                      style={{
-                                        color: theme.colors.darkGrey,
-                                        fontWeight: 600,
-                                        fontSize: 13,
-                                        borderBottom: `1px solid ${theme.colors.grey}`,
-                                        marginRight: 5,
-                                      }}
-                                    >
-                                      {key}
-                                    </span>
-                                    {value}
+                                    {d}
                                   </li>
                                 );
-                              }
-                              return (
-                                <li
-                                  key={d}
-                                  style={{
-                                    marginTop: 4,
-                                  }}
-                                >
-                                  {d}
-                                </li>
-                              );
-                            })}
-                          </JourneyItemDescription>
+                              })}
+                            </JourneyItemDescription>
+                          </Row> : i.child.map((child, index) => (
+                            <Row
+                              key={`${child.time}-${index}`}
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                padding: 16,
+                                border: `1px solid ${theme.colors.grey}`,
+                                backgroundColor: theme.colors.lightGrey,
+                              }}>
+                              <JourneyItemType>{i.type}</JourneyItemType>
+                              <JourneyItemTitle>{i.title}</JourneyItemTitle>
+                              <JourneyItemTime>{child.time}</JourneyItemTime>
+                              <JourneyItemDescription>
+                                {child.description.split(";").map((d) => {
+                                  if (d.includes(":")) {
+                                    const key = d.split(":")[0];
+                                    const value = d.split(":")[1];
+                                    return (
+                                      <li
+                                        key={d}
+                                        style={{
+                                          marginTop: 4,
+                                        }}
+                                      >
+                                        <span
+                                          style={{
+                                            color: theme.colors.darkGrey,
+                                            fontWeight: 600,
+                                            fontSize: 13,
+                                            borderBottom: `1px solid ${theme.colors.grey}`,
+                                            marginRight: 5,
+                                          }}
+                                        >
+                                          {key}
+                                        </span>
+                                        {value}
+                                      </li>
+                                    );
+                                  }
+                                  return (
+                                    <li
+                                      key={d}
+                                      style={{
+                                        marginTop: 4,
+                                      }}
+                                    >
+                                      {d}
+                                    </li>
+                                  );
+                                })}
+                              </JourneyItemDescription>
+                            </Row>
+                          ))}
                         </Col>
                       </StyledRow>
                     ))}
