@@ -130,8 +130,16 @@ const FamilySection = styled.section`
   }
   
   img {
-    height: 520px !important;
+    height: 920px !important;
     object-fit: cover;
+    
+    @media (max-width: 1280px) {
+      height: 720px !important;
+    }
+    
+    @media (max-width: 1024px) {
+      height: 520px !important;
+    }
     
     @media (max-width: 800px) {
       height: 320px !important;
