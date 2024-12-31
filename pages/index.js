@@ -45,7 +45,7 @@ const Content = styled.section`
   }
   & > div:nth-child(2) {
     flex-shrink: 0;
-    width: 360px;
+    width: 400px;
     height: auto;
     padding: 0px;
     border-left: 1px solid ${theme.colors.grey};
@@ -73,7 +73,7 @@ const Content = styled.section`
     
     & > div:nth-child(2) {
       height: 100%;
-      width: 360px;
+      width: 400px;
 
       @media (max-width: 991px) {
         height: 500px;
@@ -255,7 +255,7 @@ export default function Home() {
           <title>Nam Nguyen</title>
           <meta content="Welcome to my personal website" name="description" />
           <link href="/favicon.ico" rel="icon" />
-          <link as="image" href="/image/namnd.jpg" rel="preload" />
+          <link as="image" href="/image/namnd2.jpg" rel="preload" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -296,7 +296,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="site-ani-auto site-ani__shrink-left" />
-                    <Image alt="Namnd" preview={false} src="/image/namnd.jpg" />
+                    <Image alt="Namnd" preview={false} src="/image/namnd2.jpg" />
                   </div>
                 </Content>
                 <ContactSection className="site-ani-group">
