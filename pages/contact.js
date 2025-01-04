@@ -12,7 +12,7 @@ import { useAnimation } from "../hooks/useAnimation";
 const MainContainer = styled.div`
   background-color: ${theme.colors.white};
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   overflow-x: hidden;
   @media (max-width: 800px) {
     width: 100vw;

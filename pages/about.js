@@ -15,7 +15,7 @@ import { useAnimation } from "../hooks/useAnimation";
 const MainContainer = styled.div`
   background-color: ${theme.colors.white};
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   overflow-x: hidden;
   @media (max-width: 800px) {
     width: 100vw;
@@ -348,6 +348,8 @@ const ViewMore = styled.div`
 
 const GallerySection = styled.section`
   background-color: ${theme.colors.white};
+  border-bottom: 1px solid ${theme.colors.grey};
+
   > div {
     width: 100%;
     display: flex;
