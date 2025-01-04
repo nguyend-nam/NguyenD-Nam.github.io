@@ -346,6 +346,51 @@ const ViewMore = styled.div`
   }
 `;
 
+const GallerySection = styled.section`
+  background-color: ${theme.colors.white};
+  > div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+
+  .ant-image {
+    width: 100%;
+
+    &.w-1\\/3 {
+      width: calc((100% - 1px) / 3) !important;
+      flex-shrink: 0;
+
+      @media (max-width: 800px) {
+        width: 100% !important;
+      }
+    }
+
+    &.w-2\\/3 {
+      width: calc((100% - 1px) * 2 / 3) !important;
+      flex-shrink: 0;
+
+      @media (max-width: 800px) {
+        width: 100% !important;
+      }
+    }
+  }
+  
+  img {
+    height: 580px !important;
+    object-fit: cover;
+    
+    @media (max-width: 1280px) {
+      height: 430px !important;
+    }
+    
+    @media (max-width: 800px) {
+      height: 280px !important;
+    }
+  }
+`
+
 const journeyItems = [
   {
     type: "Work experience",
@@ -619,7 +664,6 @@ export default function About() {
                           </LogoRow>
                         </Col>
                         <Col
-                          className="site-ani-auto site-ani__slide-up"
                           lg={{ span: 8 }}
                           span={19}
                           style={{
@@ -630,6 +674,7 @@ export default function About() {
                           }}
                         >
                           {typeof i.description === 'string' ? <Row
+                            className="site-ani-auto site-ani__slide-up"
                             style={{
                               display: "flex",
                               justifyContent: "center",
@@ -684,6 +729,7 @@ export default function About() {
                           </Row> : i.child.map((child, index) => (
                             <Row
                               key={`${child.time}-${index}`}
+                              className="site-ani-auto site-ani__slide-up"
                               style={{
                                 display: "flex",
                                 justifyContent: "center",
@@ -742,6 +788,52 @@ export default function About() {
                     ))}
                   </div>
                 </JourneySection>
+
+                <GallerySection className="site-ani-group">
+                  <div>
+                    <Image
+                      alt="Me"
+                      className="site-ani-auto site-ani__fade-in size-sm"
+                      preview={false}
+                      src="/image/wizard.jpg"
+                      style={{ objectPosition: "center 45%" }}
+                    />
+                    <Image
+                      alt="Me"
+                      className="site-ani-auto site-ani__fade-in size-sm"
+                      preview={false}
+                      src="/image/gangz.jpg"
+                      wrapperClassName="w-1/3"
+                    />
+                    <Image
+                      alt="Me"
+                      className="site-ani-auto site-ani__fade-in size-sm"
+                      preview={false}
+                      src="/image/grad.jpg"
+                      wrapperClassName="w-2/3"
+                    />
+                    <Image
+                      alt="Me"
+                      className="site-ani-auto site-ani__fade-in size-sm"
+                      preview={false}
+                      src="/image/df.jpg"
+                      wrapperClassName="w-2/3"
+                    />
+                    <Image
+                      alt="Me"
+                      className="site-ani-auto site-ani__fade-in size-sm"
+                      preview={false}
+                      src="/image/wizard-2.jpg"
+                      wrapperClassName="w-1/3"
+                    />
+                    <Image
+                      alt="Me"
+                      className="site-ani-auto site-ani__fade-in size-sm"
+                      preview={false}
+                      src="/image/df-2.jpg"
+                    />
+                  </div>
+                </GallerySection>
               </>
             </SwipeWrapper>
             <Footer />

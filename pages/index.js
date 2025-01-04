@@ -84,6 +84,7 @@ const Content = styled.section`
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transform: rotate(-2deg) scale(1.08)
       }
     }
   }
@@ -255,7 +256,7 @@ export default function Home() {
           <title>Nam Nguyen</title>
           <meta content="Welcome to my personal website" name="description" />
           <link href="/favicon.ico" rel="icon" />
-          <link as="image" href="/image/namnd2.jpg" rel="preload" />
+          <link as="image" href="/image/namnd3.jpg" rel="preload" />
         </Head>
         <MainContainer className="scroll-container">
           <Sidebar />
@@ -296,7 +297,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="site-ani-auto site-ani__shrink-left" />
-                    <Image alt="Namnd" preview={false} src="/image/namnd2.jpg" />
+                    <Image alt="Namnd" preview={false} src="/image/namnd3.jpg" />
                   </div>
                 </Content>
                 <ContactSection className="site-ani-group">
