@@ -147,7 +147,11 @@ const Description = styled.div`
 const ViewMore = styled.div`
   margin-top: 36px;
 
-  & a {
+  & button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
     color: ${theme.colors.darkGrey};
     font-size: 18px;
     font-weight: 500;
@@ -158,10 +162,23 @@ const ViewMore = styled.div`
     @media (max-width: 800px) {
       font-size: 16px;
     }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: translateX(6px);
+      }
+    }
+
+    &:focus {
+      outline-offset: 4px;
+      outline: solid 1px ${theme.colors.purple};
+    }
   }
 
   & svg {
     vertical-align: sub;
+    transition: transform 0.25s ease-in-out;
   }
 `;
 
@@ -204,7 +221,6 @@ const SectionTitle = styled.div`
 const MailButton = styled.button`
   border: none;
   outline: none;
-  border-radius: 100px;
   box-shadow: -12px 4px 0 ${theme.colors.grey};
   background-color: ${theme.colors.lightGrey};
   color: ${theme.colors.darkGrey};
@@ -220,7 +236,7 @@ const MailButton = styled.button`
   }
 
   :hover {
-    border: 1px solid ${theme.colors.purple};
+    border-color: ${theme.colors.purple};
   }
 `;
 
@@ -289,10 +305,10 @@ export default function Home() {
                       </p>
                     </Description>
                     <ViewMore className="site-ani-auto site-ani__fade-in">
-                      <a onClick={() => push("/about")}>
+                      <button onClick={() => push("/about")}>
                         More about me{" "}
                         <Icon icon="ant-design:swap-right-outlined" />
-                      </a>
+                      </button>
                     </ViewMore>
                   </div>
                   <div>
@@ -305,7 +321,7 @@ export default function Home() {
                     <SectionTitle className="site-ani-auto site-ani__fade-in">
                       <span>Let&rsquo;s connect and make difference</span>
                     </SectionTitle>
-                    <MailButton className="site-ani-auto site-ani__fade-in">
+                    <MailButton className="site-ani-auto site-ani__fade-in" tabIndex={-1}>
                       <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
                     </MailButton>
                     <Links className="site-ani-group site-ani-auto site-ani__fade-in">

@@ -95,7 +95,6 @@ const ContactSection = styled.section`
 const MailButton = styled.button`
   border: none;
   outline: none;
-  border-radius: 100px;
   box-shadow: -12px 4px 0 ${theme.colors.grey};
   background-color: ${theme.colors.lightGrey};
   color: ${theme.colors.darkGrey};
@@ -111,7 +110,7 @@ const MailButton = styled.button`
   }
 
   :hover {
-    border: 1px solid ${theme.colors.purple};
+    border-color: ${theme.colors.purple};
   }
 `;
 
@@ -166,7 +165,7 @@ export default function Contact() {
                 </Content>
                 <ContactSection>
                   <div>
-                    <MailButton className="site-ani-auto site-ani__fade-in">
+                    <MailButton className="site-ani-auto site-ani__fade-in" tabIndex={-1}>
                       <a href="mailto:nguyennamnade22@gmail.com">Send email</a>
                     </MailButton>
                     <Links>

@@ -327,7 +327,10 @@ const Links = styled.div`
 const ViewMore = styled.div`
   margin: 40px 0 12px;
 
-  & a {
+  & button {
+    outline: none;
+    border: none;
+    padding: 0;
     background-color: ${theme.colors.lightGrey};
     color: ${theme.colors.darkGrey};
     font-size: 18px;
@@ -339,10 +342,23 @@ const ViewMore = styled.div`
     @media (max-width: 800px) {
       font-size: 16px;
     }
+    
+    &:hover,
+    &:focus {
+      svg {
+        transform: translateX(6px);
+      }
+    }
+
+    &:focus {
+      outline-offset: 4px;
+      outline: solid 1px ${theme.colors.purple};
+    }
   }
 
   & svg {
     vertical-align: sub;
+    transition: transform 0.25s ease-in-out;
   }
 `;
 
@@ -607,10 +623,10 @@ export default function About() {
                       className="site-ani-auto site-ani__fade-in"
                       style={{ textAlign: "left" }}
                     >
-                      <a onClick={() => push("/projects")}>
+                      <button onClick={() => push("/projects")}>
                         Checkout my projects{" "}
                         <Icon icon="ant-design:swap-right-outlined" />
-                      </a>
+                      </button>
                     </ViewMore>
                   </div>
                 </TechStackSection>

@@ -6,7 +6,7 @@ import { SideBarContext } from "../../pages/_app";
 import { Icon } from "@iconify/react";
 
 const SidebarContainer = styled.div`
-  padding: 28px 20px;
+  padding: 26px 20px;
   background-color: ${theme.colors.darkGrey};
   height: 100%;
   position: sticky;
@@ -21,7 +21,10 @@ const ToggleButton = styled.button`
   outline: none;
   border: none;
   height: 34px;
-  width: 30px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   cursor: pointer;
   color: ${theme.colors.white};
@@ -38,6 +41,10 @@ const ToggleButton = styled.button`
   padding: 0;
   &:hover {
     transform: scale(1.1);
+  }
+  &:focus {
+    outline-offset: 4px;
+    outline: solid 1px ${theme.colors.purple};
   }
   @media (max-width: 800px) {
     width: 0;
@@ -58,27 +65,41 @@ const SidebarRoutesContainer = styled.ul`
 `;
 
 const SidebarRoutes = styled.li`
-  cursor: pointer;
-  font-size: 18px;
-  color: ${(props) => (props.active ? theme.colors.grey : theme.colors.white)};
-  margin: 28px 0;
-  display: flex;
-  align-items: center;
-  width: max-content;
-  font-weight: 400;
-  user-select: none;
-  &:before {
-    margin-right: ${(props) => (props.active ? "10px" : "0px")};
-    content: "";
-    height: 1px;
-    transition: 0.3s;
-    width: ${(props) => (props.active ? "16px" : "0px")};
-    background-color: ${theme.colors.grey};
-    position: relative;
-  }
-  &:hover:before {
-    margin-right: 10px;
-    width: 16px;
+  button {
+    padding: 0;
+    display: flex;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: ${(props) => (props.active ? theme.colors.grey : theme.colors.white)};
+    margin: 28px 0;
+    align-items: center;
+    width: max-content;
+    font-weight: 400;
+    user-select: none;
+    &:before {
+      margin-right: ${(props) => (props.active ? "10px" : "0px")};
+      content: "";
+      height: 1px;
+      transition: 0.3s;
+      width: ${(props) => (props.active ? "16px" : "0px")};
+      background-color: ${theme.colors.grey};
+      position: relative;
+    }
+    &:hover:before {
+      margin-right: 10px;
+      width: 16px;
+    }
+    &:focus {
+      outline-offset: 4px;
+      outline: solid 1px ${theme.colors.purple};
+    }
+    &:focus:before {
+      margin-right: 10px;
+      width: 16px;
+    }
   }
 `;
 
@@ -94,26 +115,37 @@ export function Sidebar() {
         {sideBar ? <Icon icon="cil:x" /> : <Icon icon="cil:menu" />}
       </ToggleButton>
       <SidebarRoutesContainer isDisplayed={sideBar}>
-        <SidebarRoutes active={currPathname === "/"} onClick={() => push(`/`)}>
-          Home
+        <SidebarRoutes active={currPathname === "/"}>
+          <button
+            tabIndex={sideBar ? 0 : -1}
+            onClick={() => push(`/`)}
+          >
+            Home
+          </button>
         </SidebarRoutes>
-        <SidebarRoutes
-          active={currPathname === "/about"}
-          onClick={() => push(`/about`)}
-        >
-          About
+        <SidebarRoutes active={currPathname === "/about"}>
+          <button
+            tabIndex={sideBar ? 0 : -1}
+            onClick={() => push(`/about`)}
+          >
+            About
+          </button>
         </SidebarRoutes>
-        <SidebarRoutes
-          active={currPathname === "/projects"}
-          onClick={() => push(`/projects`)}
-        >
-          Projects
+        <SidebarRoutes active={currPathname === "/projects"}>
+          <button
+            tabIndex={sideBar ? 0 : -1}
+            onClick={() => push(`/projects`)}
+          >
+            Projects
+          </button>
         </SidebarRoutes>
-        <SidebarRoutes
-          active={currPathname === "/contact"}
-          onClick={() => push(`/contact`)}
-        >
-          Contact
+        <SidebarRoutes active={currPathname === "/contact"}>
+          <button
+            tabIndex={sideBar ? 0 : -1}
+            onClick={() => push(`/contact`)}
+          >
+            Contact
+          </button>
         </SidebarRoutes>
       </SidebarRoutesContainer>
     </SidebarContainer>

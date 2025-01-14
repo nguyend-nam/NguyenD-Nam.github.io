@@ -37,6 +37,11 @@ a {
   text-decoration: none;
 }
 
+a:focus {
+  outline-offset: 4px;
+  outline: solid 1px #7c3aed;
+}
+
 * {
   box-sizing: border-box;
   font-family: Poppins;

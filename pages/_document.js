@@ -17,7 +17,7 @@ export default function Document() {
         />
         <link href="/favicon.ico" rel="icon" />
         <meta content={theme.colors.grey} name="theme-color" />
-        <meta content="/og.png" property="og:image" />
+        <meta content="/namnd2.jpg" property="og:image" />
         <meta content="https://ngdnam.netlify.app" property="og:url" />
         <meta content="Nam Nguyen" property="og:site_name" />
         <meta content="Nam Nguyen" property="og:title" />

@@ -89,6 +89,8 @@ const ViewMore = styled.div`
   margin-top: 28px;
 
   & a {
+    display: block;
+    width: max-content;
     color: ${theme.colors.darkGrey};
     font-size: 18px;
     font-weight: 500;
@@ -99,10 +101,18 @@ const ViewMore = styled.div`
     @media (max-width: 800px) {
       font-size: 16px;
     }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: translateX(6px);
+      }
+    }
   }
 
   & svg {
     vertical-align: sub;
+    transition: transform 0.25s ease-in-out;
   }
 `;
 
@@ -208,7 +218,7 @@ const ProjectDescription = styled.div`
 const ProjectTags = styled.div`
   background-color: ${theme.colors.white};
   color: ${theme.colors.darkGrey};
-  border-radius: 100px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 400;
   border: 1px solid ${theme.colors.grey};

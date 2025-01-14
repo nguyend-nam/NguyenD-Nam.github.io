@@ -3,7 +3,7 @@ import { theme } from "../../constants";
 import { SideBarContext } from "../../pages/_app";
 import { useContext } from "react";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const HeaderContainer = styled.header`
   border-bottom: 1px solid ${theme.colors.grey};
@@ -14,8 +14,19 @@ const HeaderContainer = styled.header`
   z-index: 1000;
   background-color: ${theme.colors.lightGrey};
   display: flex;
+  align-items: center;
   @media (max-width: 800px) {
     padding: 16px 25px;
+  }
+  & button:nth-child(2) {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    &:focus {
+      outline-offset: 4px;
+      outline: solid 1px ${theme.colors.purple};
+    }
   }
 `;
 
@@ -67,17 +78,18 @@ export function Header() {
   const contextValue = useContext(SideBarContext);
   const sideBar = contextValue.sideBar;
   const setSideBar = (sideBar) => contextValue.toggleSideBar(sideBar);
+  const { push } = useRouter();
   return (
     <HeaderContainer>
       <MobileToggleButton onClick={() => setSideBar(!sideBar)}>
         {sideBar ? <Icon icon="cil:x" /> : <Icon icon="cil:menu" />}
       </MobileToggleButton>
-      <Link href="/">
+      <button onClick={() => push("/")}>
         <HeaderTitle>
           <span>NAM</span>
           <span>NGUYEN</span>
         </HeaderTitle>
-      </Link>
+      </button>
     </HeaderContainer>
   );
 }
